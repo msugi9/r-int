@@ -20,7 +20,8 @@ if(empty($mail1) != true){
     mb_send_mail(
 	$invite_url,
 	    $subject,
-	    $main);
+	    $main,
+    "-f $invite_url");
     echo "招待メールを送信しました";
 }
 ?>
