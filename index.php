@@ -4,7 +4,7 @@
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url(getenv('DATABASE_URL'));
 echo "<pre>";
-var_dump(DATABASE_URL);
+var_dump(getenv('DATABASE_URL'));
 var_dump($url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
@@ -14,7 +14,10 @@ try{
   //var_dump($pdo->getAttribute(PDO::ATTR_SERVER_VERSION));
   //sql文
   $sql = "select * from ski_resort";
-  $data = $pdo->query($sql);
+  $result = $pdo->query($sql);
+  $data = $result->fetchAll();
+  var_dump($data);
+  exit;
   // foreach($pdo->query($sql) as $row){
   //   print($row['id']);
   //   print($row['name']);
