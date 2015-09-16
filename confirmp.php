@@ -6,6 +6,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $id= ($_POST["id"]);
 $pass = ($_POST["password"]);
+ $pdo = null;
 try{
 
   //データベースに接続
