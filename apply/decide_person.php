@@ -10,18 +10,14 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-  //DBから変数をつくる
-  if($data){
-    echo "<pre>";
-    print_r($data);
-    echo "</pre>";
-  }
-  
-  //$userName = ;
-  //$relatedUser1Name = ;
-  //$relatedUser2Name = ;
-  //$userName = ;
-  
+
+
+//  if($data){
+//    echo "<pre>";
+//    print_r($data);
+//    echo "</pre>";
+//  }
+
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
