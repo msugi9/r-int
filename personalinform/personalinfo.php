@@ -17,7 +17,7 @@ try{
     $board=$_REQUEST[board];
     $email=$_REQUEST[email];
 
-    $insert_sql = "insert into personal ($loginid,'$pass',$height,$weight,$shoe,$accessory,$wear,$board,'$email')";
+    $insert_sql = "insert into personal(login_id,login_password,name,sex,height,weight,shoe_size,accessory,wear,board,email) values($loginid,'$pass',$height,$weight,$shoe,$accessory,$wear,$board,'$email')";
 
     $sql = $pdo->exec($insert_sql); 
 
