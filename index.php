@@ -44,7 +44,7 @@ $pdo = null;
   <a href="https://www.google.co.jp/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=%E7%BE%A4%E9%A6%AC%E7%9C%8C">
 <?php
 foreach($data as $row){
-  print_r($prefecture[$row['pref_code']]);
+  print($prefecture[$row['pref_code']]);
 }
 ?>
   </a>
@@ -52,7 +52,7 @@ foreach($data as $row){
   <a href="http://www.tambara.co.jp/skipark/">
 <?php
 foreach($data as $row){
-  print_r($row['name']);
+  print($row['name']);
 }
 ?>
 </a>
