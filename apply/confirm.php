@@ -2,6 +2,9 @@
 $personId = 1;
 $numOfMember = 3;
 
+//とりあえず全部借りる扱い
+$someFlg = 1;
+
 function check_rent($someFlg){
   if($someFlg)     $outputStr='○';
   else if($someFlg)$outputStr='×';
@@ -24,8 +27,8 @@ function check_rent($someFlg){
         echo '</tr>';
         <?php
         for($personId;$personId<$numOfPerson;$personId++){
-          echo "<tr>";
-          echo "<td>名前" .$personId ."</td>";
+          echo '<tr>';
+          echo '<td>名前'.$personId.'</td>';
           echo '<td><input type="checkbox" name="prsn'.$personId.'"></td>';
           echo '<td>'.check_rent().'</td>';
           echo '<td>'.check_rent().'</td>';
