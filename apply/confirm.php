@@ -52,7 +52,7 @@ function check_rent($someFlg){
         
         $flg = $boardId;
         echo 'flg='.$flg;
-        echo 'REQUEST='.$_REQEST['board4'];
+        echo 'REQUEST='.$_REQEST['$flg'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
