@@ -14,12 +14,12 @@ try{
     $wear=$_REQUESRT[wear];
     $board=$_REQUEST[board];
     $email=$_REQUEST[email];
-    
+    echo "登録完了しました。"    
     $insert_sql = "insert into personal ($loginid,'$pass',$height,$weight,$shoe,$accessory,$wear,$board,'$email')";
 
     $sql = $pdo->exec($insert_sql); 
 
-    echo "登録完了しました。"
+
     
     echo "身長...'$height'\n"
     echo "体重...'$weight'\n"
