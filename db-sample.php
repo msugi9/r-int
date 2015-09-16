@@ -1,12 +1,10 @@
 
 <?php
-//接続先のデータベース
-$database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
-$url = parse_url($database_url);
+$url = parse_url(getenv('DATABASE_URL'));
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 echo "<pre>";
-var_dump($dsn);
+var_dump($url);exit;
 try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
