@@ -11,7 +11,6 @@ $pass = ($_POST["password"]);
 $name = ($_POST["name"]);
 $mail = ($_POST["email"]);
 
-echo "1";
 try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -24,12 +23,10 @@ try{
   $sql2 = "select * from personal where login_id = '$id'";
   $data = $pdo->query($sql2);
 
-echo "2";
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
-echo "3";
 echo"登録を受け付けました。\n名前：".$data['name']."メールアドレス:".$data['email']. "ID:".$data['id'];
 ?>
