@@ -29,17 +29,17 @@ $numOfMember = 3;
     <form action="./confirm.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <tr>
+        <tr bgcolor"#101010  ">
           <td>氏名</td><td>板ブーツ</td><td>ウェア</td><td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
         <?php $prsnId = "prsn" .$personData['id'];
-        echo $_REQUEST['$prsnId'];?>
+        echo "prsnId=".$prsnId."REQUEST=".$_REQUEST['$prsnId'];?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" checked="<?php if($personData['board'])echo 'checked';?>"></td>
-          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" checked="<?php if($personData['wear'])echo 'checked';?>"></td>
-          <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" checked="<?php if($personData['accessory'])echo 'checked';?>"></td>
+          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" <?php if($personData['board'])echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" <?php if($personData['wear'])echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" <?php if($personData['accessory'])echo 'checked="checked"';?>></td>
         </tr>
         <?php endforeach; ?>
       </table>
