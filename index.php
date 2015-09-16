@@ -38,24 +38,25 @@ $pdo = null;
 
 ?>
 <html>
-<head><title>PHP TEST</title></head>
-<body>
-  <h1>僕がいきたいスキー場は・・・</h1>
-  <a href="https://www.google.co.jp/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=%E7%BE%A4%E9%A6%AC%E7%9C%8C">
-<?php
-foreach($data as $row){
-  print($prefecture[$row['pref_code']]);
-}
-?>
-  </a>
-  <p>にある</p>
-  <a href="http://www.tambara.co.jp/skipark/">
-<?php
-foreach($data as $row){
-  print($row['name']);
-}
-?>
-</a>
-<p>です。</p>
-</body>
+  <head><title>PHP TEST</title></head>
+  <body>
+    <h1>僕がいきたいスキー場は・・・</h1>
+    <a href="https://www.google.co.jp/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=%E7%BE%A4%E9%A6%AC%E7%9C%8C">
+      <?php
+        // foreach($data as $row){
+        //   print($prefecture[$row['pref_code']]);
+        // }
+      ?>
+    </a>
+    <p>にある</p>
+    <a href="http://www.tambara.co.jp/skipark/">
+      <?php
+        foreach($data as $row){
+          print($prefecture[$row['pref_code']]);
+          print($row['name']);
+        }
+      ?>
+    </a>
+    <p>です。</p>
+  </body>
 </html>
