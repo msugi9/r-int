@@ -6,16 +6,14 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $id= ($_POST["id"]);
 $pass = ($_POST["password"]);
- $pdo = null;
 try{
 
   //データベースに接続
   //sql文
 
   //$data = $result->fetchAll();
- $pdo = null;
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
-  $sql = "select login_password from personal where login_id = '$id'";
+  $sql = "select login_password from personal where login_id =".$id;
   $result = $pdo->query($sql);
   $pass1 = $result->fetchAll();
 
