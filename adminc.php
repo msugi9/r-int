@@ -22,19 +22,17 @@ try{
 
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
- $pdo = null;
+ /*$pdo = null;
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select name from company where login_id = '$id'";
   $result1 = $pdo->query($sql2);
   $name1 = $result1->fetchAll();
 
-echo $name1;
+echo $name1;*/
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
 echo"登録を受け付けました。";
-?>
-
 ?>
