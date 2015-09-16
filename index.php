@@ -12,10 +12,10 @@ try{
   //sql文
   $sql = "select * from ski_resort";
   $data = $pdo->query($sql);
-  foreach($pdo->query($sql) as $row){
-    print($row['id']);
-    print($row['name']);
-  }
+  // foreach($pdo->query($sql) as $row){
+  //   print($row['id']);
+  //   print($row['name']);
+  // }
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -40,12 +40,22 @@ $pdo = null;
 <html>
 <head><title>PHP TEST</title></head>
 <body>
+  <h1>僕がいきたいスキー場は・・・</h1>
+  <a href="https://www.google.co.jp/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=%E7%BE%A4%E9%A6%AC%E7%9C%8C">
 <?php
 foreach($data as $data){
-  print_r($row['id']);
   print_r($row['name']);
+}
+?>
+  </a>
+  <p>にある</p>
+  <a href="http://www.tambara.co.jp/skipark/">
+    <?php
+foreach($data as $data){
   print_r($prefecture[$row['pref_code']]);
 }
 ?>
+</a>
+<p>です。</p>
 </body>
 </html>
