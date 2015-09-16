@@ -1,22 +1,35 @@
 <?php
-//$userId = ;
-//$relatedPerson = ;
 $personId = 1;
-$numOfPerson = 5;
+$numOfMember = 3;
+
+function check_rent($someFlg){
+  if($someFlg)     $outputStr='○';
+  else if($someFlg)$outputStr='×';
+  else     $outputStr='△';
+  
+  return $outputStr;
+}
 ?>
+
 <html>
-  <head><title>メンバー決定</title>
+  <head><title>レンタル品確認</title>
     <body>
-      参加者を選択してください<TMPL_VAR NAME=HOME>
+      レンタル品とその数を確認してください<TMPL_VAR NAME=HOME>
       <p>
         <!--for文的な？-->
         <center>
-        <table>
+        <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+          echo '<tr>';
+            echo '<td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>';
+          echo '</tr>';
           <?php
           for($personId;$personId<$numOfPerson;$personId++){
             echo "<tr>";
             echo "<td>名前" .$personId ."</td>";
             echo '<td><input type="checkbox" name="prsn'.$personId"'></td>';
+            echo '<td>'.check_rent().'</td>';
+            echo '<td>'.check_rent().'</td>';
+            echo '<td>'.check_rent().'</td>';
             echo '</tr>';
           }?>
         </table>
