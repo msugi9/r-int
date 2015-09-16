@@ -1,5 +1,5 @@
 <?php
-
+echo "test";
 $mail1=$_REQUEST['mail_1'];
 $mail2=$_REQUEST['mail_2'];
 $mail3=$_REQUEST['mail_3'];
