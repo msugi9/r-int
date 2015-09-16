@@ -15,8 +15,8 @@ try{
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql = "select login_password from personal where login_id ='$id'";
   $result = $pdo->query($sql);
-  $data = $result->fetchAll();
-  $pass1 = (string)$data[0];
+  $pass1 = $result->fetchAll();
+  //$pass1 = (string)$data[0];
 
 
 }catch(PDOException $e){
