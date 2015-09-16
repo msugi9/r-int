@@ -13,18 +13,20 @@ if (!$link) {
 print('接続に成功しました。<br>');
 
 // PostgreSQLに対する処理
-
-$close_flag = pg_close($link);
-$sql = "select name from ski_resort where id = 1";
-if ($close_flag){
-    print('切断に成功しました。<br>');
-}
+$sql = "select name from ski_resort where id =1";
 $result = pg_exec($sql);
 if($result == false) {
 print("Can't exec SQL: [$sql]");
 exit;
 }
 print($result);
+
+
+$close_flag = pg_close($link);
+if ($close_flag){
+    print('切断に成功しました。<br>');
+}
+
 
 ?>
 </body>
