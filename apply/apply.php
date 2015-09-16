@@ -12,17 +12,17 @@ $numOfMember = 3;
         <!--for文的な？-->
         <center>
         <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-          echo "<tr>";
+          echo '<tr>';
             echo '<td>氏名</td><td>板ブーツ</td><td>ウェア</td><td>小物</td>';
           echo '</tr>';
           <?php
           for($personId;$personId<$numOfPerson;$personId++){
-            echo "<tr>";
-            echo "<td>名前" .$personId ."</td>";
-            echo '<td><input type="checkbox" name="prsn'.$personId"'></td>';
-            echo '<td><input type="checkbox" name="boad'.$personId"'></td>';
-                echo '<td><input type="checkbox" name="wear'.$personId"'></td>';
-            echo '<td><input type="checkbox" name="acce'.$personId"'></td>';
+            echo '<tr>';
+            echo '<td>名前' .$personId .'</td>';
+            echo '<td><input type="checkbox" name="prsn'.$personId.'"></td>';
+            echo '<td><input type="checkbox" name="boad'.$personId.'"></td>';
+            echo '<td><input type="checkbox" name="wear'.$personId.'"></td>';
+            echo '<td><input type="checkbox" name="acce'.$personId.'"></td>';
             echo '</tr>';
           }?>
         </table>
