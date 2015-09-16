@@ -19,7 +19,7 @@ if($result == false) {
 print("Can't exec SQL: [$sql]");
 exit;
 }
-print($result);
+var_dump($sql);
 
 
 $close_flag = pg_close($link);
