@@ -1,9 +1,15 @@
 <?php
+$database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
+//Postgresqlの接続に必要なデータの取得
+$url = parse_url($database_url);
+$dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
+
+
 $pdo = null;
-$name= ($_POST["company"]);
+$name= ($_POST["name"]);
 $id = ($_POST["id"]);
 $pass = ($_POST["password"]);
-$charge = ($_POST["name"]);
+$charge = ($_POST["charge"]);
 $address = ($_POST["address"]);
 $tel = ($_POST["tel"]);
 $ski = ($_POST["ski"]);
