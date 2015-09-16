@@ -12,6 +12,7 @@ $name = ($_POST["name"]);
 $mail = ($_POST["email"]);
 
 try{
+  /*
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
@@ -19,9 +20,12 @@ try{
 
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
+  */
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select name from personal where login_id = '$id'";
   $name1 = $pdo->query($sql2);
+  var_dump($name1);
+  exit;
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select email from personal where login_id = '$id'";
   $mail1 = $pdo->query($sql2);
@@ -37,5 +41,6 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 var_dump($name1);
 var_dump($mail1);
 var_dump($id1);
-echo"登録を受け付けました。\n名前：".$name1."メールアドレス:".$mail1. "ID:".$id1;
+echo"登録を受け付けました。";
+echo "\n名前：".$name1."メールアドレス:".$mail1. "ID:".$id1;
 ?>
