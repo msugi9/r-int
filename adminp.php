@@ -20,14 +20,18 @@ try{
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
 
-  $sql2 = "select * from personal where login_id = '$id'";
-  $data = $pdo->query($sql2);
+  $sql2 = "select name from personal where login_id = '$id'";
+  $name1 = $pdo->query($sql2);
+  $sql2 = "select email from personal where login_id = '$id'";
+  $mail1 = $pdo->query($sql2);
+  $sql2 = "select id from personal where login_id = '$id'";
+  $id1 = $pdo->query($sql2);
 
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
-var_dump($data);
-echo"登録を受け付けました。\n名前：".$data['name']."メールアドレス:".$data['email']. "ID:".$data['id'];
+
+echo"登録を受け付けました。\n名前：".$name1."メールアドレス:".$mail1. "ID:".$id1;
 ?>
