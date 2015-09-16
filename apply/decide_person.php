@@ -12,7 +12,11 @@ try{
   $data = $result->fetchAll();
   
   //DBから変数をつくる
-  echo $data;
+  if($data){
+    echo "<pre>";
+    print_r($data);
+    echo "</pre>";
+  }
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
