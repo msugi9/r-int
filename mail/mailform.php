@@ -11,15 +11,15 @@ $subject="件名:楽天レンタルサービスについて";
 
 $invite_url="realthingshakes25@gmail.com";
 
+$main="あなたはレンタル会員"
+
 $from_url="hogehoge";
 
 if(@$mail1 != ""){
     mb_send_mail(
 	$invite_url,
 	    $subject,
-	    $main,
-	    "From: {$from_url}",
-	    "-f $invite_url");
+	    $main);
     echo "<p>招待メールを送信しました</p>";
 }
 ?>
