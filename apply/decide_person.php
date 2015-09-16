@@ -7,10 +7,9 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "select * from ski_resort";
+  $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-  
   //DBから変数をつくる
   if($data){
     echo "<pre>";
