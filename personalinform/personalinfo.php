@@ -17,20 +17,20 @@ try{
     $board=$_REQUEST[board];
     $email=$_REQUEST[email];
 
-    echo "hello";
+    $insert_sql = "insert into personal ($loginid,'$pass',$height,$weight,$shoe,$accessory,$wear,$board,'$email')";
 
-    //$insert_sql = "insert into personal ($loginid,'$pass',$height,$weight,$shoe,$accessory,$wear,$board,'$email')";
-
-    //$sql = $pdo->exec($insert_sql); 
+    $sql = $pdo->exec($insert_sql); 
 
 
     
-    //echo "身長...'$height'\n";
-    //echo "体重...'$weight'\n";
-    //echo "靴のサイズ...'$shoe'\n";
-    //echo "アクセサリー(キャップ、グローブ、ゴーグル)...'$accessory'\n";
-    //echo "ウェア...'$wear'\n";
-    //echo "ボード...'$board'\n";
+    echo "身長...'$height'\n";
+    echo "体重...'$weight'\n";
+    echo "靴のサイズ...'$shoe'\n";
+    echo "アクセサリー(キャップ、グローブ、ゴーグル)...'$accessory'\n";
+    echo "ウェア...'$wear'\n";
+    echo "ボード...'$board'\n";
+
+    echo "登録しました";
     
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
