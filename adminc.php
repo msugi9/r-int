@@ -18,7 +18,7 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "insert into company (login_id,login_password,name,charge,address,tel,ski_resort_id) values ( '$id','$pass','$name','$charge','$address','$tel','$ski')";
+  $sql = "insert into company (name,login_id,login_password,charge,address,tel,ski_resort_id) values ( '$name','$id','$pass','$charge','$address','$tel','$ski')";
 
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
