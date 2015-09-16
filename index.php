@@ -13,12 +13,14 @@ if (!$link) {
 print('接続に成功しました。<br>');
 
 // PostgreSQLに対する処理
-$sql = "select name from ski_resort where id =1";
-$result = pg_exec($sql);
-if($result == false) {
-print("Can't exec SQL: [$sql]");
-exit;
-}
+// $sql = "select name from ski_resort where id =1";
+// $result = pg_exec($sql);
+// if($result == false) {
+// print("Can't exec SQL: [$sql]");
+// exit;
+// }
+// var_dump($result);
+$result = pg_query($link, $sql);
 var_dump($result);
 
 
