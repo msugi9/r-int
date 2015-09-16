@@ -23,7 +23,7 @@ if(strcmp($mail3,$cmail3) != 0){
 }
 
 if($judge == 1){
-echo "もう一度入力して下さい"
+echo "もう一度入力して下さい";
 }
 
 $invitetest_url="realthingshakes25@gmail.com";
@@ -32,7 +32,7 @@ $main="あなたはレンタル会員";
 
 $from_url="hogehoge";
 
-if(empty($mail1) != true && judge == 0){
+if(empty($mail1) != true){
     echo "test";
 
     mb_send_mail(
