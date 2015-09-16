@@ -20,6 +20,8 @@ try{
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
 
+echo $id;
+
   $sql2 = "select * from personal where login_id = '$id'";
   $data = $pdo->query($sql2);
 
@@ -28,5 +30,6 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
+echo $data['name'];
 echo"登録を受け付けました。\n名前：".$data['name']."メールアドレス:".$data['email']. "ID:".$data['id'];
 ?>
