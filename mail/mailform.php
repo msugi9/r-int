@@ -15,11 +15,11 @@ $main="あなたはレンタル会員";
 
 $from_url="hogehoge";
 
-if(@$mail1 != ""){
+if(empty($mail1) != true){
     mb_send_mail(
 	$invite_url,
 	    $subject,
 	    $main);
-    echo "<p>招待メールを送信しました</p>";
+    echo "招待メールを送信しました";
 }
 ?>
