@@ -22,7 +22,7 @@ $personId = 1;
 $numOfMember = 3;
 ?>
 <html>
-  <head><title>レンタル品確認</title></head>
+  <head><title>レンタル品選択</title></head>
   <body>
     <center>
     レンタル品とその数を確認してください<TMPL_VAR NAME=HOME>

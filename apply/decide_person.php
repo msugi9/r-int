@@ -11,6 +11,9 @@ try{
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
   
+  //DBから変数をつくる
+  echo $data;
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -25,7 +28,10 @@ $numOfPerson = 5;
   <head><title>メンバー決定</title></head>
   <body>
     <center>
-    参加者を選択してください<TMPL_VAR NAME=HOME>
+    <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+      <tr>あなたの名前は<?php echo $userName?>。</tr>
+    </table>
+    参加者を選択してください。<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
