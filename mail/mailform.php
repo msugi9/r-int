@@ -8,20 +8,37 @@ $cmail3=$_REQUEST['conf_mail_3'];
 
 $subject="件名:楽天レンタルサービスについて";
 
-$invite_url="realthingshakes25@gmail.com";
+$judge=0;
+
+if(strcmp($mail1,$cmail1) != 0){
+    $judge=1;
+}
+
+if(strcmp($mail2,$cmail2) != 0){
+    $judge=1;
+}
+
+if(strcmp($mail3,$cmail3) != 0){
+    $judge=1;
+}
+
+if($judge == 1){
+echo "もう一度入力して下さい"
+}
+
+$invitetest_url="realthingshakes25@gmail.com";
 
 $main="あなたはレンタル会員";
 
 $from_url="hogehoge";
 
-if(empty($mail1) != true){
+if(empty($mail1) != true && judge == 0){
     echo "test";
 
     mb_send_mail(
-	$invite_url,
+	$invitetest_url,
 	    $subject,
-	    $main,
-    "-f $invite_url");
+	    $main);
     echo "招待メールを送信しました";
 }
 ?>
