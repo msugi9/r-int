@@ -21,7 +21,7 @@ try{
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
 
-  $sql2 = "select * from personal where login_id =" .$id;
+  $sql2 = "select * from personal where login_id = '$id'";
   $data = $pdo->query($sql2);
 
 
