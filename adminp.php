@@ -21,6 +21,9 @@ try{
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
 
+  $sql2 = "select * from personal where login_id =" .$id;
+  $data = $pdo->query($sql2);
+
 
 
 }catch(PDOException $e){
@@ -28,6 +31,5 @@ try{
   die();
 }
 
-
-echo"登録を受け付けました。\n名前：$name\nメールアドレス:$mail";
+echo"登録を受け付けました。\n名前：$data['name']\nメールアドレス:$data['email'] ID:$data['id']";
 ?>
