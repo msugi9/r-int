@@ -19,6 +19,12 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
 var_dump($pdo->getAttribute(PDO::ATTR_SERVER_VERSION));
+$sql = "select * from ski_resort";
+foreach($pdo->query($sql) as $row){
+  print(convert_enc($row['id']));
+  print(convert_enc($row['name']));
+}
+
 // $result = pg_query($link, $sql);
 // var_dump($result);
 
