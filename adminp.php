@@ -31,5 +31,5 @@ try{
   die();
 }
 
-echo"登録を受け付けました。\n名前：$data['name']\nメールアドレス:$data['email'] ID:$data['id']";
+echo"登録を受け付けました。\n名前：".$data['name']."メールアドレス:".$data['email']. "ID:".$data['id'];
 ?>
