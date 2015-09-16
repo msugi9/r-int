@@ -19,11 +19,13 @@ try{
 
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
-
+$pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select name from personal where login_id = '$id'";
   $name1 = $pdo->query($sql2);
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select email from personal where login_id = '$id'";
   $mail1 = $pdo->query($sql2);
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select id from personal where login_id = '$id'";
   $id1 = $pdo->query($sql2);
 
