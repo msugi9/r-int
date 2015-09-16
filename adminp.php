@@ -21,7 +21,7 @@ try{
   //$data = $result->fetchAll();
 
   $sql2 = "select name from personal where login_id = '$id'";
-  $name1 = $dbh->query($sql2);
+  $name1 = $pdo->query($sql2);
   $sql2 = "select email from personal where login_id = '$id'";
   $mail1 = $pdo->query($sql2);
   $sql2 = "select id from personal where login_id = '$id'";
