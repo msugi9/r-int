@@ -12,6 +12,7 @@ try{
   //sql文
   $sql = "select * from ski_resort";
   $data = $pdo->query($sql);
+  $data2 = $data;
   // foreach($pdo->query($sql) as $row){
   //   print($row['id']);
   //   print($row['name']);
@@ -43,16 +44,15 @@ $pdo = null;
     <h1>僕がいきたいスキー場は・・・</h1>
     <a href="https://www.google.co.jp/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=%E7%BE%A4%E9%A6%AC%E7%9C%8C">
       <?php
-        // foreach($data as $row){
-        //   print($prefecture[$row['pref_code']]);
-        // }
+        foreach($data as $row){
+          print($prefecture[$row['pref_code']]);
+        }
       ?>
     </a>
     <p>にある</p>
     <a href="http://www.tambara.co.jp/skipark/">
       <?php
-        foreach($data as $row){
-          print($prefecture[$row['pref_code']]);
+        foreach($data2 as $row){
           print($row['name']);
         }
       ?>
