@@ -20,13 +20,13 @@ try{
 
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
-/*  $pdo = null;
+  $pdo = null;
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select name from personal where login_id = '$id'";
   $result1 = $pdo->query($sql2);
   $name1 = $result1->fetchAll();
 
-*/
+
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
