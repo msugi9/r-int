@@ -16,10 +16,12 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "insert into personal (id,login_password,name,email)" . ($id,$pass,$name,$mail);
+  $sql = "insert into personal (login_id,login_password,name,email) values ( '$id','$pass','$name','$mail')";
 
-  $result = $pdo->query($sql);
-  $data = $result->fetchAll();
+  $result = $pdo->exec($sql);
+  //$data = $result->fetchAll();
+
+
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
