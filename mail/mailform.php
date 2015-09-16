@@ -11,7 +11,7 @@ $subject="件名:楽天レンタルサービスについて";
 
 $invite_url="realthingshakes25@gmail.com";
 
-$main="あなたはレンタル会員"
+$main="あなたはレンタル会員";
 
 $from_url="hogehoge";
 
