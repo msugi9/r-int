@@ -36,7 +36,7 @@ function check_rent($someFlg){
   <body>
     <center>
     これでいい？？？？？？？<TMPL_VAR NAME=HOME>
-    <form>
+    <form action="./applyDb.php" method="post">
       <!--for文的な？-->
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
@@ -49,6 +49,8 @@ function check_rent($someFlg){
         $boardId = "board" .$personData['id'];
         $wearId = "wear" .$personData['id'];
         $acceId = "acce" .$personData['id'];
+        
+        echo 'REQUEST='.$_REQEST['$boardId'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
