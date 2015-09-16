@@ -17,6 +17,11 @@ try{
     echo "</pre>";
   }
   
+  //$userName = ;
+  //$relatedUser1Name = ;
+  //$relatedUser2Name = ;
+  //$userName = ;
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -45,6 +50,12 @@ $numOfPerson = 5;
           echo '<td><input type="checkbox" name="prsn'.$numOfMember.'"></td>';
           echo '</tr>';
         }?>
+        <?php foreach ($data as $personData) : ?>
+        <tr style="background-color: #ffffff  ;">
+          <td align="left"><?php echo $personData['name']; ?></td>
+          <td align="left"><input type="checkbox" name"prsn<?php echo $personData['id'];?>"></td>
+        </tr>
+        <?php endforeach; ?>
       </table>
       <!--for文的な？-->
       <input type="submit" value="メンバー確定">
