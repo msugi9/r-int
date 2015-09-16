@@ -32,6 +32,6 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-
+var_dump($id1);
 echo"登録を受け付けました。\n名前：".$name1."メールアドレス:".$mail1. "ID:".$id1;
 ?>
