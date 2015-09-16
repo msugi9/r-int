@@ -16,7 +16,7 @@ $numOfPerson = 5;
           for($personId;$personId<$numOfPerson;$personId++){
             echo "<tr>";
             echo "<td>名前" .$personId ."</td>";
-            echo '<td><input type="checkbox" name="prsn"' .$personId . 'value="1" ></td>';
+            echo '<td><input type="checkbox" name="prsn'.$personId"'></td>';
             echo '</tr>';
           }?>
         </table>
