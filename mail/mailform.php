@@ -1,5 +1,4 @@
 <?php
-echo "test";
 $mail1=$_REQUEST['mail_1'];
 $mail2=$_REQUEST['mail_2'];
 $mail3=$_REQUEST['mail_3'];
@@ -16,6 +15,8 @@ $main="あなたはレンタル会員";
 $from_url="hogehoge";
 
 if(empty($mail1) != true){
+    echo "test";
+
     mb_send_mail(
 	$invite_url,
 	    $subject,
