@@ -3,6 +3,8 @@
 
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url(getenv('DATABASE_URL'));
+echo "<pre>";
+var_dump(DATABASE_URL);
 var_dump($url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
@@ -52,6 +54,7 @@ $pdo = null;
     <p>にある</p>
     <a href="http://www.tambara.co.jp/skipark/">
       <?php
+      var_dump($data);
         foreach($data as $row2){
           print($row2['name']);
         }
