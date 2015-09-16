@@ -7,7 +7,7 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "select * from ski_resort";
+  $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
   
@@ -42,6 +42,17 @@ $numOfMember = 3;
           echo '<td><input type="checkbox" name="acce'.$personId.'"></td>';
           echo '</tr>';
         }?>
+        <?php foreach ($data as $personData) : ?>
+        $prsnId = prsn<?php echo $personData['id'];?>
+        <?php if($_REQUEST['$prsnId']){  ?>
+          <tr style="background-color: #ffffff  ;">
+            <td align="left"><?php echo $personData['name']; ?></td>
+            <td><input type="checkbox" name="board<?php echo $personData['id'];?>" checked="<?php if($personData['board'])echo 'checked';?>"></td>
+            <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" checked="<?php if($personData['wear'])echo 'checked';?>"></td>
+            <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" checked="<?php if($personData['accessory'])echo 'checked';?>"></td>
+          </tr>
+        <?php }?>
+        <?php endforeach; ?>
       </table>
       <!--for文的な？-->
       
