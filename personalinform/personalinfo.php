@@ -1,3 +1,4 @@
+<?php echo "hello"?>
 <?php
     echo "登録完了しました。\n"    
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
