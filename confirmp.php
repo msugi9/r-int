@@ -9,15 +9,14 @@ $pass = ($_POST["password"]);
 try{
 
   //データベースに接続
-  $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
 
   //$data = $result->fetchAll();
  $pdo = null;
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
-  $sql2 = "select login_password from personal where login_id = '$id'";
-  $result1 = $pdo->query($sql2);
-  $pass1 = $result1->fetchAll();
+  $sql = "select login_password from personal where login_id = '$id'";
+  $result = $pdo->query($sql);
+  $pass1 = $result->fetchAll();
 
 
 }catch(PDOException $e){
