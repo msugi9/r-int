@@ -23,7 +23,8 @@ try{
   */
 $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select name from personal where login_id = '$id'";
-  $name1 = $pdo->query($sql2);
+  $result1 = $pdo->query($sql2);
+  $name1 = $result1->fetchAll();
   var_dump($name1);
   exit;
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
