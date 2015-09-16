@@ -1,2 +1,5 @@
 <?php
-echo "ok";
+
+echo "Start!!";
+?>
+
