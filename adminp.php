@@ -30,6 +30,6 @@ echo $id;
   print('Error:'.$e->getMessage());
   die();
 }
-echo $data['name'];
+var_dump($data);
 echo"登録を受け付けました。\n名前：".$data['name']."メールアドレス:".$data['email']. "ID:".$data['id'];
 ?>
