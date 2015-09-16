@@ -13,7 +13,6 @@ try{
   //sql文
   $sql = "select * from ski_resort";
   $data = $pdo->query($sql);
-  $data2 = $data;
   // foreach($pdo->query($sql) as $row){
   //   print($row['id']);
   //   print($row['name']);
@@ -53,8 +52,8 @@ $pdo = null;
     <p>にある</p>
     <a href="http://www.tambara.co.jp/skipark/">
       <?php
-        foreach($data as $row){
-          print($row['name']);
+        foreach($data as $row2){
+          print($row2['name']);
         }
       ?>
     </a>
