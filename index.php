@@ -7,7 +7,6 @@ echo "<pre>";
 var_dump(getenv('DATABASE_URL'));
 var_dump($url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
-
 try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -16,8 +15,6 @@ try{
   $sql = "select * from ski_resort";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-  var_dump($data);
-  exit;
   // foreach($pdo->query($sql) as $row){
   //   print($row['id']);
   //   print($row['name']);
