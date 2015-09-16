@@ -21,7 +21,7 @@ try{
   //$data = $result->fetchAll();
 
   $sql2 = "select name from personal where login_id = '$id'";
-  $name1 = $pdo->query($sql2);
+  $name1 = $dbh->query($sql2);
   $sql2 = "select email from personal where login_id = '$id'";
   $mail1 = $pdo->query($sql2);
   $sql2 = "select id from personal where login_id = '$id'";
@@ -32,6 +32,8 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
+var_dump($name1);
+var_dump($mail1);
 var_dump($id1);
 echo"登録を受け付けました。\n名前：".$name1."メールアドレス:".$mail1. "ID:".$id1;
 ?>
