@@ -1,7 +1,8 @@
 <?php
 //$userId = ;
 //$relatedPerson = ;
-
+$personId = 1;
+$numOfPerson = 5;
 echo "test";
 ?>
 <html>
@@ -16,10 +17,15 @@ echo "test";
           </p>
           
           <!--for文的な？-->
-          <p>名前1<input type="checkbox" name="prsn1" value="1" ></p>
-          <p>名前1<input type="checkbox" name="prsn1" value="1" ></p>
-          <p>名前1<input type="checkbox" name="prsn1" value="1" ></p>
-          <p>名前1<input type="checkbox" name="prsn1" value="1" ></p>
+          <table>
+            <?php
+            for($personId;$personId<$numOfPerson;$personId++){
+              echo "<tr>";
+              echo "<td>名前" .$personId ."</td>";
+              echo '<td><input type="checkbox" name="prsn".$personId . value="1" ></td>';
+              echo '</tr>';
+             }?>
+          </table>
           <!--for文的な？-->
           
           
