@@ -33,14 +33,15 @@ $numOfMember = 3;
           <td>氏名</td><td>板ブーツ</td><td>ウェア</td><td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php $prsnId = "prsn" .$personData['id'];?>
+        <?php $prsnId = "prsn" .$personData['id'];
+        echo $_REQUEST['$prsnId'];?>
         <!<?php if($_REQUEST['$prsnId']){  ?>>
-          <tr style="background-color: #ffffff  ;">
-            <td align="left"><?php echo $personData['name']; ?></td>
-            <td><input type="checkbox" name="board<?php echo $personData['id'];?>" checked="<?php if($personData['board'])echo 'checked';?>"></td>
-            <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" checked="<?php if($personData['wear'])echo 'checked';?>"></td>
-            <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" checked="<?php if($personData['accessory'])echo 'checked';?>"></td>
-          </tr>
+        <tr style="background-color: #ffffff  ;">
+          <td align="left"><?php echo $personData['name']; ?></td>
+          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" checked="<?php if($personData['board'])echo 'checked';?>"></td>
+          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" checked="<?php if($personData['wear'])echo 'checked';?>"></td>
+          <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" checked="<?php if($personData['accessory'])echo 'checked';?>"></td>
+        </tr>
         <!<?php }?>>
         <?php endforeach; ?>
       </table>
