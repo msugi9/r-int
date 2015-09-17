@@ -51,7 +51,7 @@ foreach($data as $tmp){
         <?php echo "<pre>";var_dump($relationData); ?>
         <?php if($relationData['parent_personal_id']==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
-        <?php var_dump($personData); ?>
+        <?php echo "<pre>";var_dump($personData); ?>
         <?php if($personData['id']==$relaionData['child_personal_id']||1) :?>
         <?php
         echo $personData['id']."b".$relaionData['child_personal_id']."a";
