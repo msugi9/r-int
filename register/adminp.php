@@ -39,7 +39,7 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   die();
 }
 session_start();
-$_SESSION["personal_id"] = $personal_id[0]["id"];
+$_SESSION["personal_id"] = $personal_id["id"]["id"];
 
 print_r("登録を受け付けました。");
 print_r("２秒後にリダイレクトします。");
