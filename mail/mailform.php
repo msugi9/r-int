@@ -40,7 +40,7 @@ $header="From: $from\n";
 if(empty($mail1) != true){
     echo "test\n";
 
-    if(mb_send_mail($invitetest_url,$subject,$main)){
+    if(mb_send_mail($invitetest_url,$subject,$main,$header)){
 	echo "招待メールを送信しました\n";
     }else{
 	echo "おくれませんでした\n";
