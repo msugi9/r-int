@@ -43,16 +43,18 @@ $pdo = null;
     <form action="./fix_resort.php" method="post">
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <?php foreach($data as $row) : ?>
+        <?php foreach($sdata as $row) : ?>
         <tr>
           <td><?php echo $row['name']; ?></td>
-          <td><?php print($prefecture[$row['pref_code']]); ?></td>
+          <td><?php echo $prefecture[$row['pref_code']]; ?></td>
           <td><input type="checkbox" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
         </tr>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
       </center>
+      <input type="hidden" name="parentUserId" value="$_POST['parentUserId']">
+      <input type="hidden" name="companyId" value="$_POST['companyId']">
     </form>
   </body>
 </html>
