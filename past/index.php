@@ -22,7 +22,7 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-
+?>
 
 
 <html>
@@ -32,9 +32,7 @@ try{
 </head>
 <body>
 
-  /*$x = $data[0][3];
-  var_dump($x); */
-
+  
   <table>
     <tr>
       <td>県</td>
@@ -46,4 +44,3 @@ try{
 
 </body>
 </html>
-?>
