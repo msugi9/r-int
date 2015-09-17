@@ -22,7 +22,7 @@
   <div class="panel panel-primary">
     
     <div class="panel-heading">
-      <p style="text-align: center">楽々スノボ</p>
+      <h1 style="text-align: center">楽々スノボ</h1>
     </div>
     <div class="list-group">
       <a class="list-group-item" href="/register/loginp.php">個人ログイン</a>
