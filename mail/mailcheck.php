@@ -4,7 +4,7 @@
     <title> 招待ページ</title>
   </head>
   
-  <body bgcolor="#ffffff  " TEXT="#333333  " LINK="#3333cc  ">
+  <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
     <!-- タイトル -->
     <h1 style = "font-size: 16px; font-weight: bold;">招待ページ</h1>
     <!-- タイトル -->
@@ -21,6 +21,18 @@
 		                  <input type="text" name="mail_1" size="30">
 		              </td>
 	                  </tr>
+	      <!--<tr>
+		              <td style="background-color: #eeeeee  ;"></td>
+		              <td style="background-color: #ffffff  ;">
+		                  <input type="text" name="mail_2" size="30">
+		              </td>
+	                  </tr>
+	      <tr>
+		              <td style="background-color: #eeeeee  ;"></td>
+		              <td style="background-color: #ffffff  ;">
+		                  <input type="text" name="mail_3" size="30">
+		              </td>
+	                  </tr>-->
 	              </table>
 	          </td>
 	      </tr>
@@ -36,12 +48,23 @@
 		                <input type="text" name="conf_mail_1" size="30">
 	                    </td>
 	                </tr>
+<!--	    <tr>
+	                    <td style="background-color: #eeeeee  ;"></td>
+	                    <td style="background-color: #ffffff  ;">
+		                <input type="text" name="conf_mail_2"  size="30">
+	                    </td>
+	                </tr>
+	    <tr>
+	                    <td style="background-color: #eeeeee  ;"></td>
+	                    <td style="background-color: #ffffff  ;">
+		                <input type="text" name="conf_mail_3"  size="30">
+	                    </td>
+	                </tr>-->
 	            </table>
 	        </td>
             </tr>
         </table>
-        <br> <input type="submit" name="send" value="送信" style="WIDHT: 50px;HEIGHT: 30px">
+        <br> <input type="submit" name="send" value="送信">
       </form>
-    <a href="https://blooming-dawn-8215.herokuapp.com/adminp.html">TOPに戻る</a>
   </body>
   </html>
