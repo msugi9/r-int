@@ -1,9 +1,13 @@
+<?php
+session_start();
+
+?>
 <html lang = "ja">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title> 招待ページ</title>
   </head>
-  
+
   <body bgcolor="#ffffff  " TEXT="#333333  " LINK="#3333cc  ">
     <!-- タイトル -->
     <h1 style = "font-size: 16px; font-weight: bold;">招待ページ</h1>
@@ -42,6 +46,6 @@
         </table>
         <br> <input type="submit" name="send" value="送信" style="WIDHT: 50px;HEIGHT: 30px">
       </form>
-    <a href="https://blooming-dawn-8215.herokuapp.com/adminp.html">TOPに戻る</a>
+    <a href="https://blooming-dawn-8215.herokuapp.com/top/user_top.php">TOPに戻る</a>
   </body>
   </html>

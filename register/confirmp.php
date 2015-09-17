@@ -7,6 +7,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $id= ($_POST["id"]);
 $pass = ($_POST["password"]);
+$parent_id = ($_POST["parent_id"]);
 
 session_start();
 
@@ -33,6 +34,10 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $personal = $pdo->query($id_sql);
   $personal_id = $personal->fetch();
 
+  $pdo = null;
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
+  $insert = "insert into invite values('$parent_id'," . $personal_id["id"] . ")";
+  $personal = $pdo->exec($insert);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());

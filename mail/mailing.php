@@ -1,4 +1,5 @@
 <?php
+session_start();
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
@@ -50,7 +51,7 @@ try{
 	メールの入力に間違いがあります。もう一度入力して下さい<br>
       </div>
       <div class="list-group">
-	<a class="list-group-item" href="/mailform.php">招待ページに戻る</a>
+	<a class="list-group-item" href="/mail/mailform.php">招待ページに戻る</a>
       </div>
     </div>
     <?php endif; ?>

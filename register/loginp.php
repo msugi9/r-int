@@ -4,6 +4,8 @@ if($_SESSION["personal_id"]){
   header("Location:/top/user_top.php");
   exit;
 }
+
+$parent_id = ($_GET["parent"]);
 ?>
 <HTML>
   <head>
@@ -18,6 +20,7 @@ ID<input type = "text" name ="id";>
 password<input type = "text" name ="password";>
 
 <br>
-<input type ="submit" name ="login" value="login";>
+<input type="hidden" name="parent_id" value=<?php echo $parent_id; ?> />
+<input type ="submit" name ="login" value="login">
 </FORM>
 </HTML>
