@@ -36,7 +36,7 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
   $pdo = null;
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
-  $insert = "insert into invite values('$parent_id'," . $personal_id . ")";
+  $insert = "insert into invite values('$parent_id','$personal_id')";
   $personal = $pdo->exec($insert);
 
 }catch(PDOException $e){
