@@ -30,18 +30,19 @@ session_start();
 
   <!-- タイトル -->
 
-    <form action="./mailing.php" method="post">
+    <form action="./mailing.php" method="post" style="margin: 0px 14%">
       招待する人のURLを入力して下さい。
       <div class="input-group">
 	<span class="input-group-addon">招待するメールアドレス</span>
 	<input type="text" name="mail_1" class="form-control" placeholder="test@test.com">
       </div>
+      <br>
       確認のためもう一度入力して下さい。
       <div class="input-group">
 	<span class="input-group-addon">招待するメールアドレス(確認用)</span>
 	<input type="text" name="conf_mail_1" class="form-control" placeholder="test@test.com">
       </div>
-
+      <br>
       <p>
 	<button type="submit" name="send" value="送信" class="btn btn-primary">送信</button>
 	<button type="button" class="btn btn-default" onclick="location.href='/top/user_top.php'">TOPに戻る</button>
