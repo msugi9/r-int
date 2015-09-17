@@ -50,6 +50,18 @@ echo "<pre>";
               </td>
             </tr>
             <tr>
+              <td style="background-color: #87cefa  ;">住所</td>
+              <td style="background-color: #ffffff  ;">
+                <input type="text" name="address" size="30" value=<?php if($data){echo $data[0]["address"];} ?>>
+              </td>
+            </tr>
+            <tr>
+              <td style="background-color: #87cefa  ;">電話番号</td>
+              <td style="background-color: #ffffff  ;">
+                <input type="text" name="tel" size="30" value=<?php if($data){echo $data[0]["tel"];} ?>>
+              </td>
+            </tr>
+            <tr>
               <td style="background-color: #87cefa  ;">身長</td>
               <td style="background-color: #ffffff  ;">
                 <input type="text" name="height" size="30" value=<?php if($data){echo $data[0]["height"];} ?>>

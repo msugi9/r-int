@@ -16,12 +16,14 @@ try{
     $height=htmlspecialchars($_REQUEST['height']);
     $weight=htmlspecialchars($_REQUEST['weight']);
     $shoe=htmlspecialchars($_REQUEST['shoe_size']);
+    $address=htmlspecialchars($_REQUEST['address']);
+    $tel=htmlspecialchars($_REQUEST['tel']);
     $accessory=$_REQUEST['accessory'];
     $wear=$_REQUEST['wear'];
     $board=$_REQUEST['board'];
     //$email=htmlspecialchars($_REQUEST['email']);
 
-    $insert_sql = "update personal set sex = '$sex', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id = " . $_SESSION["personal_id"];
+    $insert_sql = "update personal set sex = '$sex', address = '$address', tel = '$tel', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id = " . $_SESSION["personal_id"];
 
     $sql = $pdo->exec($insert_sql);
 
