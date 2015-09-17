@@ -21,13 +21,10 @@ try{
     $board=$_REQUEST['board'];
     //$email=htmlspecialchars($_REQUEST['email']);
 
-    $insert_sql = "update personal set sex = '$sex', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id= " . $_SESSION["personal_id"];
+    $insert_sql = "update personal set sex = '$sex', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id = " . $_SESSION["personal_id"];
 
     $sql = $pdo->exec($insert_sql);
 
-    echo "登録しました\n";
-
-    print '<a href="/top/user_top.php">TOPページに戻る</a>';
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -35,3 +32,14 @@ try{
     }
 
 ?>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+登録しました
+<br>
+<a href="/top/user_top.php">TOPページに戻る</a>
+</body>
+</html>
