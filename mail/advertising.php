@@ -30,16 +30,16 @@
     現地に着いてすぐに用具を借りることのできるサービスです。</h2>
     </div>
     </div>
-    
-    <h2 class="bg-success">こんなことありませんか？</h2>
-    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #f5f5dc;">
+
+
+    <h2 class="bg-info">こんなことありませんか？</h2>
+    <div class="well well-lg">
       ・日帰りでスキー旅行にきたのに、レンタルで時間がかかる</br>
       ・正確なサイズを言いたくなくて、記入欄に嘘を書く・もはや書かない</br>
     </div>
+    
+    <h2 class="bg-info">楽天レンタルならその問題を解決出来ます!!</h2>
 
-    <font color="008080">
-    <h2 style = "font-size: 22px; font-weight: bold;">楽天レンタルならその問題を解決出来ます!!</h2>
-    </font>
     <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #f5f5dc;">
 
 	・<font color="ff4500">個人情報登録機能</font>・・・身長や体重など、知られたくない情報を入力することで、旅先で何度もプライバシーとなる情報を入力する必要がなくなります。</br>
