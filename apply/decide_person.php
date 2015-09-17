@@ -21,6 +21,9 @@ try{
   //    print_r($data);
   //    echo "</pre>";
   //  }
+  echo "<pre>";
+  print_r($rdata);
+  echo "------</pre>";
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
