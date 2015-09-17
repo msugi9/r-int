@@ -1,5 +1,5 @@
 <?php
-session_start();
+0;95;csession_start();
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url($database_url);
@@ -60,16 +60,16 @@ try{
 	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a><br>
 	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事ができます</div>
 	    </th>
-	    <th class="success"><a href="/mail/mailform.php">招待</a><br>
+	    <th class="info"><a href="/mail/mailform.php">招待</a><br>
 	      <div class="well well-lg">まだ会員になっていないメンバーをメールで招待できます</div>
 	    </th>
 	  </tr>
 	  <tr>
-	    <th class="success"><a href="/past/index.php">過去データ</a>
+	    <th class="warning"><a href="/past/index.php">過去データ</a>
 	      <div class="well well-lg">今までに行った事のあるスキー場と<br>
 		一緒に行ったことのあるメンバーの履歴を表示します</div>
 	    </th>
-	    <th class="success"><a href="/personalinform/personal_form.php">個人データ変更</a>
+	    <th class="danger"><a href="/personalinform/personal_form.php">個人データ変更</a>
 	      <div class="well well-lg">個人情報の登録・変更ができます</div>
 	    </th>
 	  </tr>
