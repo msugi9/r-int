@@ -20,7 +20,7 @@ try{
 }
 
 $itemCode = array(
-'id'=>'1','name'=>'acce',
+'id'=>'1','name'=>'accessory',
 'id'=>'2','name'=>'board',
 'id'=>'3','name'=>'wear',
 );
