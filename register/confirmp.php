@@ -32,9 +32,10 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 var_dump($pass1[0][0]);
 var_dump(trim($pass1[0]['login_password']));
 var_dump($pass);*/
-var_dump($idd);
+//var_dump($idd);
   if(trim($pass1[0]['login_password'])==$pass)
   echo"ログインに成功しました。";
+  var_dump($idd[0]['id']);
     //header("Location: ./adminp.php");
 
   else echo"失敗しました。"
