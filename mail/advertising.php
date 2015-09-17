@@ -32,14 +32,14 @@
     </div>
 
 
-    <h2 class="bg-info">こんなことありませんか？</h2>
+    <h2 class="text-primary">こんなことありませんか？</h2>
     <div class="well well-lg">
       ・日帰りでスキー旅行にきたのに、レンタルで時間がかかる</br>
       <br>
       ・正確なサイズを言いたくなくて、記入欄に嘘を書く・もはや書かない</br>
     </div>
     
-    <h2 class="bg-info">楽天レンタルならその問題を解決出来ます!!</h2>
+    <h2 class="text-primary">楽天レンタルならその問題を解決出来ます!!</h2>
 
     <div class="panel panel-warning">
       <div class="panel-heading">
@@ -60,7 +60,7 @@
       </div>
     </div>
     
-    <h2 class="bg-info">レンタルを利用するには</h2>
+    <h2 class="text-primary">レンタルを利用するには</h2>
 
     <div class="panel panel-success">
 
