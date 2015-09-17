@@ -46,7 +46,7 @@ $pdo = null;
         <?php foreach($data as $row) : ?>
         <tr>
           <td><?php echo $row['name']; ?></td>
-          <td><?php echo $prefecture[$row['pref_code']]; ?></td>
+          <td><?php print($prefecture[$row['pref_code']]); ?></td>
           <td><input type="checkbox" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
         </tr>
         <?php endforeach; ?>
