@@ -39,13 +39,6 @@ $numOfPerson = 5;
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <?php
-        for($numOfMember=1;$numOfMember<$numOfPerson;$numOfMember++){
-          echo '<tr>';
-          echo '<td>名前' .$numOfMember .'</td>';
-          echo '<td><input type="checkbox" name="prsn'.$numOfMember.'"></td>';
-          echo '</tr>';
-        }?>
         <?php foreach ($data as $personData) : ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
