@@ -6,13 +6,16 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 
 $pdo = null;
-$name= ($_POST["name"]);
-$id = ($_POST["id"]);
-$pass = ($_POST["password"]);
-$charge = ($_POST["charge"]);
-$mail = ($_POST["mail"]);
-$address = ($_POST["address"]);
-$tel = ($_POST["tel"]);
+echo "<pre>";
+var_dump($_POST);exit;
+
+
+$personalId = ($_POST["id"]);
+$companyId = ($_POST["password"]);
+$skiResortId = ($_POST["charge"]);
+$playDate = ($_POST["mail"]);
+$userId = ($_POST["address"]);
+$itemId = ($_POST["tel"]);
 $ski = ($_POST["ski"]);
 try{
 
@@ -23,17 +26,17 @@ try{
 
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
-/* $pdo = null;
-$pdo = new PDO($dsn, $url['user'], $url['pass']);
+  /* $pdo = null;
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql2 = "select name from company where id = 1";
   $result1 = $pdo->query($sql2);
   $name1 = $result1->fetchAll();
 
-echo $name1;*/
+  echo $name1;*/
 
-}catch(PDOException $e){
+  }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
-}
-echo"登録を受け付けました。";
-?>
+  }
+  echo"登録を受け付けました。";
+  ?>

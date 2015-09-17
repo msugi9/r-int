@@ -7,37 +7,52 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "select * from ski_resort";
+  $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-  
+  $rsql = "select * from relation";
+  $rresult = $pdo->query($rsql);
+  $rdata = $result->fetchAll();
+  $isql = "select * from item";
+  $iresult = $pdo->query($isql);
+  $idata = $result->fetchAll();
+//  if($data){
+//    echo "<pre>";
+//    print_r($data);
+//    echo "</pre>";
+//  }
+
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
 
-//$userId = ;
-//$relatedPerson = ;
-$personId = 1;
-$numOfPerson = 5;
+$parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
+$companyId = $_POST["something"];//レンタル会社のidもとってくる？？
 ?>
 <html>
   <head><title>メンバー決定</title></head>
   <body>
     <center>
-    参加者を選択してください<TMPL_VAR NAME=HOME>
+    <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+      <tr>あなたの名前は<?php echo $userName?>。</tr>
+    </table>
+    参加者を選択してください。<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <?php
-        for($numOfMember=1;$numOfMember<$numOfPerson;$numOfMember++){
-          echo '<tr>';
-          echo '<td>名前' .$numOfMember .'</td>';
-          echo '<td><input type="checkbox" name="prsn'.$numOfMember.'"></td>';
-          echo '</tr>';
-        }?>
+        <?php foreach ($data as $personData) : ?>
+        <?php if($rdata['parent_personal_id']==$parentUserId) : ?>
+        <tr style="background-color: #ffffff  ;">
+          <td align="left"><?php echo $personData['name']; ?></td>
+          <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
+        </tr>
+        <?php endif; ?>
+        <?php endforeach; ?>
       </table>
       <!--for文的な？-->
+      <input type="hidden" name="parentUserId" value="$parentUserId">
+      <input type="hidden" name="companyId" value="$companyId">
       <input type="submit" value="メンバー確定">
     </form>
     </center>
