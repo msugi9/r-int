@@ -32,7 +32,15 @@ try{
 </head>
 <body>
 
-  
+  <?php
+  $x = $data[0][4];
+  foreach($data as $tmp){
+    if($x == $tmp[4])
+    $child = $tmp[7];
+    echo $child;
+  }
+  else break;
+  ?>
   <table>
     <tr>
       <td>県</td>
