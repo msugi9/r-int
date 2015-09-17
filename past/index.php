@@ -34,12 +34,14 @@ try{
 
   <?php
   $x = $data[0][4];
-  var_dump($x);
-  /*foreach($data as $tmp){
-    if($x == $tmp[4])
+
+  foreach($data as $tmp){
+    if($x == $tmp[4]){
     $child = $tmp[7];
-    echo $child;*/
-  
+    echo $child;
+  }
+
+
 
   ?>
   <table>
