@@ -1,16 +1,21 @@
+<?php
+session_start();
+//var_dump($_SESSION["personal_id"])
+?>
+
 <html lang = "ja">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>個人情報入力ページ</title>
   </head>
-  
+
   <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
     <!-- タイトル -->
     <h1 style = "font-size: 16px; font-weight: bold;">個人情報入力ページ</h1>
     <!-- タイトル -->
 
     以下の欄に入力することで、お客様それぞれに合わせたサイズの用具を借りることが出来ます。
-    
+
     <!-- HTMLフォーム表示 -->
     <form action="./personalinfo.php" method="post">
       <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 2px 0pt 0pt 0px;">
@@ -32,7 +37,7 @@
 		              <td style="background-color: #ffffff  ;">
 		  <input type="text" name="shoe_size" size="30"></td>
 		                  </tr>
-		      
+
 		      <tr>
 		              <td style="background-color: #87cefa  ;">小物</td>
 		              <td style="background-color: #ffffff  ;">
@@ -56,8 +61,8 @@
 		              <td style="background-color: #ffffff  ;">
 			  <input type="text" name="email" size="30"></td>
 		      </tr>
-	      
-		      
+
+
 	              </table>
 	          </td>
 	      </tr>
@@ -68,6 +73,6 @@
       </div>
       </form>
     <!-- HTMLフォーム表示 -->
-    
+
   </body>
   </html>

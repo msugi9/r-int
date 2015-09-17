@@ -10,25 +10,11 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
-
-$personId = 1;
-$numOfMember = 3;
-
-//とりあえず全部借りる扱い
-$someFlg = 1;
-
-//function check_rent($someFlg){
-//  if($someFlg)     $outputStr='○';
-//  else if($someFlg)$outputStr='×';
-//  else     $outputStr='△';
-//
-//  echo $outputStr;
-//}
 ?>
 
 <html>
@@ -44,9 +30,9 @@ $someFlg = 1;
           <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php $prtcpntId = "prtcpnt" .$personData['id'];?>
-        <?php if($_POST["$prtcpntId"]) :?>
-        <?php
+        <?php $prsnId = "prsn" .$personData['id'];?>
+        <?php if($_POST["$prsnId"]) :?>
+        <?php 
         $prsnId = "prsn" .$personData['id'];
         $boardId = "board" .$personData['id'];
         $wearId = "wear" .$personData['id'];
@@ -58,12 +44,16 @@ $someFlg = 1;
           <td align="center"><?php if($_POST["$wearId"]){echo "○";}else{echo "×";}?></td>
           <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
         </tr>
+        <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
+        <input type="hidden" name="boardId" value="<?php echo $boardId; ?>">
+        <input type="hidden" name="wearId" value="<?php echo $wearId; ?>">
+        <input type="hidden" name="acceId" value="<?php echo $acceId; ?>">
         <?php endif; ?>
         <?php endforeach; ?>
       </table>
       </center>
       <!--for文的な？-->
-
+      
       <input type="hidden" name="id" value="1">
       <input type="submit" value="申し込む">
     </form>

@@ -1,3 +1,4 @@
+
 <?php
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
@@ -9,7 +10,7 @@ try{
   //sql文
   $ssql = "select * from ski_resort";
   $sresult = $pdo->query($ssql);
-  $sdata = $result->fetchAll();
+  $sdata = $sresult->fetchAll();
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -18,6 +19,17 @@ try{
 
 $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
 
+$error_msg = '';
+if (isset($_POST['submit'])) { // POST送信されたか
+  // チェック数のカウントと必要数のチェック
+  // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
+  if (is_array($_POST['skiResortId']) && count($_POST['skiResortId']) <= 1) {
+    exit;
+  } else {
+    $error_msg = '選びすぎ';
+    echo $error_msg;
+  }
+}
 $prefecture = array(
 '1'=>'北海道', '2'=>'青森県', '3'=>'岩手県', '4'=>'宮城県', '5'=>'秋田県',
 '6'=>'山形県', '7'=>'福島県', '8'=>'茨城県', '9'=>'栃木県', '10'=>'群馬県',
@@ -33,17 +45,7 @@ $prefecture = array(
 
 $pdo = null;
 
-$error_msg = ''; // スコープの関係上初期化しないといけない
-if (isset($_POST['submit'])) { // POST送信されたか
-  // チェック数のカウントと必要数のチェック
-  // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
-  if (is_array($_POST['ski_resort']) && count($_POST['ski_resort']) <= 1) {
-    header('Location:' . $thisfile);
-    exit;
-  } else {
-    $error_msg = '二つ以上選択してください。';
-  }
-}
+
 
 ?>
 <html>
@@ -52,16 +54,48 @@ if (isset($_POST['submit'])) { // POST送信されたか
     <form action="./fix_resort.php" method="post">
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <?php foreach($data as $row) : ?>
+        <tr>
+          <p>
+            行く日を選んでください
+          </p>
+          <select name="year">
+            <?php optionLoop('2000', date('Y'), '2100');?>
+          </select>
+          年
+          <select name="month">
+            <?php optionLoop('1', '12', '6');?>
+          </select>
+          月
+          <select name="day">
+            <?php optionLoop('1', '31', '15');?>
+          </select>
+          日
+          <?php
+          //セレクトオプションのループ設定
+          function optionLoop($start, $end, $value = null){
+            
+            for($i = $start; $i <= $end; $i++){
+              if(isset($value) &&  $value == $i){
+                echo "<option value=\"{$i}\" selected=\"selected\">{$i}</option>";
+              }else{
+                echo "<option value=\"{$i}\">{$i}</option>";
+              }
+            }
+          }
+          ?>
+        </tr>
+        <?php foreach($sdata as $row) : ?>
         <tr>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
-          <td><input type="checkbox" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
+          <td><input type="checkbox" name="skiResortId" value="1"></td>
         </tr>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
       </center>
+      <input type="hidden" name="parentUserId" value=",?php echo $parentUserId; ?>">
+      <input type="hidden" name="companyId" value="<?php echo $companyId; ?>">
     </form>
   </body>
 </html>

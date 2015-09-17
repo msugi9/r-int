@@ -28,7 +28,13 @@ try{
 }
 
 $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
+//$childrenUserId = $_POST["something"]; //子ユーザのidをとってくる？？
 $companyId = $_POST["something"];//レンタル会社のidもとってくる？？
+
+//$relationPsql = "select child_person_id from relation where parent_person_id = '$parentUserId'";
+//$relationPresult = $pdo->query($relationPsql);
+//$relationPdata = $relationPresult->fetchAll();
+
 ?>
 <html>
   <head><title>メンバー決定</title></head>
