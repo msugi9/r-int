@@ -93,7 +93,10 @@ $pdo = null;
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
           <td><input type="radio" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
-          <?php $_SESSION['ski_resort_name']=$row['name']; ?>
+          <?php 
+          $_SESSION['ski_resort_name']=$row['name']; 
+          echo $row['name']."abc";
+          ?>
         </tr>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
