@@ -33,7 +33,6 @@ try{
     echo "登録しました\n";
 
     //print '<a href="TOPページ">リンク</a>'
-    
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
