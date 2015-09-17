@@ -28,14 +28,17 @@ try{
   <h1 style="text-align: center">
      <?php echo $name[0]["name"]; ?>様のトップページ
   </h1>
-  <div style="center">
-    <a href="../company/order.php">注文一覧</a>
-  </div>
 
   <table border="1" align="center">
     <tr>
-      <th><a href="../company/itemregist.php">アイテム登録</a></th>
+      <th><a href="/company/itemregist.php">アイテム登録</a></th>
       <!--<th><a href="">企業データ変更</a></th>-->
+      <th><a href="/company/order.php">注文一覧</a></th>
+    </tr>
+    <tr>
+      <th>
+        <a href="/company/company_form">企業データ変更</a>
+      </th>
     </tr>
   </table>
   <div style="margin-top: 30px;text-align: center">
