@@ -51,22 +51,22 @@ session_start();
             <tr>
                             <td style="background-color: #87cefa  ;">小物</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="radio" name="accessory" value="yes" size="30" checked="checked"/>あり
-                <input type="radio" name="accessory" value="no" size="30"/>なし
+                <input type="radio" name="accessory" value="true" size="30" checked="checked"/>あり
+                <input type="radio" name="accessory" value="false" size="30"/>なし
               </td>
             </tr>
             <tr>
                             <td style="background-color: #87cefa  ;">ウェア</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="radio" name="wear" value="yes" size="30" checked="checked"/>あり
-                <input type="radio" name="wear" value="no" size="30" />なし
+                <input type="radio" name="wear" value="true" size="30" checked="checked"/>あり
+                <input type="radio" name="wear" value="false" size="30" />なし
               </td>
             </tr>
             <tr>
                             <td style="background-color: #87cefa  ;">ボード</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="radio" name="board" value="yes" size="30" checked="checked"/>あり
-                <input type="radio" name="board" value="no" size="30" />なし
+                <input type="radio" name="board" value="true" size="30" checked="checked"/>あり
+                <input type="radio" name="board" value="false" size="30" />なし
               </td>
             </tr>
 
