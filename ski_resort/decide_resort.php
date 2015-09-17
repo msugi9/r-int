@@ -94,6 +94,8 @@ $pdo = null;
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
           <td><input type="radio" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
         </tr>
+        <pre><?php print_r($row) ;?></pre>
+        <?php echo "---";?>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
