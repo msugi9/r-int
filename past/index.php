@@ -36,6 +36,7 @@ try{
   foreach($data as $tmp){
     if($x == $tmp[4])
     echo $tmp[9];
+    
   }
 
 
