@@ -10,7 +10,7 @@ try{
     $ssql = "select * from ski_resort";
     $sresult = $pdo->query($ssql);
     $sdata = $sresult->fetchAll();
-    $comsql = "select * from company where company_id = '$_POST['skiResortId']'";
+    $comsql = "select * from company where ski_resort_id = '$_POST['skiResortId']'";
     $comresult = $pdo->query($comsql);
     $comdata = $comresult->fetchAll();
     echo $comdata<br>;
