@@ -7,7 +7,7 @@ $cmail2=$_REQUEST['conf_mail_2'];
 $cmail3=$_REQUEST['conf_mail_3'];
 
 $subject="subjecttest";
-
+echo "test";
 $judge=0;
 
 if(strcmp($mail1,$cmail1) != 0){
