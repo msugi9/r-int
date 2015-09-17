@@ -47,12 +47,9 @@ foreach($data as $tmp){
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach ($rdata as $relationData) : ?>
-        
-        <?php echo "<pre>";var_dump($relationData); ?>
         <?php if($relationData["parent_personal_id"]==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
-        <?php echo "<pre>";var_dump($personData); ?>
-        <?php if($personData["id"]==$relationData["child_personal_id"]||1) :?>
+        <?php if($personData["id"]==$relationData["child_personal_id"]) :?>
         <?php
         echo $personData["id"]."b".$relationData["child_personal_id"]."a";
         ?>
