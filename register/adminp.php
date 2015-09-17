@@ -20,7 +20,7 @@ try{
   $result = $pdo->exec($sql);
 
   //auto_incrimentのpersonal_idを取得
-  $id_sql = "SELECT currval('personal_id')";
+  $id_sql = "SELECT currval('personalid'::regclass)";
   $personal_id = $pdo->query($id_sql);
   var_dump($personal_id);
 
