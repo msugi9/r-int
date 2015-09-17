@@ -9,7 +9,7 @@ session_start();
     <title>アイテム登録ページ</title>
   </head>
 
-  <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
+  <body bgcolor="#ffffff  " TEXT="#333333  " LINK="#3333cc  ">
     <!-- タイトル -->
     <h1 style = "font-size: 16px; font-weight: bold;">アイテム登録ページ</h1>
     <!-- タイトル -->
@@ -22,49 +22,55 @@ session_start();
 	          <td bgcolor="#008b8b  ">
 	              <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 20px;">
 		      <tr>
-			<td style="background-color: #87cefa  ;">ボードS
+			<td>ボードS
 			</td>
-			<td style="background-color: #ffffff  ;">
+			<td>
 			   <input type="checkbox" name="board_s" value="1" size="30">
-			  <input type="text" name="height" size="30">個
+			  <input type="text" name="sboard_item" size="30">個
 			 
 			</td>
 		      </tr>
 		      <tr>
-			<td style="background-color: #87cefa  ;">ボードM
+			<td>ボードM
 			</td>
 			<td style="background-color: #ffffff  ;">
-			  <input type="text" name="weight" size="30">
+			  <input type="checkbox" name="board_m" value="1" size="30">
+			  <input type="text" name="mboard_item" size="30">
 			</td>
 		      </tr>
 	      	      <tr>
-			<td style="background-color: #87cefa  ;">ボードL</td>
+			<td>ボードL</td>
 			<td style="background-color: #ffffff  ;">
-			  <input type="text" name="shoe_size" size="30"></td>
+			  <input type="checkbox" name="board_l" value="1" size="30">
+			  <input type="text" name="lboard_item" size="30"></td>
 		      </tr>
 		      <tr>
-			<td style="background-color: #87cefa  ;">ウェアS
+			<td>ウェアS
 			</td>
 			<td style="background-color: #ffffff  ;">
-			  <input type="text" name="height" size="30">
+			  <input type="checkbox" name="wear_s" value="1" size="30">
+			  <input type="text" name="swear_item" size="30">
 			</td>
 		      </tr>
 		      <tr>
-			<td style="background-color: #87cefa  ;">ウェアM
+			<td>ウェアM
 			</td>
 			<td style="background-color: #ffffff  ;">
-			  <input type="text" name="weight" size="30">
+			  <input type="checkbox" name="wear_m" value="1" size="30">
+			  <input type="text" name="mwear_item" size="30">
 			</td>
 		      </tr>
 	      	      <tr>
-			<td style="background-color: #87cefa  ;">ウェアL</td>
+			<td>ウェアL</td>
 			<td style="background-color: #ffffff  ;">
-			  <input type="text" name="shoe_size" size="30"></td>
+			  <input type="checkbox" name="wear_l" value="1" size="30">
+			  <input type="text" name="lwear_item" size="30"></td>
 		      </tr>
 	      	      <tr>
-			<td style="background-color: #87cefa  ;">小物類</td>
+			<td>小物類</td>
 			<td style="background-color: #ffffff  ;">
-			  <input type="text" name="shoe_size" size="30"></td>
+			  <input type="checkbox" name="accessory_bool" value="1" size="30">
+			  <input type="text" name="accessory_item" size="30"></td>
 		      </tr>
 
 	    </table>
