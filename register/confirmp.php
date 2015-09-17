@@ -51,7 +51,7 @@ var_dump($id1);*/
   if(trim($pass1[0]['login_password'])==$pass){
     echo"ログインに成功しました。\n";
     print_r("２秒後にリダイレクトします。");
-    header( "refresh:2;url=/personalinform/personal_form.php" );
+    header( "refresh:2;url=/top/user_top.php" );
   }else{
     echo"失敗しました。";
   }
