@@ -6,7 +6,6 @@ if($_SESSION["personal_id"]){
 }
 
 $parent_id = ($_GET["parent"]);
-var_dump($parent_id);
 ?>
 <HTML>
   <head>
@@ -21,7 +20,7 @@ ID<input type = "text" name ="id";>
 password<input type = "text" name ="password";>
 
 <br>
-<input type="hidden" name="parent_id" value='$parent_id'>
+<input type="hidden" name="parent_id" value=$parent_id>
 <input type ="submit" name ="login" value="login">
 </FORM>
 </HTML>
