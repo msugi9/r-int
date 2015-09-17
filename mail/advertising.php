@@ -54,12 +54,12 @@
     <font color="66cdaa">
     <h2 style = "font-size: 19px; font-weight: bold;">レンタルを利用するには</h2>
     </font>
-    <div class="panel panel-default">
+    <div class="panel panel-success">
 
       <div class="panel-body">
 	このサービスを利用するには、以下のリンクから必要な情報を入力して下さい
       </div>
-      <div class="list-group list-group-success">
+      <div class="list-group">
 	<a class="list-group-item" href="../adminp.html">新規登録の方はこちら</a>
 	<a class="list-group-item" href="../register/loginp.html">既に会員の方はログインして下さい</a>
       </div>
