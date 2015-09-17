@@ -46,8 +46,8 @@ $numOfMember = 3;
         <?php endforeach; ?>
       </table>
       <!--/for文的な？-->
-      
-      
+      <input type="hidden" name="parentUserId" value="$_POST["parentUserId"]">
+      <input type="hidden" name="companyId" value="$_POST["companyId"]">
       <input type="submit" value="レンタル品確定">
     </form>
     </center>
