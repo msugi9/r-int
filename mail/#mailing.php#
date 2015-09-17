@@ -51,8 +51,8 @@ try{
 	  <?php if($judge==1){echo "メールの入力に間違いがあります。もう一度入力して下さい<br>";}?>
       </div>
       <div class="list-group">
-	  <a class="list-group-item" href=<?php if($judge==1){echo $returnadd}?>><?php if($judge==1){echo $returnhome;}?></a>
-      </div>
+	  <a class="list-group-item" href=<?php if($judge==1){echo $returnadd}?>><?php if($judge==1){echo $returnhome;}></a>
+</div>
     </div>
     <h2 class="text-primary">
       <?php if($judge!=1){echo "$mail <br />";echo "招待メールを送信しました<br />";}?>
