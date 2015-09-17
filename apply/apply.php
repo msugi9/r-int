@@ -19,10 +19,7 @@ try{
   die();
 }
 
-//$userId = ;
-//$relatedPerson = ;
-$personId = 1;
-$numOfMember = 3;
+
 ?>
 <html>
   <head><title>レンタル品選択</title></head>
@@ -44,13 +41,13 @@ $numOfMember = 3;
           <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
           <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
         </tr>
-        <input type="hidden" name="prtcpnt<?php echo $personData['id'];?>" value="1">
+        <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <?php endif; ?>
         <?php endforeach; ?>
       </table>
       <!--/for文的な？-->
-      <input type="hidden" name="parentUserId" value="$_POST["parentUserId"]">
-      <input type="hidden" name="companyId" value="$_POST["companyId"]">
+      <input type="hidden" name="parentUserId" value="<?php echo $_POST["parentUserId"]; ?>">
+      <input type="hidden" name="companyId" value="<?php echo $_POST["companyId"]; ?>">
       <input type="submit" value="レンタル品確定">
     </form>
     </center>
