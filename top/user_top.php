@@ -9,9 +9,11 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "select * from personal where id = " . $_SESSION["personal_id"];
+  $sql = "select name from personal where id = " . $_SESSION["personal_id"];
+  var_dump($sql);
   $result = $pdo->query($sql);
-  $data = $result->fetchAll();
+  $name = $result->fetchAll();
+  var_dump($name);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -24,7 +26,7 @@ try{
 </head>
 <body>
   <h1 style="text-align: center">
-    <?php $data["name"] ?>さんのトップページ
+    <?php $name; ?>さんのトップページ
   </h1>
   <table border="1" align="center">
     <tr>
