@@ -6,6 +6,9 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 
 $pdo = null;
+echo "<pre>";
+var_dump($_POST);exit;
+
 
 $personalId = ($_POST["id"]);
 $companyId = ($_POST["password"]);
@@ -20,7 +23,7 @@ try{
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
   $sql = "insert into company (name,login_id,login_password,mail_address,charge,address,tel,ski_resort_id) values ( '$name','$id','$pass','$mail','$charge','$address',$tel,$ski)";
-  
+
   $result = $pdo->exec($sql);
   //$data = $result->fetchAll();
   /* $pdo = null;
@@ -28,9 +31,9 @@ try{
   $sql2 = "select name from company where id = 1";
   $result1 = $pdo->query($sql2);
   $name1 = $result1->fetchAll();
-  
+
   echo $name1;*/
-  
+
   }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
