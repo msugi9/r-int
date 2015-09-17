@@ -30,7 +30,7 @@ session_start();
 
   <!-- タイトル -->
 
-    <form action="./mailing.php" method="post" style="margin: 0px 14%">
+    <form action="./mailing.php" method="post" style="margin: 0px 25%">
       招待する人のURLを入力して下さい。
       <div class="input-group">
 	<span class="input-group-addon">招待するメールアドレス</span>
