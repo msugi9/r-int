@@ -1,11 +1,11 @@
 <?php
 session_start();
-if($_SESSION["personal_id"]){
-  header("Location:/top/user_top.php");
+
+if($_SESSION["company_id"]){
+  header("Location:/top/company_top.php");
   exit;
 }
 
-$parent_id = ($_GET["parent"]);
 ?>
 <HTML>
   <html lang="en">
