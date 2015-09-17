@@ -12,7 +12,6 @@ try{
   $result = $pdo->query($sql);
   $ski_resort = $result->fetchAll();
 
-var_dump($ski_resort);
 
 
 }catch(PDOException $e){
@@ -45,6 +44,7 @@ TEL<input type = "text" name ="tel";>
     $option = '<option value="' . $value['id'] . '">' . $value['name'] . '</option>';
     var_dump($option);
   }
+  var_dump("hoge");
  ?>
 </select>
 <br>
