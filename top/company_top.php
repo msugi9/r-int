@@ -50,23 +50,28 @@ try{
       </h1>
     </div>
 
+    <div class="container">
+      <table class="table" border="1" align="center">
   
-  <table border="1" align="center">
-    <tr>
-      <th class="warning"><a href="/company/itemregist.php">アイテム登録</a></th>
-      <!--<th><a href="">企業データ変更</a></th>-->
-      <th class="warning"><a href="/company/order.php">注文一覧</a></th>
-    </tr>
-    <tr>
-      <th class="warning">
-        <a href="/company/company_form">企業データ変更</a>
-      </th>
-      <th class="warning">
-      </th>
-    </tr>
-  </table>
-  <div style="margin-top: 30px;text-align: center">
-    <button type="button" class="btn btn-primary" onclick="location.href='/top/logoutc.php'">ログアウト</button>
-  </div>
+	<tr>
+	  <th class="warning"><a href="/company/itemregist.php">アイテム登録</a></th>
+	  <!--<th><a href="">企業データ変更</a></th>-->
+	  <th class="warning"><a href="/company/order.php">注文一覧</a></th>
+	</tr>
+	<tr>
+	  <th class="warning">
+            <a href="/company/company_form">企業データ変更</a>
+	  </th>
+	  <th class="warning">
+	  </th>
+	</tr>
+      </table>
+    </div>
+    <div style="margin-top: 30px;text-align: center">
+      <p>
+	<button type="button" class="btn btn-primary" onclick="location.href='/top/logoutc.php'">ログアウト</button>
+      </p>
+    </div>
 </body>
-</html>
+  </html>
+  
