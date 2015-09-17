@@ -10,20 +10,16 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
+  /////////////////////////////////
   $rsql = "select * from relation";
   $rresult = $pdo->query($rsql);
   $rdata = $rresult->fetchAll();
+  /////////////////////////////////
   $isql = "select * from item";
   $iresult = $pdo->query($isql);
   $idata = $iresult->fetchAll();
-  //  if($data){
-  //    echo "<pre>";
-  //    print_r($data);
-  //    echo "</pre>";
-  //  }
-  echo "<pre>";
-  print_r($rdata);
-  echo "------</pre>";
+  /////////////////////////////////
+  
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -31,15 +27,10 @@ try{
 }
 session_start();
 $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる？？
-//$childrenUserId = $_POST["something"]; //子ユーザのidをとってくる？？
 $companyId = $_SESSION["company_id"];//レンタル会社のidもとってくる？？
 foreach($data as $tmp){
   if($tmp['id']==$parentUserId)$userName = $tmp['name'];
 }
-//$relationPsql = "select child_person_id from relation where parent_person_id = '$parentUserId'";
-//$relationPresult = $pdo->query($relationPsql);
-//$relationPdata = $relationPresult->fetchAll();
-
 ?>
 <html lang = "ja">
   <head>
@@ -56,9 +47,9 @@ foreach($data as $tmp){
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach ($rdata as $relationData) : ?>
-        <?php if($relationData['parent_personal_id']==$parentUserId) : ?>
+        <?php if($relationData['parent_personal_id']==$parentUserId||1) : ?>
         <?php foreach ($data as $personData) : ?>
-        <?php if($personData['id']==$relaionData['child_person_id']||1) :?>
+        <?php if($personData['id']==$relaionData['child_person_id']) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
