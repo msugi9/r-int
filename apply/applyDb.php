@@ -28,7 +28,7 @@ try{
   $apsql = "insert into apply (personal_id, company_id, ski_resort_id, play_date) values ('$personalId','$companyId','$skiResortId','$playDate')";
   $apresult = $pdo->exec($apsql);
   if (!$apresult) {
-    exit('データを登録できませんでした。');
+    print('データを登録できませんでした。');
   }
   //sql文
   $apidsql = "select id from apply where person_id =".$personalId." and play_date = ".$playDate;
