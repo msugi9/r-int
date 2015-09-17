@@ -25,7 +25,7 @@
       <h1 style="text-align: center">楽々スノボ</h1>
     </div>
     <div class="list-group">
-      <a class="list-group-item" href="/register/loginp.php">個人ログイン</a>
+      <a class="list-group-item" href="/register/loginp.php" style="text-align: center">個人ログイン</a>
       <a class="list-group-item" href="/register/adminp.php">個人新規ログイン</a>
       <a class="list-group-item" href="/register/loginc.php">企業ログイン</a>
       <a class="list-group-item" href="/register/adminc1.php">企業新規ログイン</a>
