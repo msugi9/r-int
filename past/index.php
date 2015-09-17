@@ -32,19 +32,19 @@ try{
 ?>
 
 
+
+
 <html>
 <head>
   <title>過去のデータ</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
-<table>
-  <tr>
-    <td>スキー場</td>
-    <td>参加者</td>
-  </tr></table></body></html><?php
-  $x = $data[0]["play_date"];
-  echo $x;
+  <table>
+
+  <?php
+  $x = $data[0]["play_date"];?>
+  <caption><?php $x ?><caption><?php
 foreach($data as $tmp){
     if($x == $tmp["play_date"]){
       echo $tmp["name"];
@@ -95,8 +95,7 @@ foreach($data as $tmp){
   }
 }
 }
+?>
 
-
-
-
-  ?>
+</body>
+</html>
