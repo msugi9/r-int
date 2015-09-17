@@ -33,7 +33,8 @@ var_dump($pass1[0][0]);
 var_dump(trim($pass1[0]['login_password']));
 var_dump($pass);*/
 //var_dump($idd);
-var_dump($idd[0]['id']);
+$id1=($_SESSION[$idd[0]['id']]);
+var_dump($id1);
   if(trim($pass1[0]['login_password'])==$pass)
   echo"ログインに成功しました。";
 
