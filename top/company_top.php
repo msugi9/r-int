@@ -55,7 +55,7 @@ try{
   
 	<tr>
 	  <th class="warning"><a href="/company/itemregist.php">アイテム登録</a><br>
-	    <div class="well well-lg">レンタル品の登録をこちらで行う事ができます</div>
+	    <div class="well well-lg">レンタルする品物の登録をこちらで行う事ができます</div>
 	  </th>
 	  <!--<th><a href="">企業データ変更</a></th>-->
 	  <th class="warning"><a href="/company/order.php">注文一覧</a><br>
@@ -65,7 +65,7 @@ try{
 	<tr>
 	  <th class="warning">
             <a href="/company/company_form">企業データ変更</a><br>
-	    <div class="well well-lg">企業情報の登録・更新ができますの</div>
+	    <div class="well well-lg">企業情報の登録・更新ができます</div>
 	  </th>
 	  <th class="warning">
 	  </th>
