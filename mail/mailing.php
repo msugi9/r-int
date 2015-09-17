@@ -20,12 +20,12 @@ try{
     
     if($judge == 1){
 	echo "もう一度入力して下さい<br>";
-	print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/mailform.html">招待ページに戻る</a>';
+	print '<ahref="/mailform.php">招待ページに戻る</a>';
     }else{
 	echo "$mail <br />";
 	echo "招待メールを送信しました<br />";
-	print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/advertising.html">招待メールを見る</a><br />';
-	print '<a href="TOPページ">TOPページに戻る</a><br />';
+	print '<a href="/advertising.php">招待メールを見る</a><br />';
+	print '<a href="../top/user_top.php">TOPページに戻る</a><br />';
     }
 }catch(PDOException $e){
     print('Error:'.$e->getMessage());

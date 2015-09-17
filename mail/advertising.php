@@ -55,37 +55,16 @@
     <h2 style = "font-size: 19px; font-weight: bold;">レンタルを利用するには</h2>
     </font>
     <div class="panel panel-default">
-      <div class="panel-heading">
-	パネルのヘッダー
-      </div>
+
       <div class="panel-body">
-	パネルの内容
+	このサービスを利用するには、以下のリンクから必要な情報を入力して下さい
       </div>
       <div class="list-group">
-	<a class="list-group-item" href="../adminp.html">メニューＡ</a>
-	<a class="list-group-item" href="../register/loginp.html">メニューＢ</a>
+	<a class="list-group-item" href="../adminp.html">新規登録の方はこちら</a>
+	<a class="list-group-item" href="../register/loginp.html">既に会員の方はログインして下さい</a>
       </div>
-      <div class="panel-footer">
-	パネルのフッター
+
       </div>
-      </div>
-      以下のサイトより必要事項の記入を行ってください。<br>
-      <div class="table-responsive">
-	<table class="table table-striped table-bordered table-hover ">
-	  <thead>
-	    <tr>
-	      <th>新規登録の方はこちらから</th>
-	      <th>既に会員の方はこちらから</th>
-	    </tr>
-	  </thead>
-	  <tbody>
-	    <tr>
-	      <td><a href="../adminp.html">会員登録</a></td>
-	      <td><a href="../register/loginp.html">ログインページ</a></td>
-	    </tr>
-	  </tbody>
-	</table>
-	</div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
