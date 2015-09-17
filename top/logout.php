@@ -9,7 +9,7 @@
     header( "refresh:2;url=/register/loginp.html" );
 ?>
 
-<<html>
+<html>
 <head>
   <title>ログアウト</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
