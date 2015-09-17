@@ -39,7 +39,7 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-echo"登録を受け付けました。";
+echo"登録を受け付けました。<br>";
 ?>
 <html>
   <head>
