@@ -12,7 +12,6 @@ try{
   $result = $pdo->query($sql);
   $ski_resort = $result->fetchAll();
 
-var_dump($ski_resort);
 
 
 }catch(PDOException $e){
@@ -42,8 +41,8 @@ TEL<input type = "text" name ="tel";>
 スキー場<select name="ski">
   <?php
   foreach ($ski_resort as $value) {
-    $option = '<option value="' . $value['id'] . '">' . $value['name'] . '</option>';
-    var_dump($option);
+    $option = '<option value="' . $value['id'] . '">' . trim($value['name']) . '</option>';
+    echo $option;
   }
  ?>
 </select>
