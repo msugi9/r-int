@@ -13,7 +13,11 @@ try{
   var_dump($sql);
   $result = $pdo->query($sql);
   $name = $result->fetchAll();
+  echo "<pre>";
   var_dump($name);
+  var_dump($name["0"]);
+  var_dump($name["0"]["name"]);
+  var_dump($name["name"]);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
