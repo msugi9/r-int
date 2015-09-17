@@ -46,7 +46,7 @@ try{
   <body>
     <div class="page-header">
       <h1><span class="label label-warning">楽々スノボ</span></h1>
-      <h2 style="text-align: center">
+      <h2>
 	<span class="label laber-info">
 	  <?php echo $name[0]["name"]; ?>さんのトップページ
 	</span>
