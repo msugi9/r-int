@@ -51,10 +51,6 @@ $someFlg = 1;
         $boardId = "board" .$personData['id'];
         $wearId = "wear" .$personData['id'];
         $acceId = "acce" .$personData['id'];
-        
-        $flg = $boardId;
-        echo 'flg='.$flg;
-        echo 'REQUEST='.$_REQEST['$flg'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
