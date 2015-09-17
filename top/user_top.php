@@ -46,13 +46,13 @@ try{
   <body>
     <div class="page-header">
       <h1><span class="label label-warning">楽々スノボ</span></h1>
-    </div>
-
       <h2 style="text-align: center">
 	<span class="label laber-info">
 	  <?php echo $name[0]["name"]; ?>さんのトップページ
 	</span>
       </h2>
+      
+    </div>
 
       <div class="container">
 	<table class="table" border="1" align="center">
