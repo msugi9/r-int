@@ -60,8 +60,8 @@ try{
 	招待メールを送信しました<br>
       </div>
       <div class="list-group">
-	<a class="list-group-item" href="/mail/advertising.php?parent=<?php echo $_SESSION["personal_id"] ?>">招待メールを見る</a>
-	<a class="list-group-item" href="../top/user_top.php?parent=<?php echo $_SESSION["personal_id"] ?>">TOPに戻る</a>
+	<a class="list-group-item" href="/mail/advertising.php">招待メールを見る</a>
+	<a class="list-group-item" href="../top/user_top.php">TOPに戻る</a>
       </div>
     </div>
     <?php endif; ?>
