@@ -44,11 +44,11 @@ echo "test\n";
 $confirm_send=mail($invitetest_url,$subject,$main,$header);
 
 if($confirm_send){
-    echo "招待メールを送信しました\n";
+    echo "招待メールを送信しました<br />";
 }else{
-    echo "おくれませんでした\n";
+    echo "おくれませんでした<br />";
 }
 //}
 
-print '<a href="TOPページ">リンク</a>'
+print '<a href="TOPページ">TOPページに戻る</a>'
 ?>
