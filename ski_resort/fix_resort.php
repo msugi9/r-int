@@ -27,10 +27,10 @@ $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 $_SESSION["ski_resort_id"]=$_POST['skiResortId'];
 $_SESSION["play_date"]=$_POST['year']."/".$_POST['month']."/".$_POST['day'];
 foreach($comdata as $tmp){
-    if($tmp['ski_resort_id']==$_POST['skiResortId']){$_SESSION["company_id"]=$comdata['id'];}
+    if($tmp['ski_resort_id']==$_POST['skiResortId']){$_SESSION["company_id"]=$tmp['id'];}
 }
 foreach($sdata as $tmp2){
-    if($tmp2['id']==$_POST['skiResortId']){$_SESSION['ski_resort_name']=$sdata['name'];}
+    if($tmp2['id']==$_POST['skiResortId']){$_SESSION['ski_resort_name']=$tmp2['name'];}
 }
 echo $_SESSION["company_id"]."a";
 echo $_POST['skiResortId']."b";
