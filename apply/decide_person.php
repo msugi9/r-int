@@ -58,7 +58,7 @@ foreach($data as $tmp){
         <?php foreach ($rdata as $relationData) : ?>
         <?php if($relationData['parent_personal_id']==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
-        <?php if($personData['id']==$relaionData['child_person_id']) :?>
+        <?php if($personData['id']==$relaionData['child_person_id']||1) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
