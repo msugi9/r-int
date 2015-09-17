@@ -51,7 +51,7 @@ $parent_id = ($_GET["parent"]);
 
 <br>
 <input type="hidden" name="parent_id" value=<?php echo $parent_id; ?> />
-      <p>
+      <p style="text-align: center">
 	<button type="submit" name="login" value="login" class="btn btn-primary">login</button>
       </p>
 
