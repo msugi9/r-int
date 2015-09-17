@@ -35,23 +35,33 @@
     <h2 class="bg-info">こんなことありませんか？</h2>
     <div class="well well-lg">
       ・日帰りでスキー旅行にきたのに、レンタルで時間がかかる</br>
+      <br>
       ・正確なサイズを言いたくなくて、記入欄に嘘を書く・もはや書かない</br>
     </div>
     
     <h2 class="bg-info">楽天レンタルならその問題を解決出来ます!!</h2>
 
-    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #f5f5dc;">
-
-	・<font color="ff4500">個人情報登録機能</font>・・・身長や体重など、知られたくない情報を入力することで、旅先で何度もプライバシーとなる情報を入力する必要がなくなります。</br>
-	　　　　　　　　　　　　入力されたデータをもとにサイズ化してレンタル店に送信するので、レンタル店側に情報が渡る事もありません。</br>
-	</br>
-	・<font color="ff4500">集団申請機能</font>　　・・・出かける前までにレンタル申請が出来る様になったことで、レンタル店が事前に用意をして当日すぐに受け渡しする事が可能になります。</br>
-	　　　　　　　　　　　　持っていない物のみを選択して選べるので、一部のスキー用品を持っている人にも便利です。
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+	個人情報登録機能
+      </div>
+      <div class="panel-body">
+	身長や体重など、知られたくない情報を入力することで、旅先で何度もプライバシーとなる情報を入力する必要がなくなります。</br>
+	入力されたデータをもとにサイズ化してレンタル店に送信するので、レンタル店側に情報が渡る事もありません。</br>
+      </div>
+    </div>
+    <div class="panel panel-warning">
+      <div class="panel-heading">
+	集団申請機能
+      </div>
+      <div class="panel-body">
+	出かける前までにレンタル申請が出来る様になったことで、レンタル店が事前に用意をして当日すぐに受け渡しする事が可能になります。</br>
+	持っていない物のみを選択して選べるので、一部のスキー用品を持っている人にも便利です。
+      </div>
     </div>
     
-    <font color="66cdaa">
-    <h2 style = "font-size: 19px; font-weight: bold;">レンタルを利用するには</h2>
-    </font>
+    <h2 class="bg-info">レンタルを利用するには</h2>
+
     <div class="panel panel-success">
 
       <div class="panel-heading">
