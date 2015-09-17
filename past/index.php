@@ -77,12 +77,12 @@ foreach($data as $tmp){
 
     if($x != $tmp["play_date"])?></table><?php {
       $x = $tmp["play_date"];?>
-      <table><capition><?php $x ?><tr>
+      <table><caption><?php $x ?><tr>
       <th>名前</th>
       <th>スキー場</th>
     </tr></caption><?php
       if($x == $tmp["play_date"]){
-      echo $tmp["name"];
+      ?><td> <?php $tmp["name"] ?></td><?php
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -95,7 +95,7 @@ foreach($data as $tmp){
       $sql = "select name from personal where id =". $tmp[7];
       $result = $pdo->query($sql);
       $nam = $result->fetchAll();
-      echo $nam[0][0]."  ";
+      ?> <td><?php $nam[0][0] ?></td><?php
 
     }catch(PDOException $e){
       print('Error:'.$e->getMessage());
