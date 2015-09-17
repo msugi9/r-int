@@ -39,7 +39,7 @@ try{
     $child = $tmp[7];
     echo $child;
   }
-  else echo $x;
+  else(echo $x);
   ?>
   <table>
     <tr>
