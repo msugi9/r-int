@@ -17,11 +17,10 @@ try{
 }
 $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
 
-//$namesql = "select name from ski_resort where id = '$_POST['skiResortId']'";
-//$nameresult = $pdo->query($namesql);
-//$namedata = $nameresult->fetchAll();
+$namesql = "select name from ski_resort where id = '$_POST['skiResortId']'";
+$nameresult = $pdo->query($namesql);
+$namedata = $nameresult->fetchAll();
 
-var_dump($_POST['skiResortId']);exit;
 ?>
 
 <html>
@@ -34,8 +33,9 @@ var_dump($_POST['skiResortId']);exit;
                 <tr><?php echo $namedata; ?></tr>
                 <tr><input type="submit" name="submitResort" value="確定"></tr>
             </table>
-            <input type="hidden" name="parentUserId" value="$parentUserId">
-            <input type="hidden" name="companyId" value="$companyId">
+            <input type="hidden" name="parentUserId" value="$_POST['parentUserId']">
+            <input type="hidden" name="companyId" value="$_POST['companyId']">
+            <input type="submit" name="playDate" value="$_POST['year']/$_POST['month']/$_POST['day']">
         </form>
         </center>
     </body>

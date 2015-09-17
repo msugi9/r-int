@@ -55,11 +55,14 @@ $pdo = null;
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <tr>
+          <p>
+            行く日を選んでください
+          </p>
           <select name="year">
             <?php optionLoop('2000', date('Y'), '2100');?>
           </select>
           年
-          <select name="year">
+          <select name="month">
             <?php optionLoop('1', '12', '6');?>
           </select>
           月
@@ -91,8 +94,8 @@ $pdo = null;
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
       </center>
-      <input type="hidden" name="parentUserId" value="$_POST['parentUserId']">
-      <input type="hidden" name="companyId" value="$_POST['companyId']">
+      <input type="hidden" name="parentUserId" value="$parentUserId">
+      <input type="hidden" name="companyId" value="$companyId">
     </form>
   </body>
 </html>
