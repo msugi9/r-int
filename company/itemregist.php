@@ -26,7 +26,7 @@ session_start();
 							</td>
 							<td style="background-color: #ffffff  ;">
 								<input type="checkbox" name="board" value="1" size="50">
-								<input type="text" name="board_price" size="20">個
+								<input type="text" name="board_price" size="20">円
 							</td>
 						</tr>
 						<tr>
@@ -34,15 +34,15 @@ session_start();
 							</td>
 							<td style="background-color: #ffffff  ;">
 								<input type="checkbox" name="wear" value="1" size="50">
-								<input type="text" name="wear_price" size="20">個
+								<input type="text" name="wear_price" size="20">円
 							</td>
 						</tr>
 
 						<tr>
-							<td>小物類</td>
+							<td>小物</td>
 							<td style="background-color: #ffffff  ;">
-								<input type="checkbox" name="accessory_bool" value="1" size="50">
-								<input type="text" name="accessory_price" size="20">個
+								<input type="checkbox" name="accessory" value="1" size="50">
+								<input type="text" name="accessory_price" size="20">円
 							</td>
 						</tr>
 
