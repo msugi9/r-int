@@ -30,6 +30,14 @@ try{
   if (!$apresult) {
     exit('データを登録できませんでした。');
   }
+  //sql文
+  $apidsql = "select id from apply where person_id =".$personalId." and play_date = ".$playDate;
+  $apidresult = $pdo->query($apidsql);
+  $apiddata = $apidresult->fetchAll();
+  echo "<pre>";
+  print_r($apiddata);
+  echo "-----</pre>";
+  
   /*
   foreach($data as $tmp)//applu_itemのDBへの入力。無理だすまん。
   if(1){

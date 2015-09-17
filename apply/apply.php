@@ -20,7 +20,7 @@ try{
 }
 
 $itemCode = array(
-'id'=>'1','name'=>'accessory',
+'id'=>'1','name'=>'acce',
 'id'=>'2','name'=>'board',
 'id'=>'3','name'=>'wear',
 );
@@ -44,9 +44,9 @@ $itemCode = array(
         <?php if($_POST["$prsnId"]) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <?php foreach($itemCode as $item) : ?>
-          <td><input type="checkbox" name="<?php echo $item['id']."a".$personData['id'];?>" value="1" <?php if($personData["item['name']"]==FALSE)echo 'checked="checked"';?>></td>
-          <?php endforeach; ?>
+          <td><input type="checkbox" name="<?php echo "board".$personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo "wear".$personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo "acce".$personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <?php endif; ?>

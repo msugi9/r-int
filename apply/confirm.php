@@ -42,9 +42,9 @@ $itemCode = array(
         <?php if($_POST["$prsnId"]) :?>
         <?php 
         $prsnId = "prsn" .$personData['id'];
-        $boardId = "2a".$personData['id'];
-        $wearId = "3a".$personData['id'];
-        $acceId = "1a".$personData['id'];
+        $boardId = "board".$personData['id'];
+        $wearId = "wear".$personData['id'];
+        $acceId = "acce".$personData['id'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
@@ -52,15 +52,13 @@ $itemCode = array(
           <td align="center"><?php if($_POST["$wearId"]){echo "○";}else{echo "×";}?></td>
           <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
         </tr>
-        <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
-        <?php 
-        foreach($itemCode as $item){
-          $itemandId=$item['name']."Id";
-          $idaid=$item['id']."a".$personData['id'];
-          if($_POST["$itemandId"])$_SESSION["$idaid"]=1;
-          echo $idaid."a".$_SESSION['$idaid']."b".$itemandId."<br>";
-        }
+        <?php
+        ////sessionに1か0が入るはず///
+        $_SESSION["$boardId"]=$_POST["$boardId"];
+        $_SESSION["$wearId"]=$_POST["$wearId"];
+        $_SESSION["$acceId"]=$_POST["$acceId"];
         ?>
+        <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <input type="hidden" name="boardId" value="<?php echo $boardId; ?>">
         <input type="hidden" name="wearId" value="<?php echo $wearId; ?>">
         <input type="hidden" name="acceId" value="<?php echo $acceId; ?>">
