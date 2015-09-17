@@ -12,10 +12,10 @@ try{
   $data = $result->fetchAll();
   $rsql = "select * from relation";
   $rresult = $pdo->query($rsql);
-  $rdata = $result->fetchAll();
+  $rdata = $rresult->fetchAll();
   $isql = "select * from item";
   $iresult = $pdo->query($isql);
-  $idata = $result->fetchAll();
+  $idata = $iresult->fetchAll();
   //  if($data){
   //    echo "<pre>";
   //    print_r($data);
