@@ -39,11 +39,11 @@ password<input type = "text" name ="password";>
 <br>
 TEL<input type = "text" name ="tel";>
 <br>
-スキー場
-<select name="ski">
+スキー場<select name="ski">
   <?php
   foreach ($ski_resort as $value) {
-    echo "<option value='$value['id']'>$value['name']</option>";
+    $option = '<option value="' . $value['id'] . '">' . $value['name'] . '</option>';
+    var_dump($option);
   }
  ?>
 </select>
