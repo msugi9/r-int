@@ -96,6 +96,6 @@ foreach($data as $tmp){
 }
 }
 ?>
-
+</table>
 </body>
 </html>
