@@ -14,8 +14,9 @@ try{
     $comresult = $pdo->query($comsql);
     $comdata = $comresult->fetchAll();
     //////確認用/////////
+    echo "<pre>";
     print_r($comdata);
-    echo"<br>";
+    echo"</pre><br>";
 }catch(PDOException $e){
     print('Error:'.$e->getMessage());
     die();
@@ -27,8 +28,8 @@ $_SESSION["play_date"]=$_POST['year']."/".$_POST['month']."/".$_POST['day'];
 foreach($comdata as $tmp){
     if($tmp['ski_resort_id']==$_POST['skiResortId'])$_SESSION["company_id"]=$comdata['company_id'];
 }
-echo $_SESSION["company_id"];
-echo $_POST['skiResortId'];
+echo $_SESSION["company_id"]."a";
+echo $_POST['skiResortId']."b";
 ?>
 
 <html lang = "ja">
@@ -41,7 +42,7 @@ echo $_POST['skiResortId'];
         以下の日程，スキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
         <form action="./resortDb.php" method  ="post">
             <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-                <tr><?php echo "行き先->" . $_SESSION["ski_resort_name"]; ?></tr>
+                <tr><?php echo "行き先->" . $_SESSION["ski_resort_name"]; ?> </tr>
                 <tr><?php echo "日程->" . $_SESSION["play_date"]; ?></tr>
                 <tr><input type="submit" name="submitResort" value="確定"></tr>
             </table>
