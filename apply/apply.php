@@ -36,8 +36,8 @@ $numOfMember = 3;
         <?php $prsnId = "prsn" .$personData['id'];?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board'])echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear'])echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear']==TRUE)echo 'checked="checked"';?>></td>
           <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" value="1" <?php if($personData['accessory'])echo 'checked="checked"';?>></td>
         </tr>
         <?php endforeach; ?>
