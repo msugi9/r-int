@@ -94,8 +94,8 @@ $pdo = null;
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
       </center>
-      <input type="hidden" name="parentUserId" value="$parentUserId">
-      <input type="hidden" name="companyId" value="$companyId">
+      <input type="hidden" name="parentUserId" value=",?php echo $parentUserId; ?>">
+      <input type="hidden" name="companyId" value="<?php echo $companyId; ?>">
     </form>
   </body>
 </html>

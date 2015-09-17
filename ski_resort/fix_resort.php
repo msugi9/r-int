@@ -34,9 +34,9 @@ $namedata = $nameresult->fetchAll();
                 <tr><?php print_r($namedata); ?></tr>
                 <tr><input type="submit" name="submitResort" value="確定"></tr>
             </table>
-            <input type="hidden" name="parentUserId" value="$_POST['parentUserId']">
-            <input type="hidden" name="companyId" value="$_POST['companyId']">
-            <input type="submit" name="playDate" value="$_POST['year']">
+            <input type="hidden" name="parentUserId" value="<?php echo $_POST['parentUserId']; ?>">
+            <input type="hidden" name="companyId" value="<?php echo $_POST['companyId']; ?>">
+            <input type="submit" name="playDate" value="<?php echo $_POST['year']."/".$_POST['month']."/".$_POST['day']; ?>">
         </form>
         </center>
     </body>
