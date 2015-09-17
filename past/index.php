@@ -36,11 +36,8 @@ try{
   $x = $data[0][4];
 
   foreach($data as $tmp){
-    if($x == $tmp[4]){
-    $child = $tmp[7];
-    echo $child;
+    var_dump($tmp[4]);
   }
-
 
 
   ?>
