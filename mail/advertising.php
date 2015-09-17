@@ -54,7 +54,7 @@
     <font color="66cdaa">
     <h2 style = "font-size: 19px; font-weight: bold;">レンタルを利用するには</h2>
     </font>
-    <div class="panel">
+    <div class="panel panel-success">
 
       <div class="panel-heading">
 	このサービスを利用するには、以下のリンクから必要な情報を入力して下さい
