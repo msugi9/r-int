@@ -11,7 +11,7 @@
   </h1>
   <table border="1" align="center">
     <tr>
-      <th><a href="">レンタル申し込み</a></th>
+      <th><a href="/ski_resort/decide_resort.php">レンタル申し込み</a></th>
       <th><a href="">招待</a></th>
     </tr>
     <tr>
