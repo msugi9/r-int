@@ -56,11 +56,11 @@
     </font>
     <div class="panel">
 
-      <div class="panel-body">
+      <div class="panel-heading">
 	このサービスを利用するには、以下のリンクから必要な情報を入力して下さい
       </div>
       <div class="list-group">
-	<a class="list-group-item success" href="../adminp.html">新規登録の方はこちら</a>
+	<a class="list-group-item" href="../adminp.html">新規登録の方はこちら</a>
 	<a class="list-group-item" href="../register/loginp.html">既に会員の方はログインして下さい</a>
       </div>
 
