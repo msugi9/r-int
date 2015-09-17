@@ -65,7 +65,8 @@ foreach($data as $tmp){
       print('Error:'.$e->getMessage());
       die();
     }
-  }else{$x = $tmp[4];
+  }else{
+    $x = $tmp[4];
     if($x == $tmp[4]){
     try{
       //データベースに接続
@@ -86,6 +87,8 @@ foreach($data as $tmp){
       die();
     }
   }
+}
+
 
 
   ?>
