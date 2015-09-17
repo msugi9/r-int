@@ -25,35 +25,28 @@ try{
 ?>
 
 
-
-
+<html>
+<head>
+  <title>過去のデータ</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<table>
+  <tr>
+    <td>県</td>
+    <td>スキー場</td>
+    <td>参加者</td>
+  </tr>
+</table>
+</body>
+</html>
   <?php
   $x = $data[0][4];
-
-
-  foreach($data as $tmp){
+foreach($data as $tmp){
     if($x == $tmp[4])
     echo $tmp[9]."<br />";
-
-    echo $tmp[6];
+    echo $tmp[6]."<br />";
     }
 
 
   ?>
-  <html>
-  <head>
-    <title>過去のデータ</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  </head>
-  <body>
-  <table>
-    <tr>
-      <td>県</td>
-      <td>スキー場</td>
-      <td>参加者</td>
-    </tr>
-
-  </table>
-
-</body>
-</html>
