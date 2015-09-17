@@ -41,10 +41,9 @@ TEL<input type = "text" name ="tel";>
 スキー場<select name="ski">
   <?php
   foreach ($ski_resort as $value) {
-    $option = '<option value="' . $value['id'] . '">' . $value['name'] . '</option>';
-    var_dump($option);
+    $option = '<option value="' . $value['id'] . '">' . trim($value['name']) . '</option>';
+    echo $option;
   }
-  var_dump("hoge");
  ?>
 </select>
 <br>
