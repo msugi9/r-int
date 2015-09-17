@@ -60,7 +60,8 @@ try{
 	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a><br>
 	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事が出来ます</div>
 	    </th>
-	    <th class="warning"><a href="/mail/mailform.php">招待</a>
+	    <th class="warning"><a href="/mail/mailform.php">招待</a><br>
+	      <div class="well well-lg">まだ会員になっていないメンバーを招待出来ますx</div>
 	    </th>
 	  </tr>
 	  <tr>
