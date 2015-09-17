@@ -43,10 +43,11 @@ try{
   <?php
   $x = $data[0][4];
 foreach($data as $tmp){
-    if($x == $tmp[4])
+    if($x == $tmp[4]){
     echo $tmp[9]."<br />";
-    echo $tmp[6]."<br />";
+    echo $tmp[7]."<br />";
     }
+  }
 
 
   ?>
