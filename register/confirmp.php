@@ -1,4 +1,5 @@
 <?php
+
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url($database_url);
@@ -17,15 +18,29 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $result = $pdo->query($sql);
   $pass1 = $result->fetchAll();
   //$pass1 = (string)$data[0];
+  $pdo = null;
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
+    $sql = "select id from personal where login_id ='$id'";
+    $result = $pdo->query($sql);
+    $idd = $result->fetchAll();
 
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
-var_dump($pass1);
-var_dump($pass);
+/*var_dump($pass1);
+var_dump($pass1[0][0]);
+var_dump(trim($pass1[0]['login_password']));
+var_dump($pass);*/
+//var_dump($idd);
 
-  if($pass1==$pass)echo"ログインに成功しました。";
+/*$id1=($_SESSION($idd[0]['id']));
+var_dump($id1);*/
+  if(trim($pass1[0]['login_password'])==$pass)
+  echo"ログインに成功しました。";
+
+    //header("Location: ./adminp.php");
+
   else echo"失敗しました。"
 ?>
