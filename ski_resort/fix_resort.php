@@ -36,7 +36,7 @@ $namedata = $nameresult->fetchAll();
         以下のスキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
         <form action="./resortDb.php" method  ="post">
             <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-                <tr><?php echo $namedata["name"]); ?></tr>
+                <tr><?php echo $namedata["name"]; ?></tr>
                 <tr><input type="submit" name="submitResort" value="確定"></tr>
             </table>
             <input type="hidden" name="parentUserId" value="<?php echo $_POST['parentUserId']; ?>">
