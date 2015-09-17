@@ -68,9 +68,10 @@ foreach($data as $tmp){
     }
   }
 
-    echo $x;
+
     if($x != $tmp["play_date"]){
       $x = $tmp["play_date"];
+      echo $x;
       if($x == $tmp["play_date"]){
       echo $tmp["name"];
     try{
