@@ -3,6 +3,9 @@ $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
+
+session_start();
+
 try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -10,7 +13,7 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-  
+
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
