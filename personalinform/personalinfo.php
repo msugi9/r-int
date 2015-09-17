@@ -22,7 +22,6 @@ try{
     //$email=htmlspecialchars($_REQUEST['email']);
 
     $insert_sql = "update personal set sex = '$sex', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id = " . $_SESSION["personal_id"];
-    var_dump($insert_sql);exit;
 
     $sql = $pdo->exec($insert_sql);
 
