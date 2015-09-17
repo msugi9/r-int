@@ -51,7 +51,7 @@ foreach($data as $tmp){
         <?php foreach ($data as $personData) : ?>
         <?php if($personData['id']==$relaionData['child_person_id']||1) :?>
         <?php
-        echo $personData['id'].$relaionData['child_person_id']."a";
+        echo $personData['id']."0".$relaionData['child_person_id']."a";
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
