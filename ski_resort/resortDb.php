@@ -47,7 +47,7 @@ echo"登録を受け付けました。";
     <title>スキー場決定</title>
   </head>
   スキー場、日程を確定しました。
-  <form action="./decide_person.php" method="post">
+  <form action="/apply/decide_person.php" method="post">
     <input type="submit" name="submitResoDate" value="メンバーを選びにいく">
   </form>
 </html>
