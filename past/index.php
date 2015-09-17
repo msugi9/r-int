@@ -43,11 +43,11 @@ try{
     <td>スキー場</td>
     <td>参加者</td>
   </tr></table></body></html><?php
-  $x = $data[0][4];
+  $x = $data[0]["play_date"];
   echo $x;
 foreach($data as $tmp){
-    if($x == $tmp[4]){
-      echo $tmp[9];
+    if($x == $tmp["play_date"]){
+      echo $tmp["name"];
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -69,10 +69,10 @@ foreach($data as $tmp){
   }
 
     echo $x;
-    if($x != $tmp[4]){
-      $x = $tmp[4];
-      if($x == $tmp[4]){
-      echo $tmp[9];
+    if($x != $tmp["play_date"]){
+      $x = $tmp["play_date"];
+      if($x == $tmp["play_date"]){
+      echo $tmp["name"];
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
