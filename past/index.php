@@ -76,8 +76,11 @@ foreach($data as $tmp){
 
 
     if($x != $tmp["play_date"])?></table><?php {
-      $x = $tmp["play_date"];
-      echo $x;
+      $x = $tmp["play_date"];?>
+      <table><capition><?php $x ?><tr>
+      <th>名前</th>
+      <th>スキー場</th>
+    </tr></caption><?php
       if($x == $tmp["play_date"]){
       echo $tmp["name"];
     try{
@@ -101,7 +104,7 @@ foreach($data as $tmp){
   }
 }
 }
-?>
+?></table>
 
 </body>
 </html>
