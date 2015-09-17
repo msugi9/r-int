@@ -42,7 +42,7 @@ $numOfPerson = 5;
         <?php foreach ($data as $personData) : ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td align="left"><input type="checkbox" name"prsn<?php echo $personData['id'];?>" value="1"></td>
+          <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
         </tr>
         <?php endforeach; ?>
       </table>
