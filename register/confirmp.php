@@ -28,6 +28,9 @@ var_dump($pass1[0][0]);
 var_dump(trim($pass1[0]['login_password']));
 var_dump($pass);*/
 
-  if(trim($pass1[0]['login_password'])==$pass)echo"ログインに成功しました。";
+  if(trim($pass1[0]['login_password'])==$pass)
+  {echo"ログインに成功しました。";
+    header("Location: ./adminp.php");
+  }
   else echo"失敗しました。"
 ?>
