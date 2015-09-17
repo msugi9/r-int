@@ -24,7 +24,6 @@ if (isset($_POST['submit'])) { // POST送信されたか
   // チェック数のカウントと必要数のチェック
   // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
   if (is_array($_POST['skiResortId']) && count($_POST['skiResortId']) <= 1) {
-    header('Location:' . $thisfile);
     exit;
   } else {
     $error_msg = '選びすぎ';
