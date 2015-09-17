@@ -27,7 +27,7 @@ try{
 
     echo "登録しました\n";
 
-    print '<a href="/top/personal_top.php">TOPページに戻る</a>';
+    print '<a href="/top/user_top.php">TOPページに戻る</a>';
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
