@@ -13,9 +13,9 @@ try{
   $sql = "select * from personal where id = " . $_SESSION["personal_id"];
 
   $result = $pdo->query($sql);
-  //$data = $result->fetchAll();
+  $data = $result->fetchAll();
 echo "<pre>";
-  var_dump($result);
+  var_dump($data);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
