@@ -51,7 +51,7 @@ try{
     </div>
 
   
-  <div style="center">
+  <div style="text-align: center">
     <a href="../company/order.php">注文一覧</a>
   </div>
 
