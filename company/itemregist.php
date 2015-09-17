@@ -39,10 +39,12 @@ session_start();
 			</td>
 		      </tr>
 	      	      <tr>
-			<td>ボードL</td>
+			<td>ボードL
+			</td>
 			<td style="background-color: #ffffff  ;">
 			  <input type="checkbox" name="board_l" value="1" size="50">
-			  <input type="text" name="lboard_item" size="20"></td>個
+			  <input type="text" name="lboard_item" size="20">個
+			</td>
 		      </tr>
 		      <tr>
 			<td>ウェアS
