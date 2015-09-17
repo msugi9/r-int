@@ -45,8 +45,8 @@ echo "<pre>";
             <tr>
               <td style="background-color: #87cefa  ;">性別</td>
               <td style="background-color: #ffffff  ;">
-                <input type="radio" name="sex" value="true" size="30" checked="checked"/>男性
-                <input type="radio" name="sex" value="false" size="30"/>女性
+                <input type="radio" name="sex" value="true" size="30" <?php if($data[0]["sex"]==true) {echo "checked='checked'";} ?>/>男性
+                <input type="radio" name="sex" value="false" size="30" <?php if($data[0]["sex"]==false) {echo "checked='checked'";} ?>/>女性
               </td>
             </tr>
             <tr>
@@ -99,6 +99,7 @@ echo "<pre>";
       <br>
 	<input type="submit" name="submit" value="更新">
       </form>
+    <input type="button" onclick="location.href='/top/user_top.php'"value="戻る">
     <!-- HTMLフォーム表示 -->
 
 </body>
