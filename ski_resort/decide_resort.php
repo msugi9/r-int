@@ -54,11 +54,38 @@ $pdo = null;
     <form action="./fix_resort.php" method="post">
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+        <tr>
+          <select name="year">
+            <?php optionLoop('2000', date('Y'), '2100');?>
+          </select>
+          年
+          <select name="year">
+            <?php optionLoop('1', '12', '6');?>
+          </select>
+          月
+          <select name="day">
+            <?php optionLoop('1', '31', '15');?>
+          </select>
+          日
+          <?php
+          //セレクトオプションのループ設定
+          function optionLoop($start, $end, $value = null){
+            
+            for($i = $start; $i <= $end; $i++){
+              if(isset($value) &&  $value == $i){
+                echo "<option value=\"{$i}\" selected=\"selected\">{$i}</option>";
+              }else{
+                echo "<option value=\"{$i}\">{$i}</option>";
+              }
+            }
+          }
+          ?>
+        </tr>
         <?php foreach($sdata as $row) : ?>
         <tr>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
-          <td><input type="checkbox" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
+          <td><input type="checkbox" name="skiResortId" value="1"></td>
         </tr>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
