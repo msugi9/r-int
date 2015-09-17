@@ -20,7 +20,7 @@ session_start();
       <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 2px 0pt 0pt 0px;">
 	      <tr>
 	          <td bgcolor="#ffffff  ">
-	              <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 20px;">
+	              <table width="100%" border=1 cellspacing=1 cellpadding=5 style="font-size: 20px;">
 		      <tr>
 			<td>ボードS
 			</td>
