@@ -14,8 +14,6 @@ try{
 
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-echo "<pre>";
-  var_dump($data);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
