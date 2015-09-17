@@ -44,7 +44,7 @@ try{
 
   <?php
   $x = $data[0]["play_date"];?>
-  <caption><?php $x ?><caption>
+  <caption><?php $x ?></caption>
     <tr>
     <th>名前</th>
     <th>スキー場</th>
