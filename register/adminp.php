@@ -40,13 +40,9 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 }
 session_start();
 $_SESSION["personal_id"] = $personal_id["id"];
-echo "<pre>";
-var_dump($personal_id);
-var_dump($personal_id["id"]);
 
 print_r("登録を受け付けました。");
 print_r("２秒後にリダイレクトします。");
-var_dump($_SESSION["personal_id"]);
 
 header( "refresh:2;url=/personalinform/personalinfo.html" );
 ?>
