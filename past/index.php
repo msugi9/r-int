@@ -23,7 +23,7 @@ try{
   die();
 }
 
-?>
+
 
 <html>
 <head>
@@ -31,19 +31,9 @@ try{
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
-  <?php
+
   $x = $data[0][3];
   var_dump($x);
-  foreach($data as $tmp)if($tmp[3]==$x){
-  $childname = $tmp[7];
-  $ski = $tmp[9];
-  <table>
-  <tr>
-  <td>県</td>
-  <td>echo $ski;</td>
-  <td>echo $childname;</td>
-  </tr>
-  </table>}else break;?>
 
   <table>
     <tr>
@@ -56,3 +46,4 @@ try{
 
 </body>
 </html>
+?>
