@@ -43,7 +43,7 @@ $ski = $tmp[9];
   <td>$childname</td>
 </tr>
 </table>
-}
+}else$x = $tmp[3];
   <table>
     <tr>
       <td>県</td>
