@@ -6,6 +6,8 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $id= ($_POST["id"]);
 $pass = ($_POST["password"]);
+
+session_start();
 try{
 
   //データベースに接続
@@ -16,6 +18,12 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $sql = "select login_password from company where login_id ='$id'";
   $result = $pdo->query($sql);
   $pass1 = $result->fetchAll();
+
+  $pdo = null;
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
+  $id_sql = "select id from company where login_id = '$id'";
+  $personal = $pdo->query($id_sql);
+  $personal_id = $personal->fetch();
   //$pass1 = (string)$data[0];
 
 
@@ -23,8 +31,13 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   print('Error:'.$e->getMessage());
   die();
 }
+$_SESSION["company_id"] = $personal_id["id"];
 
-
-  if(trim($pass1[0]['login_password'])==$pass)echo"ログインに成功しました。";
-  else echo"失敗しました。"
+  if(trim($pass1[0]['login_password'])==$pass){
+    echo"ログインに成功しました。\n";
+    print_r("２秒後にリダイレクトします。");
+    header( "refresh:2;url=/top/company_top.php" );
+  }else{
+    echo"失敗しました。";
+  }
 ?>

@@ -27,10 +27,10 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>User Top</title>
-    
+
     <!-- Bootstrap -->
     <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,7 +42,7 @@ try{
 <!--<head>
   <title>User Top</title>
   </head> -->
-  
+
   <body>
     <div class="page-header page-header">
       <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
@@ -51,13 +51,13 @@ try{
 	  <?php echo $name[0]["name"]; ?>さんのトップページ
 	</span>
       </h1>
-      
+
     </div>
 
       <div class="container">
 	<table class="table" border="1" align="center">
 	  <tr>
-	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a><br>
+	    <th class="success"><a href="/ski_resort/decide_resort.php">レンタル申し込み</a><br>
 	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事ができます</div>
 	    </th>
 	    <th class="success"><a href="/mail/mailform.php">招待</a><br>

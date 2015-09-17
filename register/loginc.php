@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION["company_id"]){
+  header("Location:/top/company_top.php");
+  exit;
+}
+?>
 <HTML>
 <FORM action="confirmc.php" method="post">
   <title>楽天　スノーボードレンタルサイト　ログイン</title>
