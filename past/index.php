@@ -39,8 +39,8 @@ try{
     if($x == $tmp[4])
     $child = $tmp[7];
     echo $child;*/
-  }
-  else(echo $x);
+  
+
   ?>
   <table>
     <tr>
