@@ -16,8 +16,14 @@ try{
   $data = $result->fetchAll();
 
   echo "<pre>";
-  var_dump($data);
-
+  /*
+  $pdo =null;
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
+  //sql文
+  $sql = "select name from personal where id =". $data[c][7];
+  $result = $pdo->query($sql);
+  $nam[c] = $result->fetchAll();
+*/
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -42,6 +48,24 @@ foreach($data as $tmp){
     if($x == $tmp[4]){
     echo $tmp[9]."  ";
     echo $tmp[7]."<br />";
+    try{
+      //データベースに接続
+      $pdo = new PDO($dsn, $url['user'], $url['pass']);
+      //sql文
+      echo "<pre>";
+
+      $pdo =null;
+      $pdo = new PDO($dsn, $url['user'], $url['pass']);
+      //sql文
+      $sql = "select name from personal where id =". $tmp[7];
+      $result = $pdo->query($sql);
+      $nam = $result->fetchAll();
+      var_dump($nam);
+
+    }catch(PDOException $e){
+      print('Error:'.$e->getMessage());
+      die();
+    }
     }
   }
 
