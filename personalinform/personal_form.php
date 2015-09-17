@@ -40,7 +40,7 @@ echo "<pre>";
   以下の欄に入力することで、お客様それぞれに合わせたサイズの用具を借りることが出来ます。
 
   <!-- HTMLフォーム表示 -->
-  <form action="./personalinfo.php" method="post">
+  <form action="./personal_form.php" method="post">
     <div class="container">
       <table class="table">
 	<tbody>
