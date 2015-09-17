@@ -15,9 +15,12 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-
-$itemCode = array('1'=>'acce','2'=>'board','3'=>'wear');
-?>
+session_start();
+$itemCode = array(
+'id'=>'1','name'=>'acce',
+'id'=>'2','name'=>'board',
+'id'=>'3','name'=>'wear',
+);?>
 
 <html lang = "ja">
   <head>
@@ -35,14 +38,13 @@ $itemCode = array('1'=>'acce','2'=>'board','3'=>'wear');
           <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php foreach ($itemCode as $item) : ?>
         <?php $prsnId = "prsn" .$personData['id'];?>
         <?php if($_POST["$prsnId"]) :?>
         <?php 
         $prsnId = "prsn" .$personData['id'];
-        $boardId = $item."a".$personData['id'];
-        $wearId = $item."a".$personData['id'];
-        $acceId = $item."a".$personData['id'];
+        $boardId = "2a".$personData['id'];
+        $wearId = "3a".$personData['id'];
+        $acceId = "1a".$personData['id'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
@@ -51,7 +53,14 @@ $itemCode = array('1'=>'acce','2'=>'board','3'=>'wear');
           <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
-        <?php $_SESSION['$boardId']
+        <?php 
+        foreach($itemCode as $item){
+          $itemandId=$item['name']."Id";
+          $idaid=$item['id']."a".$personData['id'];
+          if($_POST["$itemandId"])$_SESSION["$idaid"]=1;
+          echo $idaid."a".$_SESSION['$idaid']."b".$itemandId."<br>";
+        }
+        ?>
         <input type="hidden" name="boardId" value="<?php echo $boardId; ?>">
         <input type="hidden" name="wearId" value="<?php echo $wearId; ?>">
         <input type="hidden" name="acceId" value="<?php echo $acceId; ?>">

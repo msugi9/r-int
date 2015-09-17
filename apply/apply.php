@@ -20,11 +20,10 @@ try{
 }
 
 $itemCode = array(
-'0'=>'1','1'=>'acce',
-'0'=>'2','1'=>'board',
-'0'=>'3','1'=>'wear',
+'id'=>'1','name'=>'acce',
+'id'=>'2','name'=>'board',
+'id'=>'3','name'=>'wear',
 );
-print_r($itemCode);
 ?>
 <html lang = "ja">
   <head>
@@ -45,9 +44,9 @@ print_r($itemCode);
         <?php if($_POST["$prsnId"]) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td><input type="checkbox" name="<?php echo $item."a".$personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="<?php echo $item."a".$personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="<?php echo $item."a".$personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
+          <?php foreach($itemCode as $item) : ?>
+          <td><input type="checkbox" name="<?php echo $item['id']."a".$personData['id'];?>" value="1" <?php if($personData['item['name']']==FALSE)echo 'checked="checked"';?>></td>
+          <?php endforeach; ?>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <?php endif; ?>
