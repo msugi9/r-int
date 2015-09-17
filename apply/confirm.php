@@ -10,7 +10,7 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-  
+
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -26,7 +26,7 @@ $someFlg = 1;
 //  if($someFlg)     $outputStr='○';
 //  else if($someFlg)$outputStr='×';
 //  else     $outputStr='△';
-//  
+//
 //  echo $outputStr;
 //}
 ?>
@@ -46,7 +46,7 @@ $someFlg = 1;
         <?php foreach ($data as $personData) : ?>
         <?php $prtcpntId = "prtcpnt" .$personData['id'];?>
         <?php if($_POST["$prtcpntId"]) :?>
-        <?php 
+        <?php
         $prsnId = "prsn" .$personData['id'];
         $boardId = "board" .$personData['id'];
         $wearId = "wear" .$personData['id'];
@@ -63,8 +63,8 @@ $someFlg = 1;
       </table>
       </center>
       <!--for文的な？-->
-      
-      
+
+      <input type="hidden" name="id" value="1">
       <input type="submit" value="申し込む">
     </form>
     </center>
