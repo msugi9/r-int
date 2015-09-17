@@ -26,7 +26,7 @@ try{
 </head>
 <body>
   <h1 style="text-align: center">
-    <?php $name; ?>さんのトップページ
+    <?php $name[0]['name']; ?>さんのトップページ
   </h1>
   <table border="1" align="center">
     <tr>
