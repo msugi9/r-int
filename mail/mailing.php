@@ -24,7 +24,7 @@ try{
     }else{
 	echo "$mail <br />";
 	echo "招待メールを送信しました<br />";
-	print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/advertising.html">招待メールのサイトに行く</a><br />';
+	print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/advertising.html">招待メールを見る</a><br />';
 	print '<a href="TOPページ">TOPページに戻る</a><br />';
     }
 }catch(PDOException $e){
