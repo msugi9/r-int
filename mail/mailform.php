@@ -1,52 +1,70 @@
-<?php
-$mail=htmlspecialchars($_REQUEST['mail_1']);
-//$mail2=$_REQUEST['mail_2'];
-//$mail3=$_REQUEST['mail_3'];
-$cmail1=htmlspecialchars($_REQUEST['conf_mail_1']);
-//$cmail2=$_REQUEST['conf_mail_2'];
-//$cmail3=$_REQUEST['conf_mail_3'];
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title> 招待ページ</title>
+  </head>
+  
+  <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
+    <!-- タイトル -->
+    <h1 style = "font-size: 16px; font-weight: bold;">招待ページ</h1>
+    <!-- タイトル -->
 
-$subject="subjecttest";
-
-$judge=0;
-
-if(strcmp($mail1,$cmail1) != 0){
-    $judge=1;
-}
-
-/*if(strcmp($mail2,$cmail2) != 0){
-    $judge=1;
-}
-
-if(strcmp($mail3,$cmail3) != 0){
-    $judge=1;
-}
-*/
-if($judge == 1){
-    echo "もう一度入力して下さい\n";
-    print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/mailform.html">招待ページに戻る</a>'
-}
-
-$invitetest_url="realthingshakes25@gmail.com";
-
-$main="test\n";
-
-$from_url="test@test.com";
-
-$header="From: ".$from_url."\n";
-
-//if(empty($mail1) != true){
-
-//$confirm_send=mb_send_mail($invitetest_url,$subject,$main,$header);
-$confirm_send=mail($invitetest_url,$subject,$main,$header);
-
-if($confirm_send){
-    echo "招待メールを送信しました<br />";
-}else{
-    echo "$mail <br />";
-    echo "招待メールを送信出来ました<br />";
-}
-//}
-
-print '<a href="TOPページ">TOPページに戻る</a>'
-?>
+    <form action="./mailing.php" method="post">
+      招待する人のURLを入力して下さい。
+      <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 2px 0pt 0pt 0px;">
+	      <tr>
+	          <td bgcolor="#afafaf  ">
+	              <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
+	                  <tr>
+		              <td style="background-color: #eeeeee  ;">招待するメールアドレス</td>
+		              <td style="background-color: #ffffff  ;">
+		                  <input type="text" name="mail_1" size="30">
+		              </td>
+	                  </tr>
+	      <!--<tr>
+		              <td style="background-color: #eeeeee  ;"></td>
+		              <td style="background-color: #ffffff  ;">
+		                  <input type="text" name="mail_2" size="30">
+		              </td>
+	                  </tr>
+	      <tr>
+		              <td style="background-color: #eeeeee  ;"></td>
+		              <td style="background-color: #ffffff  ;">
+		                  <input type="text" name="mail_3" size="30">
+		              </td>
+	                  </tr>-->
+	              </table>
+	          </td>
+	      </tr>
+          </table>
+      確認のためもう一度入力して下さい。
+    <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 5px 0pt 0pt 0px;">
+            <tr>
+	        <td bgcolor="#afafaf  ">
+	            <table width="100%" border=0 cellspacing=1 cellpadding=5 style="font-size: 12px;">
+	                <tr>
+	                    <td style="background-color: #eeeeee  ;">確認用メールアドレス</td>
+	                    <td style="background-color: #ffffff  ;">
+		                <input type="text" name="conf_mail_1" size="30">
+	                    </td>
+	                </tr>
+<!--	    <tr>
+	                    <td style="background-color: #eeeeee  ;"></td>
+	                    <td style="background-color: #ffffff  ;">
+		                <input type="text" name="conf_mail_2"  size="30">
+	                    </td>
+	                </tr>
+	    <tr>
+	                    <td style="background-color: #eeeeee  ;"></td>
+	                    <td style="background-color: #ffffff  ;">
+		                <input type="text" name="conf_mail_3"  size="30">
+	                    </td>
+	                </tr>-->
+	            </table>
+	        </td>
+            </tr>
+        </table>
+        <br> <input type="submit" name="send" value="送信">
+      </form>
+  </body>
+  </html>
