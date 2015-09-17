@@ -15,25 +15,23 @@ $userId = ($_POST["address"]);
 $itemId = ($_POST["tel"]);
 $ski = ($_POST["ski"]);
 try{
-
+  
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "insert into company (name,login_id,login_password,mail_address,charge,address,tel,ski_resort_id) values ( '$name','$id','$pass','$mail','$charge','$address',$tel,$ski)";
-  
+  $apsql = "insert into apply (name,login_id,login_password,mail_address,charge,address,tel,ski_resort_id) values ( '$name','$id','$pass','$mail','$charge','$address',$tel,$ski)";
   $result = $pdo->exec($sql);
-  //$data = $result->fetchAll();
-  /* $pdo = null;
-  $pdo = new PDO($dsn, $url['user'], $url['pass']);
-  $sql2 = "select name from company where id = 1";
-  $result1 = $pdo->query($sql2);
-  $name1 = $result1->fetchAll();
   
-  echo $name1;*/
+  foreach($data as $tmp)
+  if(){
+  $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";
+  $result = $pdo->exec($sql);
   
-  }catch(PDOException $e){
+  
+  
+}catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
-  }
-  echo"登録を受け付けました。";
-  ?>
+}
+echo"登録を受け付けました。";
+?>
