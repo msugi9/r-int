@@ -1,0 +1,7 @@
+<?php
+<<<<<<< HEAD
+echo "hello";
+=======
+echo "Hello";
+?>
+>>>>>>> 297f479211a2425d83b6f8699d9103dfd3e8c7fe
