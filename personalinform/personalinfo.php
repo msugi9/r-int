@@ -7,15 +7,15 @@ try{
     //データベース接続
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
   
-    $loginid=$_REQUEST['login_ID'];
-    $pass=$_REQUEST['login_pass'];
-    $height=$_REQUEST['height'];
-    $weight=$_REQUEST['weight'];
-    $shoe=$_REQUEST['shoe_size'];
-    $accessory=$_REQUEST['accessory'];
-    $wear=$_REQUESRT['wear'];
-    $board=$_REQUEST['board'];
-    $email=$_REQUEST['email'];
+    $loginid=htmlspecialchars($_REQUEST['login_ID']);
+    $pass=htmlspecialchars($_REQUEST['login_pass']);
+    $height=htmlspecialchars($_REQUEST['height']);
+    $weight=htmlspecialchars($_REQUEST['weight']);
+    $shoe=htmlspecialchars($_REQUEST['shoe_size']);
+    $accessory=htmlspecialchars($_REQUEST['accessory']);
+    $wear=htmlspecialchars($_REQUESRT['wear']);
+    $board=htmlspecialchars($_REQUEST['board']);
+    $email=htmlspecialchars($_REQUEST['email']);
 
     $insert_sql = "insert into personal(login_id,login_password,name,sex,height,weight,shoe_size,accessory,wear,board,email) values($loginid,'$pass',$height,$weight,$shoe,$accessory,$wear,$board,'$email')";
 
@@ -32,7 +32,7 @@ try{
 
     echo "登録しました\n";
 
-    //print '<a href="TOPページ">リンク</a>'
+    print '<a href="TOPページ">TOPページに戻る</a>'
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
