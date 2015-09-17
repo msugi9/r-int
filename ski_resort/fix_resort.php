@@ -45,7 +45,7 @@ echo $_SESSION['ski_resort_name']."d";
     <body>
         <center>
         以下の日程，スキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
-        <form action="apply/decide_person.php" method  ="post">
+        <form action="/apply/decide_person.php" method  ="post">
             <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
                 <tr><td><?php echo "行き先->" . $_SESSION['ski_resort_name']; ?></td></tr>
                 <tr><td><?php echo "日程->" . $_SESSION["play_date"]; ?></td></tr>

@@ -47,7 +47,9 @@ foreach($itemdata as $tmp){
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <tr>
-          <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>
+        <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+        <tr>
+          <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td> <td>小計</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
         <?php $prsnId = "prsn" .$personData['id'];?>
@@ -65,7 +67,7 @@ foreach($itemdata as $tmp){
           <td align="center"><?php if($_POST["$boardId"]){echo "○";$_SESSION["$priceId"]+=$bPrice;}else{echo "×";}?></td>
           <td align="center"><?php if($_POST["$wearId"]){echo "○";$_SESSION["$priceId"]+=$wPrice;}else{echo "×";}?></td>
           <td align="center"><?php if($_POST["$acceId"]){echo "○";$_SESSION["$priceId"]+=$aPrice;}else{echo "×";}?></td>
-          <td align="right"><?php echo $_SESSION["$priceId"]; ?></td>
+          <td align="right">￥<?php echo $_SESSION["$priceId"]; ?></td>
         </tr>
         <?php
         ////sessionに1か0が入るはず///
@@ -73,14 +75,12 @@ foreach($itemdata as $tmp){
         $_SESSION["$wearId"]=$_POST["$wearId"];
         $_SESSION["$acceId"]=$_POST["$acceId"];
         ?>
-        <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
-        <input type="hidden" name="boardId" value="<?php echo $boardId; ?>">
-        <input type="hidden" name="wearId" value="<?php echo $wearId; ?>">
-        <input type="hidden" name="acceId" value="<?php echo $acceId; ?>">
         <?php $_SESSION["priceAll"] += $_SESSION["$priceId"]; ?>
         <?php endif; ?>
         <?php endforeach; ?>
-      </table>
+      </table></tr>
+        <tr><td align="right">￥<?php echo $_SESSION["priceAll"]; ?></tr>
+    </table>
       </center>
       <!--for文的な？-->
       

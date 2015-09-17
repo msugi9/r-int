@@ -12,10 +12,6 @@ $companyId = $_SESSION["company_id"];
 $skiResortId = $_SESSION["ski_resort_id"];
 $playDate = $_SESSION["play_date"];
 
-$userId = ($_POST["address"]);
-$itemId = ($_POST["tel"]);
-$ski = ($_POST["ski"]);
-
 try{
   
   //データベースに接続
