@@ -1,5 +1,5 @@
 <?php
-$mail1=htmlspecialchars($_REQUEST['mail_1']);
+$mail=htmlspecialchars($_REQUEST['mail_1']);
 //$mail2=$_REQUEST['mail_2'];
 //$mail3=$_REQUEST['mail_3'];
 $cmail1=htmlspecialchars($_REQUEST['conf_mail_1']);
@@ -43,6 +43,7 @@ $confirm_send=mail($invitetest_url,$subject,$main,$header);
 if($confirm_send){
     echo "招待メールを送信しました<br />";
 }else{
+    echo "$mail <br />";
     echo "招待メールを送信出来ました<br />";
 }
 //}
