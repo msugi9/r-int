@@ -4,7 +4,7 @@
 </head>
 <body>
   <h1 style="text-align: center">
-     さんのトップページ
+     トップページ
   </h1>
   <div style="center">
     <a href="">注文一覧</a>

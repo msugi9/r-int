@@ -7,7 +7,7 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "select * from ski_resort";
+  $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
   
@@ -22,13 +22,13 @@ $numOfMember = 3;
 //とりあえず全部借りる扱い
 $someFlg = 1;
 
-function check_rent($someFlg){
-  if($someFlg)     $outputStr='○';
-  else if($someFlg)$outputStr='×';
-  else     $outputStr='△';
-  
-  return $outputStr;
-}
+//function check_rent($someFlg){
+//  if($someFlg)     $outputStr='○';
+//  else if($someFlg)$outputStr='×';
+//  else     $outputStr='△';
+//  
+//  echo $outputStr;
+//}
 ?>
 
 <html>
@@ -36,23 +36,34 @@ function check_rent($someFlg){
   <body>
     <center>
     これでいい？？？？？？？<TMPL_VAR NAME=HOME>
-    <form>
+    <form action="./applyDb.php" method="post">
       <!--for文的な？-->
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        echo '<tr>';
-          echo '<td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>';
-        echo '</tr>';
-        <?php
-        for($personId;$personId<$numOfPerson;$personId++){
-          echo '<tr>';
-          echo '<td>名前'.$personId.'</td>';
-          echo '<td><input type="checkbox" name="prsn'.$personId.'"></td>';
-          echo '<td>'.check_rent().'</td>';
-          echo '<td>'.check_rent().'</td>';
-          echo '<td>'.check_rent().'</td>';
-          echo '</tr>';
-        }?>
+        <tr>
+          <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>
+        </tr>
+        <?php foreach ($data as $personData) : ?>
+        <?php $prtcpntId = "prtcpnt" .$personData['id'];?>
+        <?php if($_POST["$prtcpntId"]) :?>
+        <?php 
+        $prsnId = "prsn" .$personData['id'];
+        $boardId = "board" .$personData['id'];
+        $wearId = "wear" .$personData['id'];
+        $acceId = "acce" .$personData['id'];
+        
+        $flg = $boardId;
+        echo 'flg='.$flg;
+        echo 'REQUEST='.$_REQEST['$flg'];
+        ?>
+        <tr style="background-color: #ffffff  ;">
+          <td align="left"><?php echo $personData['name']; ?></td>
+          <td align="center"><?php if($_POST["$boardId"]){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($_POST["$wearId"]){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
+        </tr>
+        <?php endif; ?>
+        <?php endforeach; ?>
       </table>
       </center>
       <!--for文的な？-->
