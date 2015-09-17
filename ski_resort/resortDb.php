@@ -20,15 +20,20 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
+  $ssql = "select * from ski_resort";
+  $sresult = $pdo->query($ssql);
+  $persdata = $sresult->fetchAll();
+  
+  /*
   $apsql = "insert into apply (name,login_id,login_password,mail_address,charge,address,tel,ski_resort_id) values ( '$name','$id','$pass','$mail','$charge','$address',$tel,$ski)";
   $result = $pdo->exec($sql);
   
-  foreach($data as $tmp)
+  foreach($data as $tmp)//applu_itemのDBへの入力。無理だすまん。
   if(1){
     $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";
     $result = $pdo->exec($sql);
   }
-  
+  */
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
