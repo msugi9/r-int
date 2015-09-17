@@ -30,5 +30,5 @@ if($judge == 1){
     echo "招待メールを送信しました<br />";
 
     print '<a href="TOPページ">TOPページに戻る</a>'
-    }
+}
 ?>
