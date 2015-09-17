@@ -52,41 +52,41 @@ echo "<pre>";
             <tr>
               <td style="background-color: #87cefa  ;">身長</td>
               <td style="background-color: #ffffff  ;">
-                <input type="text" name="height" size="30">
+                <input type="text" name="height" size="30" value=<?php if($data){echo $data[0]["height"];} ?>>
               </td>
             </tr>
             <tr>
               <td style="background-color: #87cefa  ;">体重</td>
               <td style="background-color: #ffffff  ;">
-                <input type="text" name="weight" size="30">
+                <input type="text" name="weight" size="30" value=<?php if($data){echo $data[0]["weight"];} ?>>
               </td>
                         </tr>
             <tr>
                             <td style="background-color: #87cefa  ;">靴のサイズ</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="text" name="shoe_size" size="30">
+                <input type="text" name="shoe_size" size="30" value=<?php if($data){echo $data[0]["shoe-size"];} ?>>
               </td>
                         </tr>
 
             <tr>
                             <td style="background-color: #87cefa  ;">小物</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="radio" name="accessory" value="true" size="30" checked="checked"/>あり
-                <input type="radio" name="accessory" value="false" size="30"/>なし
+                <input type="radio" name="accessory" value="true" size="30" <?php if($data[0]["accessory"]==true) {echo "checked='checked'";} ?>/>あり
+                <input type="radio" name="accessory" value="false" size="30" <?php if($data[0]["accessory"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>/>なし
               </td>
             </tr>
             <tr>
                             <td style="background-color: #87cefa  ;">ウェア</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="radio" name="wear" value="true" size="30" checked="checked"/>あり
-                <input type="radio" name="wear" value="false" size="30" />なし
+                <input type="radio" name="wear" value="true" size="30" <?php if($data[0]["wear"]==true) {echo "checked='checked'";} ?>/>あり
+                <input type="radio" name="wear" value="false" size="30" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?> />なし
               </td>
             </tr>
             <tr>
                             <td style="background-color: #87cefa  ;">ボード</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="radio" name="board" value="true" size="30" checked="checked"/>あり
-                <input type="radio" name="board" value="false" size="30" />なし
+                <input type="radio" name="board" value="true" size="30" <?php if($data[0]["board"]==true) {echo "checked='checked'";} ?>/>あり
+                <input type="radio" name="board" value="false" size="30" <?php if($data[0]["board"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>/>なし
               </td>
             </tr>
 
