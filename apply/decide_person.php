@@ -40,9 +40,9 @@ foreach($data as $tmp){
   <body>
     <center>
     <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-      <tr><td>あなたの名前は<?php echo $userName; ?>。</td></tr>
+      <tr><td><?php echo $userName; ?>さんの知り合い</td></tr>
     </table>
-    参加者を選択してください。<TMPL_VAR NAME=HOME>
+    参加者を選択しましょう！<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
@@ -50,9 +50,6 @@ foreach($data as $tmp){
         <?php if($relationData["parent_personal_id"]==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
         <?php if($personData["id"]==$relationData["child_personal_id"]) :?>
-        <?php
-        echo $personData["id"]."b".$relationData["child_personal_id"]."a";
-        ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
