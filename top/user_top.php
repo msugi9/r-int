@@ -10,14 +10,9 @@ try{
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
   $sql = "select name from personal where id = " . $_SESSION["personal_id"];
-  var_dump($sql);
+
   $result = $pdo->query($sql);
   $name = $result->fetchAll();
-  echo "<pre>";
-  var_dump($name);
-  var_dump($name["0"]);
-  var_dump($name["0"]["name"]);
-  var_dump($name["name"]);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -30,7 +25,7 @@ try{
 </head>
 <body>
   <h1 style="text-align: center">
-    <?php $name[0]['name']; ?>さんのトップページ
+    <?php $name["0"]["name"]; ?>さんのトップページ
   </h1>
   <table border="1" align="center">
     <tr>
