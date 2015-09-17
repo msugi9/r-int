@@ -13,7 +13,6 @@ try{
 
   $result = $pdo->query($sql);
   $name = $result->fetchAll();
-  var_dump($name[0]["name"]);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -26,7 +25,7 @@ try{
 </head>
 <body>
   <h1 style="text-align: center">
-    <?php $name[0]["name"]; ?>さんのトップページ
+    <?php echo $name[0]["name"]; ?>さんのトップページ
   </h1>
   <table border="1" align="center">
     <tr>
