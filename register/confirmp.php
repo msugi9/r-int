@@ -8,6 +8,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 $id= ($_POST["id"]);
 $pass = ($_POST["password"]);
 $parent_id = ($_POST["parent_id"]);
+var_dump($parent_id);
 
 session_start();
 

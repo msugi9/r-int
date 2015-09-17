@@ -6,6 +6,7 @@ if($_SESSION["personal_id"]){
 }
 
 $parent_id = ($_POST["parent"]);
+var_dump($parent_id);
 ?>
 <HTML>
   <head>
