@@ -44,5 +44,5 @@ $_SESSION["personal_id"] = $personal_id["id"];
 print_r("登録を受け付けました。");
 print_r("２秒後にリダイレクトします。");
 
-header( "refresh:2;url=/personalinform/personalinfo.html" );
+// header( "refresh:2;url=/personalinform/personalinfo.html" );
 ?>
