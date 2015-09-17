@@ -45,7 +45,7 @@ $itemCode = array(
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <?php foreach($itemCode as $item) : ?>
-          <td><input type="checkbox" name="<?php echo $item['id']."a".$personData['id'];?>" value="1" <?php if($personData['item['name']']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo $item['id']."a".$personData['id'];?>" value="1" <?php if($personData["item['name']"]==FALSE)echo 'checked="checked"';?>></td>
           <?php endforeach; ?>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
