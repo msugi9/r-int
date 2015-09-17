@@ -25,12 +25,7 @@ try{
 ?>
 
 
-<html>
-<head>
-  <title>過去のデータ</title>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-</head>
-<body>
+
 
   <?php
   $x = $data[0][4];
@@ -38,9 +33,19 @@ try{
   foreach($data as $tmp){
     var_dump($tmp[4]);
   }
+  foreach($data as $tmp){
+    if($x = $tmp[4])
+    echo $tmp[9];
+  }
 
 
   ?>
+  <html>
+  <head>
+    <title>過去のデータ</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
   <table>
     <tr>
       <td>県</td>
