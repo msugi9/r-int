@@ -33,7 +33,7 @@ $parent_id = ($_GET["parent"]);
     <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
     <h1 class="text-primary" style="text-align: center">
 	<span class="text-info text-inline" style="text-align: center">
-	  楽々スノボ　ログイン(個人)
+	  楽々スノボ　ログイン
 	</span>
       </h1>
   </div>
