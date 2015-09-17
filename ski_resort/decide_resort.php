@@ -91,7 +91,7 @@ $pdo = null;
         <tr>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
-          <td><input type="checkbox" name="skiResortId" value="1"></td>
+          <td><input type="checkbox" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
         </tr>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
