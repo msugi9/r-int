@@ -34,7 +34,7 @@ $numOfMember = 3;
         </tr>
         <?php foreach ($data as $personData) : ?>
         <?php $prsnId = "prsn" .$personData['id'];
-        echo $prsnId;?>
+        echo $_POST['$prsnId'];?>
         <?php if($_POST['$prsnId']) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
