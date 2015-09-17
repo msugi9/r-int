@@ -1,5 +1,5 @@
 <?php
-0;95;csession_start();
+session_start();
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url($database_url);
