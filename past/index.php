@@ -22,6 +22,7 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
+
 ?>
 
 <<html>
@@ -30,6 +31,27 @@ try{
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 </head>
 <body>
+  <?php
+  $x = $tmp[0][3];
+  foreach($data as $tmp){if($tmp[3]==$x)
+  $childname = $tmp["child_personal_id"];
+$ski = $tmp[9];
+<table>
+<tr>
+  <td>県</td>
+  <td>$ski</td>
+  <td>$childname</td>
+</tr>
+</table>
+}
+  <table>
+    <tr>
+      <td>県</td>
+      <td>スキー場</td>
+      <td>参加者</td>
+    </tr>
 
+  </table>
+  ?>
 </body>
 </html>
