@@ -5,20 +5,21 @@ $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
 session_start();
-
+var_dump($_REQUESRT['sex']);
+exit;
 try{
     //データベース接続
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
     $loginid=htmlspecialchars($_REQUEST['login_ID']);
-    $sex=var_export($_REQUESRT['sex'],true);
+    $sex=htmlspecialchars($_REQUESRT['sex']);
     $pass=htmlspecialchars($_REQUEST['login_pass']);
     $height=htmlspecialchars($_REQUEST['height']);
     $weight=htmlspecialchars($_REQUEST['weight']);
     $shoe=htmlspecialchars($_REQUEST['shoe_size']);
-    $accessory=var_export($_REQUESRT['accessory'],true);
-    $wear=var_export($_REQUESRT['wear'],true);
-    $board=var_export($_REQUESRT['board'],true);
+    $accessory=htmlspecialchars($_REQUEST['accessory']);
+    $wear=htmlspecialchars($_REQUESRT['wear']);
+    $board=htmlspecialchars($_REQUEST['board']);
     //$email=htmlspecialchars($_REQUEST['email']);
 
     $insert_sql = "update personal set sex = '$sex', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id= " . $_SESSION["personal_id"];
