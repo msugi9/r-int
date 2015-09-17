@@ -97,7 +97,7 @@ $pdo = null;
         <pre><?php print_r($row) ;?></pre>
         <?php echo "---";?>
         <?php endforeach; ?>
-        <tr><input type="submit" name="submit" value="スキー場確定"></tr>
+        <tr><td><input type="submit" name="submit" value="スキー場確定"></td></tr>
       </table>
       </center>
     </form>
