@@ -71,15 +71,15 @@ session_start();
             </tr>
 
 
-          </table>
-        </td>
-      </tr>
-    </table>
-    <div style="margin-left:10%;margin-right:10%">
-      <input type="submit" name="submit" value="更新">
-    </div>
-    </form>
-  <!-- HTMLフォーム表示 -->
+
+	              </table>
+	          </td>
+	      </tr>
+          </table>
+      <br>
+	<input type="submit" name="submit" value="更新">
+      </form>
+    <!-- HTMLフォーム表示 -->
 
 </body>
 </html>

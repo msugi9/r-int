@@ -12,7 +12,7 @@
 
   <table border="1" align="center">
     <tr>
-      <th><a href="">アイテム登録</a></th>
+      <th><a href="../company/itemregist.php">アイテム登録</a></th>
       <th><a href="">企業データ変更</a></th>
     </tr>
   </table>
