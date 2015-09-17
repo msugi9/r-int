@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) { // POST送信されたか
         <tr>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
-          <td><input type="checkbox" name="ski_resort" value="<?php echo $row['pref_code']; ?>"></td>
+          <td><input type="checkbox" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
         </tr>
         <?php endforeach; ?>
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
