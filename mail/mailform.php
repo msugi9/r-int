@@ -27,9 +27,6 @@ if($judge == 1){
     print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/mailform.html">招待ページに戻る</a>'
 }
 
-//mb_language("Japanese");
-//mb_internal_encoding("UTF-8");
-
 $invitetest_url="realthingshakes25@gmail.com";
 
 $main="test\n";
