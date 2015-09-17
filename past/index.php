@@ -41,6 +41,15 @@ try{
 </head>
 <body>
   <table>
+  <style>
+table {
+border-collapse: collapse;
+}
+td {
+border: solid 1px;
+padding: 0.5em;
+}
+</style>
 
   <?php
   $x = $data[0]["play_date"];?>
