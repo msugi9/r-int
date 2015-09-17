@@ -5,7 +5,7 @@ if($_SESSION["personal_id"]){
   exit;
 }
 
-$parent_id = ($_POST["parent"]);
+$parent_id = ($_GET["parent"]);
 var_dump($parent_id);
 ?>
 <HTML>
