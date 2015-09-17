@@ -14,6 +14,7 @@ try{
 
 var_dump($ski_resort);
 
+
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -38,7 +39,14 @@ password<input type = "text" name ="password";>
 <br>
 TEL<input type = "text" name ="tel";>
 <br>
-スキー場<input type = "number" name ="ski" list="data1";>
+スキー場
+<select name="ski">
+  <?php
+  foreach ($ski_resort as $value) {
+    echo '<option value="' . $value['id'] . '">' . $value['name'] . '</option>';
+  }
+ ?>
+</select>
 <br>
 <input type ="submit" name ="to-roku" value="登録";>
 </FORM>
