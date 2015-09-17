@@ -35,7 +35,8 @@ $pdo = null;
 <html>
   <head><title>スキー場選択</title></head>
   <body>
-    <form>
+    <form action="./fix_resort.php" method="post">
+      <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach($data as $row) : ?>
         <tr>
@@ -44,7 +45,9 @@ $pdo = null;
           <td><input type="checkbox" name="ski_resort" value="<?php echo $row['pref_code']; ?>"></td>
         </tr>
         <?php endforeach; ?>
+        <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
+      </center>
     </form>
   </body>
 </html>
