@@ -51,8 +51,8 @@ if($_SESSION["company_id"]){
 
 <br>
 <input type="hidden" name="parent_id" value=<?php echo $parent_id; ?> />
-      <p>
-	<button type="submit" name="login" value="login" class="btn btn-primary" style="margin: 0px 50%">login</button>
+      <p style="text-align: center">
+	<button type="submit" name="login" value="login" class="btn btn-primary">login</button>
       </p>
 
 </FORM>
