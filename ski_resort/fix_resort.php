@@ -35,7 +35,7 @@ foreach($sdata as $tmp2){
 echo $_SESSION["company_id"]."a";
 echo $_POST['skiResortId']."b";
 echo $comdata['id']."c";
-echo $_SESSION['ski_resort_name's]."d";
+echo $_SESSION['ski_resort_name']."d";
 $_SESSION["company_id"]=$comdata['id'];
 $_SESSION['ski_resort_name']=$sdata['name'];
 echo $_SESSION["company_id"]."a";
