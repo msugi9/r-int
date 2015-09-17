@@ -5,6 +5,8 @@ $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
 session_start();
+var_dump($_SESSION["personal_id"]);
+exit;
 
 try{
     //データベース接続
@@ -25,9 +27,6 @@ try{
 
     $sql = $pdo->exec($insert_sql);
 
-    echo "登録しました\n";
-
-    print '<a href="/top/user_top.php">TOPページに戻る</a>';
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -35,3 +34,14 @@ try{
     }
 
 ?>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+登録しました
+<br>
+<a href="/top/user_top.php">TOPページに戻る</a>
+</body>
+</html>
