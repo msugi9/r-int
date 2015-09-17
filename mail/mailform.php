@@ -35,7 +35,7 @@ $main="あなたはレンタル会員\n";
 
 $from_url="test@test.com";
 
-$header="From: $from\n";
+$header="From: $from_url\n";
 
 //if(empty($mail1) != true){
 echo "test\n";
@@ -48,4 +48,6 @@ if($confirm_send){
     echo "おくれませんでした\n";
 }
 //}
+
+print '<a href="TOPページ">リンク</a>'
 ?>
