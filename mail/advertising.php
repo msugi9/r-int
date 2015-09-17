@@ -26,19 +26,15 @@
     <!-- タイトル -->
     <div class="jumbotoron">
     <div class="container">
-    <h2>楽天レンタルとは、あらかじめレンタルしたい用具をレンタル店に注文することで<br>
+    <h2 class="text-primary">楽天レンタルとは、あらかじめレンタルしたい用具をレンタル店に注文することで<br>
     現地に着いてすぐに用具を借りることのできるサービスです。</h2>
     </div>
     </div>
     
-    <font color="66cdaa">
-    <h2 style = "font-size: 19px; font-weight: bold;">こんなことありませんか？</h2>
-    </font>
+    <h2 class="bg-success">こんなことありませんか？</h2>
     <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: #f5f5dc;">
-      <font color="f08080">
       ・日帰りでスキー旅行にきたのに、レンタルで時間がかかる</br>
       ・正確なサイズを言いたくなくて、記入欄に嘘を書く・もはや書かない</br>
-      </font>
     </div>
 
     <font color="008080">
