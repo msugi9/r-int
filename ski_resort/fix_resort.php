@@ -28,6 +28,9 @@ $_SESSION["play_date"]=$_POST['year']."/".$_POST['month']."/".$_POST['day'];
 foreach($comdata as $tmp){
     if($tmp['ski_resort_id']==$_POST['skiResortId'])$_SESSION["company_id"]=$comdata['id'];
 }
+foreach($Sdata as $tmp2){
+    if($tmp2['id']==$_POST['skiResortId'])$_SESSION['ski_resort_name']=$sdata['name'];
+}
 echo $_SESSION["company_id"]."a";
 echo $_POST['skiResortId']."b";
 ?>
