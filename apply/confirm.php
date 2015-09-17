@@ -28,7 +28,7 @@ $someFlg = 1;
 //  else     $outputStr='△';
 //  
 //  echo $outputStr;
-}
+//}
 ?>
 
 <html>

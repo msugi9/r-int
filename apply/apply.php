@@ -33,8 +33,9 @@ $numOfMember = 3;
           <td>氏名</td><td>板ブーツ</td><td>ウェア</td><td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php $prsnId = "prsn" .$personData['id'];?>
-        <?php if($prsnId) :?>
+        <?php $prsnId = "prsn" .$personData['id'];
+        echo $prsnId;?>
+        <?php if($_REQUEST['$prsnId']) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
