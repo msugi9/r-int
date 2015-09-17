@@ -18,7 +18,7 @@ try{
 $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
 $resId = $sdata[$_POST["skiResortId"]]; //行き先スキー場のid
 
-$namesql = "select name from ski_resort where id = '$_POST["skiResortId"]'";
+$namesql = "select name from ski_resort where id = '$_POST['skiResortId']'";
 $nameresult = $pdo->query($namesql);
 $namedata = $nameresult->fetchAll();
 
