@@ -13,8 +13,6 @@ try{
     $judge=0;
 
     //$insert_sql="insert into() values($mail)";
-    $returnadd="mail/mailform.php"
-    $returnhome="招待ページに戻る<br>";
     if(strcmp($mail,$cmail) != 0){
 	$judge=1;
     }
@@ -46,15 +44,17 @@ try{
 	<![endif]-->
   </head>
   <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
+    <?php if($judge==1) : ?>
     <div class="panel panel-danger">
       <div class="panel-heading">
-	  <?php if($judge==1){echo "メールの入力に間違いがあります。もう一度入力して下さい<br>";}?>
+	メールの入力に間違いがあります。もう一度入力して下さい<br>
       </div>
       <div class="list-group">
-	  <a class="list-group-item" href=<?php if($judge==1){echo $returnadd}?>><?php if($judge==1){echo $returnhome;}?></a>
+	<a class="list-group-item" href="mail/mailform.php">招待ページに戻る</a>
       </div>
     </div>
-    <h2 class="text-primary">
+    <?php endif; ?>
+    <!--<h2 class="text-primary">
       <?php if($judge!=1){echo "$mail <br />";echo "招待メールを送信しました<br />";}?>
     </h2>
     <h2 class="text-normal">
@@ -62,5 +62,5 @@ try{
     </h2>
     <h2 class="text-normal">
       <?php if($judge!=1){print '<a href="../top/user_top.php">TOPページに戻る</a><br />';}?>
-    </h2>
+    </h2>-->
 </html>
