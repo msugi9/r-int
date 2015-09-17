@@ -46,7 +46,7 @@ try{
   <body>
     <div class="page-header">
       <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
-      <h1>
+      <h1 style="text-align: center">
 	<span class="text-info text-inline" style="text-align: center">
 	  <?php echo $name[0]["name"]; ?>さんのトップページ
 	</span>
