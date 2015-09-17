@@ -35,13 +35,14 @@ $numOfMember = 3;
         <?php foreach ($data as $personData) : ?>
         <?php $prsnId = "prsn" .$personData['id'];
         echo $prsnId;?>
-        <?php if(isset($_POST['$prsnId'])) :?>
+        <?php if($_POST['$prsnId']) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
           <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
           <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
         </tr>
+        <input type="hydden" name="prtcpnt<?php echo $personData['id'];?>" value="a">
         <?php endif; ?>
         <?php endforeach; ?>
       </table>

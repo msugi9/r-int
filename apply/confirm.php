@@ -45,6 +45,10 @@ $someFlg = 1;
         </tr>
         <?php foreach ($data as $personData) : ?>
         <?php 
+        $prtcpntId = "prsn" .$personData['id'];
+        echo $prtcpntId;?>
+        <?php if($_POST['$prtcpntId']) :?>
+        <?php 
         $prsnId = "prsn" .$personData['id'];
         $boardId = "board" .$personData['id'];
         $wearId = "wear" .$personData['id'];
