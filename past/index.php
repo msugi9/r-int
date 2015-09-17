@@ -60,7 +60,7 @@ foreach($data as $tmp){
       $sql = "select name from personal where id =". $tmp[7];
       $result = $pdo->query($sql);
       $nam = $result->fetchAll();
-      var_dump($nam);
+      echo $nam;
 
     }catch(PDOException $e){
       print('Error:'.$e->getMessage());
