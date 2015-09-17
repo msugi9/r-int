@@ -67,15 +67,17 @@ foreach($data as $tmp){
       die();
     }
   }
-    $x = $tmp[4];
+
     echo $x;
-    if($x == $tmp[4]){
+    if($x != $tmp[4]){
+      $x = $tmp[4];
+      if($x == $tmp[4]){
       echo $tmp[9];
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
       //sql文
-    
+
 
       $pdo =null;
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -90,6 +92,7 @@ foreach($data as $tmp){
       die();
     }
   }
+}
 }
 
 
