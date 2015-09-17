@@ -33,7 +33,7 @@ try{
       <th><a href="/mail/mailform.php">招待</a></th>
     </tr>
     <tr>
-      <th><a href="">過去データ</a></th>
+      <th><a href="/past/index.php">過去データ</a></th>
       <th><a href="/personalinform/personal_form.php">個人データ変更</a></th>
     </tr>
   </table>
