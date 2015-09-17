@@ -13,13 +13,18 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
 
-
+$itemCode = array(
+'0'=>'1','1'=>'acce',
+'0'=>'2','1'=>'board',
+'0'=>'3','1'=>'wear',
+);
+print_r($itemCode);
 ?>
 <html lang = "ja">
   <head>
@@ -40,9 +45,9 @@ try{
         <?php if($_POST["$prsnId"]) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo $item."a".$personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo $item."a".$personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo $item."a".$personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <?php endif; ?>

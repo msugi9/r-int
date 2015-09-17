@@ -15,6 +15,8 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
+
+$itemCode = array('1'=>'acce','2'=>'board','3'=>'wear');
 ?>
 
 <html lang = "ja">
@@ -24,7 +26,7 @@ try{
   </head>
   <body>
     <center>
-    これでいい？？？？？？？<TMPL_VAR NAME=HOME>
+    これでいい？？？？？？？
     <form action="./applyDb.php" method="post">
       <!--for文的な？-->
       <center>
@@ -33,13 +35,14 @@ try{
           <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
+        <?php foreach ($itemCode as $item) : ?>
         <?php $prsnId = "prsn" .$personData['id'];?>
         <?php if($_POST["$prsnId"]) :?>
         <?php 
         $prsnId = "prsn" .$personData['id'];
-        $boardId = "board" .$personData['id'];
-        $wearId = "wear" .$personData['id'];
-        $acceId = "acce" .$personData['id'];
+        $boardId = $item."a".$personData['id'];
+        $wearId = $item."a".$personData['id'];
+        $acceId = $item."a".$personData['id'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
@@ -48,6 +51,7 @@ try{
           <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
+        <?php $_SESSION['$boardId']
         <input type="hidden" name="boardId" value="<?php echo $boardId; ?>">
         <input type="hidden" name="wearId" value="<?php echo $wearId; ?>">
         <input type="hidden" name="acceId" value="<?php echo $acceId; ?>">

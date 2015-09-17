@@ -26,11 +26,13 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-
-$parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
+session_start();
+$parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる？？
 //$childrenUserId = $_POST["something"]; //子ユーザのidをとってくる？？
-$companyId = $_POST["something"];//レンタル会社のidもとってくる？？
-
+$companyId = $_SESSION["company_id"];//レンタル会社のidもとってくる？？
+foreach($data as $tmp){
+  if($tmp['id']==$parentUserId)$userName = $tmp['name'];
+}
 //$relationPsql = "select child_person_id from relation where parent_person_id = '$parentUserId'";
 //$relationPresult = $pdo->query($relationPsql);
 //$relationPdata = $relationPresult->fetchAll();
@@ -59,9 +61,6 @@ $companyId = $_POST["something"];//レンタル会社のidもとってくる？�
         <?php endif; ?>
         <?php endforeach; ?>
       </table>
-      <!--for文的な？-->
-      <input type="hidden" name="parentUserId" value="$parentUserId">
-      <input type="hidden" name="companyId" value="$companyId">
       <input type="submit" value="メンバー確定">
     </form>
     </center>
