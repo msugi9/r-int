@@ -94,7 +94,7 @@ try{
 	  ?>
 	</select>
 	<br>
-	<p>
+	<p style="text-align: center">
 	  <button type="submit" name="to-roku" value="登録" class="btn btn-primary">regist</button>
 	</p>
 
