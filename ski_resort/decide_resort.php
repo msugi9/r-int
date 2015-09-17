@@ -12,6 +12,11 @@ try{
   $sresult = $pdo->query($ssql);
   $sdata = $sresult->fetchAll();
   
+  /*/////確認用/////////
+  echo "<pre>";
+  print_r($sdata);
+  echo"</pre><br>";
+  //////確認用////////*/
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -19,18 +24,6 @@ try{
 session_start();
 $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 
-$thisfile = $_SERVER['SCRIPT_NAME'];
-$error_msg = ''; // スコープの関係上初期化しないといけない
-
-if (isset($_POST['submit'])) { // POST送信されたか
-  // チェック数のカウントと必要数のチェック
-  // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
-  if (is_array($_POST['skiResortId']) && count($_POST['skiResortId']) != 1) {
-    header('Location:' . $thisfile);
-    $error_msg = '二つ以上選択してください。';
-    echo $error_msg;
-  } 
-}
 $prefecture = array(
 '1'=>'北海道', '2'=>'青森県', '3'=>'岩手県', '4'=>'宮城県', '5'=>'秋田県',
 '6'=>'山形県', '7'=>'福島県', '8'=>'茨城県', '9'=>'栃木県', '10'=>'群馬県',
@@ -97,8 +90,8 @@ $pdo = null;
         <pre><?php print_r($row) ;?></pre>
         <?php echo "---";?>
         <?php endforeach; ?>
-        <tr><td><input type="submit" name="submit" value="スキー場確定"></td></tr>
       </table>
+      <input type="submit" name="submit" value="スキー場確定">
       </center>
     </form>
   </body>

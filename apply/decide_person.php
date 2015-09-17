@@ -49,7 +49,7 @@ $companyId = $_POST["something"];//レンタル会社のidもとってくる？�
     参加者を選択してください。<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
-      <table width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+      <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach ($data as $personData) : ?>
         <?php if($rdata['parent_personal_id']==$parentUserId) : ?>
         <tr style="background-color: #ffffff  ;">
