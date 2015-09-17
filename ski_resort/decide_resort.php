@@ -1,3 +1,4 @@
+
 <?php
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
@@ -9,7 +10,7 @@ try{
   //sql文
   $ssql = "select * from ski_resort";
   $sresult = $pdo->query($ssql);
-  $sdata = $result->fetchAll();
+  $sdata = $sresult->fetchAll();
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());

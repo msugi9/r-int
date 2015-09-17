@@ -9,7 +9,7 @@
   //sql文
   $ssql = "select * from ski_resort";
   $sresult = $pdo->query($ssql);
-  $sdata = $result->fetchAll();
+  $sdata = $sresult->fetchAll();
   
   }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -21,7 +21,7 @@
   
   $namesql = "select name from ski_resort where id=$resId";
   $nameresult = $pdo->query($namedsql);
-  $namedata = $result->fetchAll();
+  $namedata = $nameresult->fetchAll();
   ?>
   <html>
   <head><title>スキー場確認</title></head>
