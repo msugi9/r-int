@@ -50,8 +50,6 @@ echo "<pre>";
             <td>
 	      <div class="radio">
 		<label><input type="radio" name="sex" value="true"> 男性</label>
-	      </div>
-	      <div class="radio">
 		<label><input type="radio" name="sex" value="false" checked=""> 女性</label>
 	      </div>
             </td>
@@ -109,8 +107,6 @@ echo "<pre>";
             <td>
 		<div class="radio">
 		  <label><input type="radio" name="accessory" value="true" <?php if($data[0]["accessory"]==true) {echo "checked='checked'";}?> > あり</label>
-		</div>
-		<div class="radio">
 		  <label><input type="radio" name="accessory" value="false" <?php if($data[0]["accessory"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
 		</div>
             </td>
@@ -121,8 +117,6 @@ echo "<pre>";
             <td>
 	      <div class="radio">
 		<label><input type="radio" name="wear" value="true" <?php if($data[0]["wear"]==true) {echo "checked='checked'";}?> > あり</label>
-	      </div>
-	      <div class="radio">
 		<label><input type="radio" name="wear" value="false" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
 	      </div>
             </td>
@@ -133,20 +127,19 @@ echo "<pre>";
             <td>
 	      <div class="radio">
 		<label><input type="radio" name="board" value="true" <?php if($data[0]["wear"]==true) {echo "checked='checked'";}?> > あり</label>
-	      </div>
-	      <div class="radio">
 		<label><input type="radio" name="board" value="false" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
 	      </div>
             </td>
 	  </tr>
 	</tbody>
       </table>
+      <p>
+	<button type="submit" class="btn btn-primary">更新</button>
+	<button type="button" class="btn btn-default" onclick="location.href='/top/user_top.php'">戻る</button>
+      </p>
     </div>
+    
     <br>
-    <p>
-      <button type="submit" class="btn btn-primary">更新</button>
-      <button type="button" class="btn btn-default" onclick="location.href='/top/user_top.php'">戻る</button>
-    </p>
     </form>
 
   <!-- HTMLフォーム表示 -->
