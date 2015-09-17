@@ -11,14 +11,14 @@ try{
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
     $loginid=htmlspecialchars($_REQUEST['login_ID']);
-    $sex=htmlspecialchars($_REQUESRT['sex']);
+    $sex=var_export($_REQUESRT['sex'],true);
     $pass=htmlspecialchars($_REQUEST['login_pass']);
     $height=htmlspecialchars($_REQUEST['height']);
     $weight=htmlspecialchars($_REQUEST['weight']);
     $shoe=htmlspecialchars($_REQUEST['shoe_size']);
-    $accessory=htmlspecialchars($_REQUEST['accessory']);
-    $wear=htmlspecialchars($_REQUESRT['wear']);
-    $board=htmlspecialchars($_REQUEST['board']);
+    $accessory=var_export($_REQUESRT['accessory'],true);
+    $wear=var_export($_REQUESRT['wear'],true);
+    $board=var_export($_REQUESRT['board'],true);
     //$email=htmlspecialchars($_REQUEST['email']);
 
     $insert_sql = "update personal set sex = '$sex', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id= " . $_SESSION["personal_id"];
