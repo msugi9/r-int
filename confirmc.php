@@ -25,6 +25,6 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 }
 
 
-  if(trim($pass1[0]['login_password']==$pass)echo"ログインに成功しました。";
+  if(trim($pass1[0]['login_password'])==$pass)echo"ログインに成功しました。";
   else echo"失敗しました。"
 ?>
