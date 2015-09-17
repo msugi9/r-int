@@ -16,7 +16,7 @@
       <th><a href="">個人データ変更</a></th>
     </tr>
   </table>
-  <div style="center">
+  <div style="margin-top: 30px;text-align: center">
     <a href="">ログアウト</a>
   </div>
 </body>
