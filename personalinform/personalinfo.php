@@ -25,16 +25,9 @@ try{
 
     $sql = $pdo->exec($insert_sql);
 
-    echo "身長...'$height'\n";
-    echo "体重...'$weight'\n";
-    echo "靴のサイズ...'$shoe'\n";
-    echo "アクセサリー(キャップ、グローブ、ゴーグル)...'$accessory'\n";
-    echo "ウェア...'$wear'\n";
-    echo "ボード...'$board'\n";
-
     echo "登録しました\n";
 
-    print '<a href="TOPページ">TOPページに戻る</a>';
+    print '<a href="/top/personal_top.php">TOPページに戻る</a>';
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
