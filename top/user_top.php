@@ -66,7 +66,8 @@ try{
 	  </tr>
 	  <tr>
 	    <th class="danger"><a href="/past/index.php">過去データ</a>
-	      <div class="well well-lg">今までに行った事のあるスキー場・共に行ったメンバーの履歴を表示します</div>
+	      <div class="well well-lg">今までに行った事のあるスキー場と<br>
+		共に行ったことのあるメンバーの履歴を表示します</div>
 	    </th>
 	    <th class="info"><a href="/personalinform/personal_form.php">個人データ変更</a>
 	      <div class="well well-lg">個人情報の登録・変更ができます</div>
