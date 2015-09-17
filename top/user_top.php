@@ -44,7 +44,7 @@ try{
   </head> -->
   
   <body>
-    <div class="page-header">
+    <div class="page-header page-header">
       <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
       <h1 style="text-align: center">
 	<span class="text-info text-inline" style="text-align: center">
@@ -57,8 +57,11 @@ try{
       <div class="container">
 	<table class="table" border="1" align="center">
 	  <tr>
-	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a></th>
-	    <th class="warning"><a href="/mail/mailform.php">招待</a></th>
+	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a><br>
+	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事が出来ます</div>
+	    </th>
+	    <th class="warning"><a href="/mail/mailform.php">招待</a>
+	    </th>
 	  </tr>
 	  <tr>
 	    <th class="danger"><a href="/past/index.php">過去データ</a></th>
