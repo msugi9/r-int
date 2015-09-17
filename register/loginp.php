@@ -27,7 +27,7 @@ $parent_id = ($_GET["parent"]);
 	<![endif]-->
 </head>
 <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
-  <FORM action="confirmp.php" method="post">
+  <FORM action="confirmp.php" method="post" style="margin: 0px 25%">
   <!-- タイトル -->
   <div class="page-header">
     <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
