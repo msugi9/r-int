@@ -6,6 +6,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 session_start();
 var_dump($_REQUESRT['sex']);
+var_dump($_REQUESRT['wear']);
 exit;
 try{
     //データベース接続
