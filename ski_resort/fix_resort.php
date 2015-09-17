@@ -17,7 +17,7 @@
   }
   
   $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
-  $resId = $sdata["$_POST["skiResortId"]"]; //行き先スキー場のid
+  $resId = $sdata['$_POST["skiResortId"]']; //行き先スキー場のid
   
   $namesql = "select name from ski_resort where id=$resId";
   $nameresult = $pdo->query($namedsql);
@@ -28,7 +28,7 @@
   <body>
 	<center>
 	以下のスキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
-	<form action="./apply.php" method  ="post">
+	<form action="./resortDb.php" method  ="post">
 	  <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
 		<tr><?php echo $namedata; ?></tr>
 		<tr><input type="submit" name="submitResort" value="確定"></tr>
