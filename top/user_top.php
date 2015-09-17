@@ -58,15 +58,19 @@ try{
 	<table class="table" border="1" align="center">
 	  <tr>
 	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a><br>
-	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事が出来ます</div>
+	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事ができます</div>
 	    </th>
 	    <th class="warning"><a href="/mail/mailform.php">招待</a><br>
-	      <div class="well well-lg">まだ会員になっていないメンバーを招待出来ますx</div>
+	      <div class="well well-lg">まだ会員になっていないメンバーを招待できます</div>
 	    </th>
 	  </tr>
 	  <tr>
-	    <th class="danger"><a href="/past/index.php">過去データ</a></th>
-	    <th class="info"><a href="/personalinform/personal_form.php">個人データ変更</a></th>
+	    <th class="danger"><a href="/past/index.php">過去データ</a>
+	      <div class="well well-lg">今までに行った事のあるスキー場・共に行ったメンバーの履歴を表示します</div>
+	    </th>
+	    <th class="info"><a href="/personalinform/personal_form.php">個人データ変更</a>
+	      <div class="well well-lg">個人情報の登録・変更ができます</div>
+	    </th>
 	  </tr>
 	</table>
       </div>
