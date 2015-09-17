@@ -33,17 +33,7 @@ $prefecture = array(
 
 $pdo = null;
 
-$error_msg = ''; // スコープの関係上初期化しないといけない
-if (isset($_POST['submit'])) { // POST送信されたか
-  // チェック数のカウントと必要数のチェック
-  // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
-  if (is_array($_POST['ski_resort']) && count($_POST['ski_resort']) <= 1) {
-    header('Location:' . $thisfile);
-    exit;
-  } else {
-    $error_msg = '二つ以上選択してください。';
-  }
-}
+
 
 ?>
 <html>
