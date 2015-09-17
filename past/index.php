@@ -32,8 +32,8 @@ try{
 </head>
 <body>
 
-  $x = $data[0][3];
-  var_dump($x);
+  /*$x = $data[0][3];
+  var_dump($x); */
 
   <table>
     <tr>
