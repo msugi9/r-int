@@ -25,9 +25,10 @@ if(strcmp($mail3,$cmail3) != 0){
 if($judge == 1){
     echo "もう一度入力して下さい<br>";
     print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/mailform.html">招待ページに戻る</a>'
-}
-
+}else{
+    
     echo "招待メールを送信しました<br />";
 
-print '<a href="TOPページ">TOPページに戻る</a>'
+    print '<a href="TOPページ">TOPページに戻る</a>'
+    }
 ?>

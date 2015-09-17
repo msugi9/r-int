@@ -23,7 +23,8 @@ if(strcmp($mail3,$cmail3) != 0){
 }
 
 if($judge == 1){
-echo "もう一度入力して下さい\n";
+    echo "もう一度入力して下さい\n";
+    print '<a href="https://blooming-dawn-8215.herokuapp.com/mail/mailform.html">招待ページに戻る</a>'
 }
 
 //mb_language("Japanese");
@@ -45,7 +46,7 @@ $confirm_send=mail($invitetest_url,$subject,$main,$header);
 if($confirm_send){
     echo "招待メールを送信しました<br />";
 }else{
-    echo "招待メールを送信出来ませんでした<br />";
+    echo "招待メールを送信出来ました<br />";
 }
 //}
 
