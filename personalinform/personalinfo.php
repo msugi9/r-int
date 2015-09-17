@@ -18,13 +18,11 @@ try{
     $accessory=htmlspecialchars($_REQUEST['accessory']);
     $wear=htmlspecialchars($_REQUESRT['wear']);
     $board=htmlspecialchars($_REQUEST['board']);
-    $email=htmlspecialchars($_REQUEST['email']);
+    //$email=htmlspecialchars($_REQUEST['email']);
 
     $insert_sql = "update personal set height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id= " . $_SESSION["personal_id"];
 
     $sql = $pdo->exec($insert_sql);
-
-
 
     echo "身長...'$height'\n";
     echo "体重...'$weight'\n";
