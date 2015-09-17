@@ -62,10 +62,8 @@ echo "<pre>";
             <td>性別
 	    </td>
             <td>
-	      <div class="radio">
-		<label><input type="radio" name="sex" value="true"> 男性</label>
-		<label><input type="radio" name="sex" value="false" checked=""> 女性</label>
-	      </div>
+		<label class="radio-inline"><input type="radio" name="sex" value="true"> 男性</label>
+		<label class="radio-inline"><input type="radio" name="sex" value="false" checked=""> 女性</label>
             </td>
 	  </tr>
 	  <tr>
@@ -109,30 +107,24 @@ echo "<pre>";
             <td>小物
 	    </td>
             <td>
-	      <div class="radio">
-		<label><input type="radio" name="accessory" value="true" <?php if($data[0]["accessory"]==true) {echo "checked='checked'";}?> > あり</label>
-		<label><input type="radio" name="accessory" value="false" <?php if($data[0]["accessory"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
-	      </div>
+		<label class="radio-inline"><input type="radio" name="accessory" value="true" <?php if($data[0]["accessory"]==true) {echo "checked='checked'";}?> > あり</label>
+		<label class="radio-inline"><input type="radio" name="accessory" value="false" <?php if($data[0]["accessory"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
             </td>
 	  </tr>
 	  <tr>
              <td>ウェア
 	    </td>
             <td>
-	      <div class="radio">
-		<label><input type="radio" name="wear" value="true" <?php if($data[0]["wear"]==true) {echo "checked='checked'";}?> > あり</label>
-		<label><input type="radio" name="wear" value="false" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
-	      </div>
+		<label class="radio-inline"><input type="radio" name="wear" value="true" <?php if($data[0]["wear"]==true) {echo "checked='checked'";}?> > あり</label>
+		<label class="radio-inline"><input type="radio" name="wear" value="false" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
             </td>
 	  </tr>
 	  <tr>
              <td>ボード
 	    </td>
             <td>
-	      <div class="radio">
-		<label><input type="radio" name="board" value="true" <?php if($data[0]["wear"]==true) {echo "checked='checked'";}?> > あり</label>
-		<label><input type="radio" name="board" value="false" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
-	      </div>
+		<label class="radio-inline"><input type="radio" name="board" value="true" <?php if($data[0]["wear"]==true) {echo "checked='checked'";}?> > あり</label>
+		<label class="radio-inline"><input type="radio" name="board" value="false" <?php if($data[0]["wear"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
             </td>
 	  </tr>
 	</tbody>
