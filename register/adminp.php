@@ -22,7 +22,8 @@ try{
   //auto_incrimentのpersonal_idを取得
   $id_sql = "select id from personal where login_id = '$id'";
   $personal_id = $pdo->query($id_sql);
-  echo "jfkds" . $personal_id;
+  echo "aa";
+  var_dump($personal_id);
 
   //$data = $result->fetchAll();
   /*$pdo = null;
