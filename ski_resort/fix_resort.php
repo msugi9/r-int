@@ -20,7 +20,7 @@
   $resId = $sdata['$_POST["skiResortId"]']; //行き先スキー場のid
   
   $namesql = "select name from ski_resort where id=$resId";
-  $nameresult = $pdo->query($namedsql);
+  $nameresult = $pdo->query($namesql);
   $namedata = $nameresult->fetchAll();
   ?>
   <html>
