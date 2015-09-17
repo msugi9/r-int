@@ -58,9 +58,9 @@ $someFlg = 1;
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td align="center"><?php if($boardId){echo "○";}else{echo "×";}?></td>
-          <td align="center"><?php if($wearId){echo "○";}else{echo "×";}?></td>
-          <td align="center"><?php if($acceId){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($_POST["$boardId"]){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($_POST["$wearId"]){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
         </tr>
         <?php endif; ?>
         <?php endforeach; ?>
