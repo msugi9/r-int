@@ -27,7 +27,7 @@ if($_SESSION["company_id"]){
 	<![endif]-->
 </head>
 <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
-  <FORM action="confirmp.php" method="post" style="margin: 0px 25%">
+  <FORM action="confirmc.php" method="post" style="margin: 0px 25%">
   <!-- タイトル -->
   <div class="page-header">
     <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
@@ -47,6 +47,7 @@ if($_SESSION["company_id"]){
   <div class="input-group">
 	<span class="input-group-addon">login password</span>
 	<input type="text" name="password" class="form-control" placeholder="hogehoge">
+
   </div>
 
 <br>
