@@ -38,7 +38,6 @@ $from_url="test@test.com";
 $header="From: ".$from_url."\n";
 
 //if(empty($mail1) != true){
-echo "test\n";
 
 //$confirm_send=mb_send_mail($invitetest_url,$subject,$main,$header);
 $confirm_send=mail($invitetest_url,$subject,$main,$header);
@@ -46,7 +45,7 @@ $confirm_send=mail($invitetest_url,$subject,$main,$header);
 if($confirm_send){
     echo "招待メールを送信しました<br />";
 }else{
-    echo "おくれませんでした<br />";
+    echo "招待メールを送信出来ませんでした<br />";
 }
 //}
 
