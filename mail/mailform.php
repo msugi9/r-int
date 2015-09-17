@@ -6,7 +6,7 @@ $cmail1=$_REQUEST['conf_mail_1'];
 $cmail2=$_REQUEST['conf_mail_2'];
 $cmail3=$_REQUEST['conf_mail_3'];
 
-$subject="件名:楽天レンタルサービスについて";
+$subject="subjecttest";
 
 $judge=0;
 
@@ -26,12 +26,12 @@ if($judge == 1){
 echo "もう一度入力して下さい\n";
 }
 
-mb_language("Japanese");
-mb_internal_encoding("UTF-8");
+//mb_language("Japanese");
+//mb_internal_encoding("UTF-8");
 
 $invitetest_url="realthingshakes25@gmail.com";
 
-$main="あなたはレンタル会員\n";
+$main="test\n";
 
 $from_url="test@test.com";
 
