@@ -26,7 +26,7 @@ try{
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>User Top</title>
     
     <!-- Bootstrap -->
     <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
@@ -48,11 +48,11 @@ try{
       <h1><span class="label label-warning">楽々スノボ</span></h1>
     </div>
 
-      <h1 style="text-align: center">
+      <h2 style="text-align: center">
 	<span class="label laber-info">
 	  <?php echo $name[0]["name"]; ?>さんのトップページ
 	</span>
-      </h1>
+      </h2>
 
       <div class="container">
 	<table class="table" border="1" align="center">
