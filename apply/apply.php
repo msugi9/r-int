@@ -35,7 +35,7 @@ $numOfMember = 3;
         <?php foreach ($data as $personData) : ?>
         <?php $prsnId = "prsn" .$personData['id'];
         echo $prsnId;?>
-        <?php if($_REQUEST['$prsnId']) :?>
+        <?php if(isset($_POST['$prsnId'])) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
