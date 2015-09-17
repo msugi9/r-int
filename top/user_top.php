@@ -29,13 +29,8 @@ try{
   </h1>
   <table border="1" align="center">
     <tr>
-<<<<<<< HEAD
-      <th><a href="/ski_resort/decide_resort.php">レンタル申し込み</a></th>
-      <th><a href="">招待</a></th>
-=======
       <th><a href="/apply/decide_person.php">レンタル申し込み</a></th>
       <th><a href="/mail/mailform.php">招待</a></th>
->>>>>>> c4e35cd1d257206a9546612cbf04f522cd75ccdd
     </tr>
     <tr>
       <th><a href="/past/index.php">過去データ</a></th>
