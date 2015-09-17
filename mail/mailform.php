@@ -26,7 +26,7 @@ if($judge == 1){
 echo "もう一度入力して下さい\n";
 }
 
-mb_language("Ja");
+mb_language("Japanese");
 mb_internal_encoding("UTF-8");
 
 $invitetest_url="realthingshakes25@gmail.com";
@@ -37,13 +37,15 @@ $from_url="test@test.com";
 
 $header="From: $from\n";
 
-if(empty($mail1) != true){
-    echo "test\n";
+//if(empty($mail1) != true){
+echo "test\n";
 
-    if(mb_send_mail($invitetest_url,$subject,$main,$header)){
-	echo "招待メールを送信しました\n";
-    }else{
-	echo "おくれませんでした\n";
-    }
+$confirm_send=mb_send_mail($invitetest_url,$subject,$main,$header);
+
+if($confirm_send){
+    echo "招待メールを送信しました\n";
+}else{
+    echo "おくれませんでした\n";
 }
+//}
 ?>
