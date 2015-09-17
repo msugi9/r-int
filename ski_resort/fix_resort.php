@@ -20,7 +20,7 @@ $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204
   $resId = $sdata['$_POST["skiResortId"]']; //行き先スキー場のid
   
   $namesql = "select name from ski_resort where id=$resId";
-  $nameresult = $pdo->query($name<?phpsql);
+  $nameresult = $pdo->query($namesql);
   $namedata = $nameresult->fetchAll();
   ?>
   <html>
