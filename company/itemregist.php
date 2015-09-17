@@ -16,7 +16,7 @@ session_start();
 
     以下の欄に入力することで、貸し出し可能なレンタル用品を登録する事が出来ます。
 
-form action="./personalinfo.php" method="post">
+<form action="./personalinfo.php" method="post">
       <table width="60%" border="0" cellspacing="0" cellpadding="0" style="margin: 2px 0pt 0pt 0px;">
 	      <tr>
 	          <td bgcolor="#008b8b  ">
@@ -25,8 +25,8 @@ form action="./personalinfo.php" method="post">
 			<td style="background-color: #87cefa  ;">ボードS
 			</td>
 			<td style="background-color: #ffffff  ;">
-			   <input type="checked" name="board_s" value="true" size="30" checked="checked">
-			  <input type="text" name="height" size="30">
+			   <input type="checkbox" name="board_s" value="1" size="30">
+			  <input type="text" name="height" size="30">個
 			 
 			</td>
 		      </tr>
