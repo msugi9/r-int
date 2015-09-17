@@ -20,7 +20,7 @@ try{
     $board=htmlspecialchars($_REQUEST['board']);
     $email=htmlspecialchars($_REQUEST['email']);
 
-    $insert_sql = "update personal set height=$height,weight=$weight,shoe_size=$shoe,accessory=$accessory,wear=$wear,board=$board where id= " . $_SESSION["personal_id"];
+    $insert_sql = "update personal set height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id= " . $_SESSION["personal_id"];
 
     $sql = $pdo->exec($insert_sql);
 
