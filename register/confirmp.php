@@ -39,6 +39,8 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $insert = "insert into invite values('$parent_id'," . $_SESSION["personal_id"] . ")";
   $personal = $pdo->exec($insert);
 
+  var_dump($insert);
+
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -57,7 +59,7 @@ var_dump($id1);*/
   if(trim($pass1[0]['login_password'])==$pass){
     echo"ログインに成功しました。\n";
     print_r("２秒後にリダイレクトします。");
-    header( "refresh:2;url=/top/user_top.php" );
+    //header( "refresh:2;url=/top/user_top.php" );
   }else{
     echo"失敗しました。";
   }
