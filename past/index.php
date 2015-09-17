@@ -68,6 +68,7 @@ foreach($data as $tmp){
     }
   }
     $x = $tmp[4];
+    echo $x;
     if($x == $tmp[4]){
       echo $tmp[9];
     try{
