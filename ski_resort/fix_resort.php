@@ -33,6 +33,8 @@ foreach($Sdata as $tmp2){
 }
 echo $_SESSION["company_id"]."a";
 echo $_POST['skiResortId']."b";
+echo $comdata['id']."c";
+echo $_SESSION["ski_resort_name"]."d";
 ?>
 
 <html lang = "ja">
