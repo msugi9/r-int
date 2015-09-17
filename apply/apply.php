@@ -18,8 +18,11 @@ try{
 
 
 ?>
-<html>
-  <head><title>レンタル品選択</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>レンタル品選択</title>
+  </head>
   <body>
     <center>
     レンタル品とその数を確認してください<TMPL_VAR NAME=HOME>

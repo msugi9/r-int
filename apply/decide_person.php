@@ -16,12 +16,12 @@ try{
   $isql = "select * from item";
   $iresult = $pdo->query($isql);
   $idata = $result->fetchAll();
-//  if($data){
-//    echo "<pre>";
-//    print_r($data);
-//    echo "</pre>";
-//  }
-
+  //  if($data){
+  //    echo "<pre>";
+  //    print_r($data);
+  //    echo "</pre>";
+  //  }
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
@@ -36,8 +36,11 @@ $companyId = $_POST["something"];//レンタル会社のidもとってくる？�
 //$relationPdata = $relationPresult->fetchAll();
 
 ?>
-<html>
-  <head><title>メンバー決定</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>メンバー決定</title>
+  </head>
   <body>
     <center>
     <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">

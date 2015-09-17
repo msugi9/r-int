@@ -16,15 +16,15 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-
-$parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
+session_start();
+$parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 
 $error_msg = '';
 if (isset($_POST['submit'])) { // POST送信されたか
   // チェック数のカウントと必要数のチェック
   // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
   if (is_array($_POST['skiResortId']) && count($_POST['skiResortId']) <= 1) {
-    exit;
+    
   } else {
     $error_msg = '選びすぎ';
     echo $error_msg;
@@ -48,8 +48,11 @@ $pdo = null;
 
 
 ?>
-<html>
-  <head><title>スキー場選択</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>スキー場選択</title>
+  </head>
   <body>
     <form action="./fix_resort.php" method="post">
       <center>
@@ -94,8 +97,6 @@ $pdo = null;
         <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
       </center>
-      <input type="hidden" name="parentUserId" value=",?php echo $parentUserId; ?>">
-      <input type="hidden" name="companyId" value="<?php echo $companyId; ?>">
     </form>
   </body>
 </html>

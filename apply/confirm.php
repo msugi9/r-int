@@ -17,8 +17,11 @@ try{
 }
 ?>
 
-<html>
-  <head><title>レンタル品確認</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>レンタル品確認</title>
+  </head>
   <body>
     <center>
     これでいい？？？？？？？<TMPL_VAR NAME=HOME>

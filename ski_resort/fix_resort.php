@@ -15,7 +15,9 @@ try{
     print('Error:'.$e->getMessage());
     die();
 }
-$parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
+session_start();
+$parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
+$_SESSION["ski_resort_id"]=$_POST['skiResortId'];
 $rstId = $_POST['skiResortId'];
 
 $namesql = "select name from ski_resort where id = '$rstId'";
@@ -24,8 +26,11 @@ $namedata = $nameresult->fetchAll();
 
 ?>
 
-<html>
-    <head><title>スキー場確認</title></head>
+<html lang = "ja">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>スキー場確認</title>
+    </head>
     <body>
         <center>
         以下のスキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
