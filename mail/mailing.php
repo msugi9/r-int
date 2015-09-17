@@ -4,19 +4,19 @@ $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 try{
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
-    
+
     $mail=htmlspecialchars($_REQUEST['mail_1']);
     $cmail=htmlspecialchars($_REQUEST['conf_mail_1']);
-    
+
     $subject="subjecttest";
-    
+
     $judge=0;
 
     //$insert_sql="insert into() values($mail)";
     if(strcmp($mail,$cmail) != 0){
 	$judge=1;
     }
-    
+
 }catch(PDOException $e){
     print('Error:'.$e->getMessage());
     die();
@@ -32,10 +32,10 @@ try{
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Bootstrap 101 Template</title>
-    
+
     <!-- Bootstrap -->
     <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -60,7 +60,7 @@ try{
 	招待メールを送信しました<br>
       </div>
       <div class="list-group">
-	<a class="list-group-item" href="/advertising.php">招待メールを見る</a>
+	<a class="list-group-item" href="/mail/advertising.php">招待メールを見る</a>
 	<a class="list-group-item" href="../top/user_top.php">TOPに戻る</a>
       </div>
     </div>

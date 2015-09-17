@@ -13,16 +13,23 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
-
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
 
-
+$itemCode = array(
+'id'=>'1','name'=>'acce',
+'id'=>'2','name'=>'board',
+'id'=>'3','name'=>'wear',
+);
 ?>
-<html>
-  <head><title>レンタル品選択</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>レンタル品選択</title>
+  </head>
   <body>
     <center>
     レンタル品とその数を確認してください<TMPL_VAR NAME=HOME>
@@ -37,9 +44,9 @@ try{
         <?php if($_POST["$prsnId"]) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
-          <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo "board".$personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo "wear".$personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
+          <td><input type="checkbox" name="<?php echo "acce".$personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
         </tr>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <?php endif; ?>
