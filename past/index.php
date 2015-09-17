@@ -16,6 +16,7 @@ try{
   $data = $result->fetchAll();
 
   echo "<pre>";
+  var_dump($data);
   /*
   $pdo =null;
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -47,7 +48,6 @@ try{
 foreach($data as $tmp){
     if($x == $tmp[4]){
     echo $tmp[9]."  ";
-    echo $tmp[7]."<br />";
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
