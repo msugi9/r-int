@@ -23,7 +23,7 @@ if(strcmp($mail3,$cmail3) != 0){
 }
 
 if($judge == 1){
-echo "もう一度入力して下さい";
+echo "もう一度入力して下さい\n";
 }
 
 $invitetest_url="realthingshakes25@gmail.com";
