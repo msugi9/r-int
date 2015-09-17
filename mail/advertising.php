@@ -59,7 +59,7 @@
       <div class="panel-body">
 	このサービスを利用するには、以下のリンクから必要な情報を入力して下さい
       </div>
-      <div class="list-group">
+      <div class="list-group-success">
 	<a class="list-group-item" href="../adminp.html">新規登録の方はこちら</a>
 	<a class="list-group-item" href="../register/loginp.html">既に会員の方はログインして下さい</a>
       </div>
