@@ -52,7 +52,7 @@ foreach($data as $tmp){
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
       //sql文
-      echo "<pre>";
+
 
       $pdo =null;
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -60,7 +60,7 @@ foreach($data as $tmp){
       $sql = "select name from personal where id =". $tmp[7];
       $result = $pdo->query($sql);
       $nam = $result->fetchAll();
-      echo $nam[0][0]."<br />";
+      echo $nam[0][0]."  ";
 
     }catch(PDOException $e){
       print('Error:'.$e->getMessage());
@@ -75,7 +75,7 @@ foreach($data as $tmp){
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
       //sql文
-      echo "<pre>";
+    
 
       $pdo =null;
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -83,7 +83,7 @@ foreach($data as $tmp){
       $sql = "select name from personal where id =". $tmp[7];
       $result = $pdo->query($sql);
       $nam = $result->fetchAll();
-      echo $nam[0][0]."<br />";
+      echo $nam[0][0]."  ";
 
     }catch(PDOException $e){
       print('Error:'.$e->getMessage());
