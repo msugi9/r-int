@@ -48,6 +48,7 @@ echo $_SESSION["ski_resort_name"]."d";
         <form action="./resortDb.php" method  ="post">
             <table width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
                 <tr><td><?php echo "行き先->" . $_SESSION['ski_resort_name']; ?></td></tr>
+                <tr><td>hokkaido</td></tr>
                 <tr><td><?php echo "日程->" . $_SESSION["play_date"]; ?></td></tr>
                 <tr><input type="submit" name="submitResort" value="確定"></tr>
             </table>
