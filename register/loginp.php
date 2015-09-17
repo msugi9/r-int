@@ -21,7 +21,7 @@ ID<input type = "text" name ="id";>
 password<input type = "text" name ="password";>
 
 <br>
-<input type="hidden" name="parent_id" value="<?php echo $_SESSION["personal_id"] ?>">
+<input type="hidden" name="parent_id" value='$parent_id'>
 <input type ="submit" name ="login" value="login">
 </FORM>
 </HTML>
