@@ -10,10 +10,12 @@ try{
     $ssql = "select * from ski_resort";
     $sresult = $pdo->query($ssql);
     $sdata = $sresult->fetchAll();
-    $comsql = "select * from company where ski_resort_id = '$_POST['skiResortId']'";
+    $comsql = "select * from company";
     $comresult = $pdo->query($comsql);
     $comdata = $comresult->fetchAll();
-    echo $comdata<br>;
+    //////確認用/////////
+    print_r($comdata);
+    echo"<br>";
 }catch(PDOException $e){
     print('Error:'.$e->getMessage());
     die();
@@ -22,7 +24,11 @@ session_start();
 $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 $_SESSION["ski_resort_id"]=$_POST['skiResortId'];
 $_SESSION["play_date"]=$_POST['year']."/".$_POST['month']."/".$_POST['day'];
-$_SESSION["company_id"]=$comdata['company_id'];
+foreach($comdata as $tmp){
+    if($tmp['ski_resort_id']==$_POST['skiResortId'])$_SESSION["company_id"]=$comdata['company_id'];
+}
+echo $_SESSION["company_id"];
+echo $_POST['skiResortId'];
 ?>
 
 <html lang = "ja">

@@ -8,13 +8,10 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 $pdo = null;
 
 
-$personalId = ($_POST["id"]);
-$companyId = ($_POST["password"]);
-$skiResortId = ($_POST["charge"]);
-$playDate = ($_POST["mail"]);
-$userId = ($_POST["address"]);
-$itemId = ($_POST["tel"]);
-$ski = ($_POST["ski"]);
+$personalId = $_SESSION["personal_id"];
+$companyId = $_SESSION["company_id"];
+$skiResortId = $_SESSION["ski_resort_id"];
+$playDate = $_SESSION["play_date"];
 try{
   
   //データベースに接続
@@ -24,10 +21,10 @@ try{
   $sresult = $pdo->query($ssql);
   $persdata = $sresult->fetchAll();
   
-  /*
-  $apsql = "insert into apply (name,login_id,login_password,mail_address,charge,address,tel,ski_resort_id) values ( '$name','$id','$pass','$mail','$charge','$address',$tel,$ski)";
-  $result = $pdo->exec($sql);
+  $apsql = "insert into apply (personal_id, company_id, ski_resort_id, play_date) values ('$personalId','$companyId','$skiResortId','$playDate')";
+  $result = $pdo->exec($apsql);
   
+  /*
   foreach($data as $tmp)//applu_itemのDBへの入力。無理だすまん。
   if(1){
     $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";

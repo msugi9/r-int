@@ -7,8 +7,8 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $pdo = null;
 
-
-$personalId = ($_POST["id"]);
+session_start();
+$personalId = $_SESSION["personal_id"];
 $companyId = ($_POST["password"]);
 $skiResortId = ($_POST["charge"]);
 $playDate = ($_POST["mail"]);
