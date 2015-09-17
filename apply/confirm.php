@@ -22,12 +22,12 @@ $numOfMember = 3;
 //とりあえず全部借りる扱い
 $someFlg = 1;
 
-function check_rent($someFlg){
-  if($someFlg)     $outputStr='○';
-  else if($someFlg)$outputStr='×';
-  else     $outputStr='△';
-  
-  echo $outputStr;
+//function check_rent($someFlg){
+//  if($someFlg)     $outputStr='○';
+//  else if($someFlg)$outputStr='×';
+//  else     $outputStr='△';
+//  
+//  echo $outputStr;
 }
 ?>
 
@@ -56,9 +56,9 @@ function check_rent($someFlg){
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
-          <td align="center"><?php check_rent($_REQUEST['$boardId']);?></td>
-          <td align="center"><?php check_rent($_REQUEST['$wearId']);?></td>
-          <td align="center"><?php check_rent($_REQUEST['$acceId']);?></td>
+          <td align="center"><?php if($boardId){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($wearId){echo "○";}else{echo "×";}?></td>
+          <td align="center"><?php if($acceId){echo "○";}else{echo "×";}?></td>
         </tr>
         <?php endforeach; ?>
       </table>
