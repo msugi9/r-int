@@ -66,8 +66,10 @@ try{
 	  </tr>
 	</table>
       </div>
-  <div style="margin-top: 30px;text-align: center">
-    <a href="/top/logout.php">ログアウト</a>
-  </div>
-</body>
-</html>
+      <div style="margin-top: 30px;text-align: center">
+	<p>
+	  <button type="button" class="btn btn-primary" onclick="location.href='/top/logout.php'">ログアウト</button>
+	</p>
+      </div>
+  </body>
+  </html>
