@@ -15,14 +15,16 @@ $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204
   print('Error:'.$e->getMessage());
   die();
   }
-  var_damp("aaaa");exit;
   $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
   $resId = $sdata['$_POST["skiResortId"]']; //行き先スキー場のid
   
   $namesql = "select name from ski_resort where id=$resId";
   $nameresult = $pdo->query($namesql);
   $namedata = $nameresult->fetchAll();
+  
+  var_dump("aaaa");exit;
   ?>
+  
   <html>
   <head><title>スキー場確認</title></head>
   <body>
