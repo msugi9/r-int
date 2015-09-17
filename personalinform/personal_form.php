@@ -58,9 +58,7 @@ echo "<pre>";
             <td>住所
 	    </td>
 	    <td>
-	      <div class="input-group">
 		<input type="text" name="address" class="form-control" placeholder="東京都2-54-3" value=<?php if($data){echo $data[0]["address"];} ?>>
-	      </div>
             </td>
 	  </tr>
 
@@ -68,36 +66,28 @@ echo "<pre>";
             <td>電話番号
 	    </td>
             <td>
-	      <div class="input-group">
 		<input type="text" name="tel" class="form-control" placeholder="01200000000" value=<?php if($data){echo $data[0]["tel"];} ?>>
-	      </div>
             </td>
 	  </tr>
 	  <tr>
             <td>身長
 	    </td>
             <td>
-	      <div class="input-group">
 		<input type="text" name="height" class="form-control" placeholder="160" value=<?php if($data){echo $data[0]["height"];} ?>>
-	      </div>
             </td>
 	  </tr>
 	  <tr>
             <td>体重
 	    </td>
             <td>
-	      <div class="input-group">
 		<input type="text" name="weight" class="form-control" placeholder="50" value=<?php if($data){echo $data[0]["weight"];} ?>>
-	      </div>
             </td>
 	  </tr>
 	  <tr>
             <td>靴のサイズ
 	    </td>
             <td>
-	      <div class="input-group">
 		<input type="text" name="shoe_size" class="form-control" placeholder="24" value=<?php if($data){echo $data[0]["shoe_size"];} ?>>
-	      </div>
             </td>
 	  </tr>
 	  
@@ -105,10 +95,10 @@ echo "<pre>";
             <td>小物
 	    </td>
             <td>
-		<div class="radio">
-		  <label><input type="radio" name="accessory" value="true" <?php if($data[0]["accessory"]==true) {echo "checked='checked'";}?> > あり</label>
-		  <label><input type="radio" name="accessory" value="false" <?php if($data[0]["accessory"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
-		</div>
+	      <div class="radio">
+		<label><input type="radio" name="accessory" value="true" <?php if($data[0]["accessory"]==true) {echo "checked='checked'";}?> > あり</label>
+		<label><input type="radio" name="accessory" value="false" <?php if($data[0]["accessory"]==false) {echo "checked='checked'";}elseif(!$data){echo "checked='checked'";} ?>> なし</label>
+	      </div>
             </td>
 	  </tr>
 	  <tr>
