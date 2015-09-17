@@ -68,9 +68,7 @@ session_start();
 	      </tr>
           </table>
       <br>
-      <div style="margin-left:10%;margin-right:10%">
 	<input type="submit" name="submit" value="更新">
-      </div>
       </form>
     <!-- HTMLフォーム表示 -->
 
