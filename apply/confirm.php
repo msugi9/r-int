@@ -15,13 +15,21 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-?>
+session_start();
+$itemCode = array(
+'id'=>'1','name'=>'acce',
+'id'=>'2','name'=>'board',
+'id'=>'3','name'=>'wear',
+);?>
 
-<html>
-  <head><title>レンタル品確認</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>レンタル品確認</title>
+  </head>
   <body>
     <center>
-    これでいい？？？？？？？<TMPL_VAR NAME=HOME>
+    これでいい？？？？？？？
     <form action="./applyDb.php" method="post">
       <!--for文的な？-->
       <center>
@@ -34,9 +42,9 @@ try{
         <?php if($_POST["$prsnId"]) :?>
         <?php 
         $prsnId = "prsn" .$personData['id'];
-        $boardId = "board" .$personData['id'];
-        $wearId = "wear" .$personData['id'];
-        $acceId = "acce" .$personData['id'];
+        $boardId = "board".$personData['id'];
+        $wearId = "wear".$personData['id'];
+        $acceId = "acce".$personData['id'];
         ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
@@ -44,6 +52,12 @@ try{
           <td align="center"><?php if($_POST["$wearId"]){echo "○";}else{echo "×";}?></td>
           <td align="center"><?php if($_POST["$acceId"]){echo "○";}else{echo "×";}?></td>
         </tr>
+        <?php
+        ////sessionに1か0が入るはず///
+        $_SESSION["$boardId"]=$_POST["$boardId"];
+        $_SESSION["$wearId"]=$_POST["$wearId"];
+        $_SESSION["$acceId"]=$_POST["$acceId"];
+        ?>
         <input type="hidden" name="prsn<?php echo $personData['id'];?>" value="1">
         <input type="hidden" name="boardId" value="<?php echo $boardId; ?>">
         <input type="hidden" name="wearId" value="<?php echo $wearId; ?>">

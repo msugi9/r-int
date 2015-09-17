@@ -12,24 +12,18 @@ try{
   $sresult = $pdo->query($ssql);
   $sdata = $sresult->fetchAll();
   
+  /*/////確認用/////////
+  echo "<pre>";
+  print_r($sdata);
+  echo"</pre><br>";
+  //////確認用////////*/
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
+session_start();
+$parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 
-$parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
-
-$error_msg = '';
-if (isset($_POST['submit'])) { // POST送信されたか
-  // チェック数のカウントと必要数のチェック
-  // countは配列でない場合1を返す。is_arrayでチェックしないと誤動作の恐れあり
-  if (is_array($_POST['skiResortId']) && count($_POST['skiResortId']) <= 1) {
-    exit;
-  } else {
-    $error_msg = '選びすぎ';
-    echo $error_msg;
-  }
-}
 $prefecture = array(
 '1'=>'北海道', '2'=>'青森県', '3'=>'岩手県', '4'=>'宮城県', '5'=>'秋田県',
 '6'=>'山形県', '7'=>'福島県', '8'=>'茨城県', '9'=>'栃木県', '10'=>'群馬県',
@@ -48,8 +42,11 @@ $pdo = null;
 
 
 ?>
-<html>
-  <head><title>スキー場選択</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>スキー場選択</title>
+  </head>
   <body>
     <form action="./fix_resort.php" method="post">
       <center>
@@ -88,14 +85,14 @@ $pdo = null;
         <tr>
           <td><?php echo $row['name']; ?></td>
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
-          <td><input type="checkbox" name="skiResortId" value="1"></td>
+          <td><input type="radio" name="skiResortId" value="<?php echo $row['id']; ?>"></td>
         </tr>
+        <pre><?php print_r($row) ;?></pre>
+        <?php echo "---";?>
         <?php endforeach; ?>
-        <tr><input type="submit" name="submit" value="スキー場確定"></tr>
       </table>
+      <input type="submit" name="submit" value="スキー場確定">
       </center>
-      <input type="hidden" name="parentUserId" value=",?php echo $parentUserId; ?>">
-      <input type="hidden" name="companyId" value="<?php echo $companyId; ?>">
     </form>
   </body>
 </html>
