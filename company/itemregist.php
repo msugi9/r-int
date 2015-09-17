@@ -25,7 +25,9 @@ form action="./personalinfo.php" method="post">
 			<td style="background-color: #87cefa  ;">ボードS
 			</td>
 			<td style="background-color: #ffffff  ;">
+			   <input type="checked" name="board_s" value="true" size="30" checked="checked">
 			  <input type="text" name="height" size="30">
+			 
 			</td>
 		      </tr>
 		      <tr>
