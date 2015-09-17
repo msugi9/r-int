@@ -50,17 +50,20 @@ try{
 	メールの入力に間違いがあります。もう一度入力して下さい<br>
       </div>
       <div class="list-group">
-	<a class="list-group-item" href="mail/mailform.php">招待ページに戻る</a>
+	<a class="list-group-item" href="/mailform.php">招待ページに戻る</a>
       </div>
     </div>
     <?php endif; ?>
-    <!--<h2 class="text-primary">
-      <?php if($judge!=1){echo "$mail <br />";echo "招待メールを送信しました<br />";}?>
-    </h2>
-    <h2 class="text-normal">
-      <?php if($judge!=1){print '<a href="/mail/advertising.php">招待メールを見る</a><br />';}?>
-    </h2>
-    <h2 class="text-normal">
-      <?php if($judge!=1){print '<a href="../top/user_top.php">TOPページに戻る</a><br />';}?>
-    </h2>-->
+    <?php if($judge!=1) : ?>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+	招待メールを送信しました<br>
+      </div>
+      <div class="list-group">
+	<a class="list-group-item" href="/advertising.php">招待メールを見る</a>
+	<a class="list-group-item" href="../top/user_top.php">TOPに戻る</a>
+      </div>
+    </div>
+    <?php endif; ?>
+
 </html>
