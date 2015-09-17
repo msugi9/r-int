@@ -16,32 +16,37 @@ try{
   $isql = "select * from item";
   $iresult = $pdo->query($isql);
   $idata = $result->fetchAll();
-//  if($data){
-//    echo "<pre>";
-//    print_r($data);
-//    echo "</pre>";
-//  }
-
+  //  if($data){
+  //    echo "<pre>";
+  //    print_r($data);
+  //    echo "</pre>";
+  //  }
+  
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
 }
-
-$parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
+session_start();
+$parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる？？
 //$childrenUserId = $_POST["something"]; //子ユーザのidをとってくる？？
-$companyId = $_POST["something"];//レンタル会社のidもとってくる？？
-
+$companyId = $_SESSION["company_id"];//レンタル会社のidもとってくる？？
+foreach($data as $tmp){
+  if($tmp['id']==$parentUserId)$userName = $tmp['name'];
+}
 //$relationPsql = "select child_person_id from relation where parent_person_id = '$parentUserId'";
 //$relationPresult = $pdo->query($relationPsql);
 //$relationPdata = $relationPresult->fetchAll();
 
 ?>
-<html>
-  <head><title>メンバー決定</title></head>
+<html lang = "ja">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>メンバー決定</title>
+  </head>
   <body>
     <center>
     <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-      <tr>あなたの名前は<?php echo $userName?>。</tr>
+      <tr>あなたの名前は<?php echo $userName; ?>。</tr>
     </table>
     参加者を選択してください。<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">
@@ -56,9 +61,6 @@ $companyId = $_POST["something"];//レンタル会社のidもとってくる？�
         <?php endif; ?>
         <?php endforeach; ?>
       </table>
-      <!--for文的な？-->
-      <input type="hidden" name="parentUserId" value="$parentUserId">
-      <input type="hidden" name="companyId" value="$companyId">
       <input type="submit" value="メンバー確定">
     </form>
     </center>
