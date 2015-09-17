@@ -18,12 +18,11 @@ try{
   $sql = "insert into personal (login_id,login_password,name,email) values ( '$id','$pass','$name','$mail')";
 
   $result = $pdo->exec($sql);
-  $result = $result->fetchAll();
 
   //auto_incrimentのpersonal_idを取得
   $id_sql = "select id from personal where login_id = '$id'";
-  $personal_id = $pdo->query($id_sql);
-  $personal_id = $personal_id->fetchAll();
+  $personal = $pdo->query($id_sql);
+  $personal_id = $personal->fetch();
 
   //$data = $result->fetchAll();
   /*$pdo = null;
