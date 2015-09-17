@@ -24,6 +24,8 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   die();
 }
 var_dump($pass1);
+var_dump($pass1[0][0]);
+var_dump($pass1[0]['login_password']);
 var_dump($pass);
 
   if($pass1==$pass)echo"ログインに成功しました。";
