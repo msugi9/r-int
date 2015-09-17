@@ -25,8 +25,8 @@ session_start();
             <tr>
               <td style="background-color: #87cefa  ;">性別</td>
               <td style="background-color: #ffffff  ;">
-                <input type="radio" name="sex" value="man" size="30" checked="checked"/>男性
-                <input type="radio" name="sex" value="woman" size="30"/>女性
+                <input type="radio" name="sex" value="true" size="30" checked="checked"/>男性
+                <input type="radio" name="sex" value="false" size="30"/>女性
               </td>
             </tr>
             <tr>
