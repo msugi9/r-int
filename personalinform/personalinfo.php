@@ -5,8 +5,6 @@ $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
 session_start();
-var_dump($_SESSION["personal_id"]);
-exit;
 
 try{
     //データベース接続
