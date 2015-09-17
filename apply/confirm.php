@@ -44,10 +44,8 @@ $someFlg = 1;
           <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php 
-        $prtcpntId = "prsn" .$personData['id'];
-        echo $prtcpntId;?>
-        <?php if($_POST['$prtcpntId']) :?>
+        <?php $prtcpntId = "prtcpnt" .$personData['id'];?>
+        <?php if($_POST["$prtcpntId"]) :?>
         <?php 
         $prsnId = "prsn" .$personData['id'];
         $boardId = "board" .$personData['id'];
@@ -64,6 +62,7 @@ $someFlg = 1;
           <td align="center"><?php if($wearId){echo "○";}else{echo "×";}?></td>
           <td align="center"><?php if($acceId){echo "○";}else{echo "×";}?></td>
         </tr>
+        <?php endif; ?>
         <?php endforeach; ?>
       </table>
       </center>

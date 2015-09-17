@@ -33,17 +33,15 @@ $numOfMember = 3;
           <td>氏名</td><td>板ブーツ</td><td>ウェア</td><td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php $prsnId = "prsn" .$personData['id'];
-        $flg = $_POST["$prsnId"];
-        echo $flg;?>
-        <?php if($flg) :?>
+        <?php $prsnId = "prsn" .$personData['id'];?>
+        <?php if($_POST["$prsnId"]) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td><input type="checkbox" name="board<?php echo $personData['id'];?>" value="1" <?php if($personData['board']==FALSE)echo 'checked="checked"';?>></td>
           <td><input type="checkbox" name="wear<?php echo $personData['id'];?>" value="1" <?php if($personData['wear']==FALSE)echo 'checked="checked"';?>></td>
           <td><input type="checkbox" name="acce<?php echo $personData['id'];?>" value="1" <?php if($personData['accessory']==FALSE)echo 'checked="checked"';?>></td>
         </tr>
-        <input type="hydden" name="prtcpnt<?php echo $personData['id'];?>" value="a">
+        <input type="hidden" name="prtcpnt<?php echo $personData['id'];?>" value="1">
         <?php endif; ?>
         <?php endforeach; ?>
       </table>
