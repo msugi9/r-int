@@ -45,7 +45,7 @@ try{
   
   <body>
     <div class="page-header">
-      <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
+      <!--<h1><span class="label label-warning label-inline">楽々スノボ</span></h1>-->
       <h1>
 	<span class="label laber-info label-inline">
 	  <?php echo $name[0]["name"]; ?>さんのトップページ
