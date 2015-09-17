@@ -57,15 +57,6 @@ try{
       }
     }
   }
-  
-  
-  /*
-  foreach($data as $tmp)//applu_itemのDBへの入力。無理だすまん。
-  if(1){
-    $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";
-    $result = $pdo->exec($sql);
-  }
-  */
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();

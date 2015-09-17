@@ -55,12 +55,16 @@ foreach($data as $tmp){
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+        <?php foreach ($rdata as $relationData) : ?>
+        <?php if($relationData['parent_personal_id']==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
-        <?php if($rdata['parent_personal_id']==$parentUserId) : ?>
+        <?php if($personData['id']==$relaionData['child_person_id']) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
         </tr>
+        <?php endif; ?>
+        <?php endforeach; ?>
         <?php endif; ?>
         <?php endforeach; ?>
       </table>
