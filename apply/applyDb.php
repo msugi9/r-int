@@ -7,6 +7,7 @@ $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1))
 
 $pdo = null;
 
+
 $personalId = ($_POST["id"]);
 $companyId = ($_POST["password"]);
 $skiResortId = ($_POST["charge"]);
@@ -23,10 +24,10 @@ try{
   $result = $pdo->exec($sql);
   
   foreach($data as $tmp)
-  if(){
-  $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";
-  $result = $pdo->exec($sql);
-  
+  if(1){
+    $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";
+    $result = $pdo->exec($sql);
+  }
   
   
 }catch(PDOException $e){

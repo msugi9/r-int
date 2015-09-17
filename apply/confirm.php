@@ -15,7 +15,6 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
-
 ?>
 
 <html>
@@ -55,7 +54,7 @@ try{
       </center>
       <!--for文的な？-->
       
-      
+      <input type="hidden" name="id" value="1">
       <input type="submit" value="申し込む">
     </form>
     </center>
