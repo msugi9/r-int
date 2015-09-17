@@ -5,21 +5,21 @@ $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
 session_start();
-var_dump($_REQUESRT['sex']);
-var_dump($_REQUESRT['wear']);
+var_dump($_REQUEST['sex']);
+var_dump($_REQUEST['wear']);
 exit;
 try{
     //データベース接続
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
     $loginid=htmlspecialchars($_REQUEST['login_ID']);
-    $sex=htmlspecialchars($_REQUESRT['sex']);
+    $sex=htmlspecialchars($_REQUEST['sex']);
     $pass=htmlspecialchars($_REQUEST['login_pass']);
     $height=htmlspecialchars($_REQUEST['height']);
     $weight=htmlspecialchars($_REQUEST['weight']);
     $shoe=htmlspecialchars($_REQUEST['shoe_size']);
     $accessory=htmlspecialchars($_REQUEST['accessory']);
-    $wear=htmlspecialchars($_REQUESRT['wear']);
+    $wear=htmlspecialchars($_REQUEST['wear']);
     $board=htmlspecialchars($_REQUEST['board']);
     //$email=htmlspecialchars($_REQUEST['email']);
 
