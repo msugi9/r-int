@@ -29,7 +29,7 @@ $parent_id = ($_GET["parent"]);
     </head>
     <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
 
-      <FORM action="/register/admincomfirmp.php" method="post">
+      <FORM action="/register/admincomfirmp.php" method="post" style="margin: 0px 25%">
 	<div class="page-header">
 	  <h1><span class="label label-warning label-inline">楽々スノボ</span></h1>
 	  <h1 class="text-primary" style="text-align: center">
