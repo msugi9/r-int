@@ -38,7 +38,7 @@ try{
     </tr>
   </table>
   <div style="margin-top: 30px;text-align: center">
-    <a href="/top/logout">ログアウト</a>
+    <a href="/top/logout.php">ログアウト</a>
   </div>
 </body>
 </html>

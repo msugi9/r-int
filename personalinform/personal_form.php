@@ -64,7 +64,7 @@ echo "<pre>";
             <tr>
                             <td style="background-color: #87cefa  ;">靴のサイズ</td>
                             <td style="background-color: #ffffff  ;">
-                <input type="text" name="shoe_size" size="30" value=<?php if($data){echo $data[0]["shoe-size"];} ?>>
+                <input type="text" name="shoe_size" size="30" value=<?php if($data){echo $data[0]["shoe_size"];} ?>>
               </td>
                         </tr>
 
