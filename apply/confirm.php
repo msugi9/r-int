@@ -79,7 +79,7 @@ foreach($itemdata as $tmp){
         <?php endif; ?>
         <?php endforeach; ?>
       </table></tr>
-        <tr><td align="right">￥<?php echo $_SESSION["priceAll"]; ?></tr>
+        <tr><td align="right">合計  ￥<?php echo $_SESSION["priceAll"]; ?></tr>
     </table>
       </center>
       <!--for文的な？-->
