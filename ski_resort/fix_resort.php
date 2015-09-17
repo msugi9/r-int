@@ -16,13 +16,12 @@ try{
     die();
 }
 $parentUserId = $_POST["something"]; //親ユーザのidをとってくる？？
-$resId = $sdata[$_POST["skiResortId"]]; //行き先スキー場のid
 
-$namesql = "select name from ski_resort where id = '$_POST['skiResortId']'";
-$nameresult = $pdo->query($namesql);
-$namedata = $nameresult->fetchAll();
+//$namesql = "select name from ski_resort where id = '$_POST['skiResortId']'";
+//$nameresult = $pdo->query($namesql);
+//$namedata = $nameresult->fetchAll();
 
-//var_dump("aaaa");exit;
+var_dump($_POST['skiResortId']);exit;
 ?>
 
 <html>
