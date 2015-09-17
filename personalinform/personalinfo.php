@@ -11,31 +11,22 @@ try{
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
     $loginid=htmlspecialchars($_REQUEST['login_ID']);
+    $sex=$_REQUEST['sex'];
     $pass=htmlspecialchars($_REQUEST['login_pass']);
     $height=htmlspecialchars($_REQUEST['height']);
     $weight=htmlspecialchars($_REQUEST['weight']);
     $shoe=htmlspecialchars($_REQUEST['shoe_size']);
-    $accessory=htmlspecialchars($_REQUEST['accessory']);
-    $wear=htmlspecialchars($_REQUESRT['wear']);
-    $board=htmlspecialchars($_REQUEST['board']);
-    $email=htmlspecialchars($_REQUEST['email']);
+    $address=htmlspecialchars($_REQUEST['address']);
+    $tel=htmlspecialchars($_REQUEST['tel']);
+    $accessory=$_REQUEST['accessory'];
+    $wear=$_REQUEST['wear'];
+    $board=$_REQUEST['board'];
+    //$email=htmlspecialchars($_REQUEST['email']);
 
-    $insert_sql = "update personal set height=$height,weight=$weight,shoe_size=$shoe,accessory=$accessory,wear=$wear,board=$board where id= " . $_SESSION["personal_id"];
+    $insert_sql = "update personal set sex = '$sex', address = '$address', tel = '$tel', height = '$height', weight = '$weight', shoe_size = '$shoe', accessory = '$accessory', wear = '$wear', board = '$board' where id = " . $_SESSION["personal_id"];
 
     $sql = $pdo->exec($insert_sql);
 
-
-
-    echo "身長...'$height'\n";
-    echo "体重...'$weight'\n";
-    echo "靴のサイズ...'$shoe'\n";
-    echo "アクセサリー(キャップ、グローブ、ゴーグル)...'$accessory'\n";
-    echo "ウェア...'$wear'\n";
-    echo "ボード...'$board'\n";
-
-    echo "登録しました\n";
-
-    print '<a href="TOPページ">TOPページに戻る</a>';
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -43,3 +34,14 @@ try{
     }
 
 ?>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+登録しました
+<br>
+<a href="/top/user_top.php">TOPページに戻る</a>
+</body>
+</html>
