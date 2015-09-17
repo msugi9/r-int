@@ -26,15 +26,11 @@
     </div>
     <div class="list-group">
       <a class="list-group-item" href="/register/loginp.php" style="text-align: center">個人ログイン</a>
-      <a class="list-group-item" href="/register/adminp.php">個人新規ログイン</a>
-      <a class="list-group-item" href="/register/loginc.php">企業ログイン</a>
-      <a class="list-group-item" href="/register/adminc1.php">企業新規ログイン</a>
+      <a class="list-group-item" href="/register/adminp.php" style="text-align: center">個人新規ログイン</a>
+      <a class="list-group-item" href="/register/loginc.php" style="text-align: center">企業ログイン</a>
+      <a class="list-group-item" href="/register/adminc1.php" style="text-align: center">企業新規ログイン</a>
     </div>
   </div>
    
-<!--<a href="/register/loginp.php">個人ログイン</a>
-<a href="/register/adminp.php">個人新規ログイン</a>
-<a href="/register/loginc.php">企業ログイン</a>
-<a href="/register/adminc1.php">企業新規ログイン</a>-->
 </body>
 </html>
