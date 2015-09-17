@@ -36,15 +36,11 @@ try{
     <td>県</td>
     <td>スキー場</td>
     <td>参加者</td>
-  </tr>
-</table>
-</body>
-</html>
-  <?php
+  </tr></table></body></html><?php
   $x = $data[0][4];
 foreach($data as $tmp){
     if($x == $tmp[4]){
-    echo $tmp[9]."<br />";
+    echo $tmp[9]."  ";
     echo $tmp[7]."<br />";
     }
   }
