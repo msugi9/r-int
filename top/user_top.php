@@ -60,12 +60,12 @@ try{
 	    <th class="success"><a href="/apply/decide_person.php">レンタル申し込み</a><br>
 	      <div class="well well-lg">レンタル品の申し込みをこちらで行う事ができます</div>
 	    </th>
-	    <th class="info"><a href="/mail/mailform.php">招待</a><br>
+	    <th class="warning"><a href="/mail/mailform.php">招待</a><br>
 	      <div class="well well-lg">まだ会員になっていないメンバーをメールで招待できます</div>
 	    </th>
 	  </tr>
 	  <tr>
-	    <th class="warning"><a href="/past/index.php">過去データ</a>
+	    <th class="info"><a href="/past/index.php">過去データ</a>
 	      <div class="well well-lg">今までに行った事のあるスキー場と<br>
 		一緒に行ったことのあるメンバーの履歴を表示します</div>
 	    </th>
