@@ -10,7 +10,7 @@ try{
   //データベースに接続
   $pdo = new PDO($dsn, $url['user'], $url['pass']);
   //sql文
-  $sql = "select * from apply,relation,ski_resort where apply.id = relation.apply_id and apply.ski_resort_id = ski_resort.id and apply.personal_id = " . $_SESSION["personal_id"];
+  $sql = "select * from apply,relation,ski_resort group by apply.id where apply.id = relation.apply_id and apply.ski_resort_id = ski_resort.id and apply.personal_id = " . $_SESSION["personal_id"];
 
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
