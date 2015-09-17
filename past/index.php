@@ -30,14 +30,13 @@ try{
   <?php
   $x = $data[0][4];
 
-  foreach($data as $tmp){
-    var_dump($tmp[4]);
-  }
+
   foreach($data as $tmp){
     if($x == $tmp[4])
-    echo $tmp[9];
-    
-  }
+    echo $tmp[9]."<br />";
+
+    echo $tmp[6];
+    }
 
 
   ?>
