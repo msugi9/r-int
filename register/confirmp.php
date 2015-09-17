@@ -17,6 +17,11 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
   $result = $pdo->query($sql);
   $pass1 = $result->fetchAll();
   //$pass1 = (string)$data[0];
+  $pdo = null;
+  $pdo = new PDO($dsn, $url['user'], $url['pass']);
+    $sql = "select id from personal where login_id ='$id'";
+    $result = $pdo->query($sql);
+    $idd = $result->fetchAll();
 
 
 }catch(PDOException $e){
@@ -27,10 +32,10 @@ $pdo = new PDO($dsn, $url['user'], $url['pass']);
 var_dump($pass1[0][0]);
 var_dump(trim($pass1[0]['login_password']));
 var_dump($pass);*/
-
+var_dump($idd);
   if(trim($pass1[0]['login_password'])==$pass)
-  {echo"ログインに成功しました。";
-    header("Location: ./adminp.php");
-  }
+  echo"ログインに成功しました。";
+    //header("Location: ./adminp.php");
+
   else echo"失敗しました。"
 ?>
