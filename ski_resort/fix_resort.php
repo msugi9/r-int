@@ -18,12 +18,7 @@ try{
 session_start();
 $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 $_SESSION["ski_resort_id"]=$_POST['skiResortId'];
-$rstId = $_POST['skiResortId'];
-
-$namesql = "select name from ski_resort where id = '$rstId'";
-$nameresult = $pdo->query($namesql);
-$namedata = $nameresult->fetchAll();
-
+$_SESSION["play_date"]=$_POST['year']."/".$_POST['month']."/".$_POST['day'];
 ?>
 
 <html lang = "ja">
@@ -33,15 +28,13 @@ $namedata = $nameresult->fetchAll();
     </head>
     <body>
         <center>
-        以下のスキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
+        以下の日程，スキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
         <form action="./resortDb.php" method  ="post">
             <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-                <tr><?php echo $namedata["name"]; ?></tr>
+                <tr><?php echo "行き先->" . $_SESSION["ski_resort_name"]; ?></tr>
+                <tr><?php echo "日程->" . $_SESSION["play_date"]; ?></tr>
                 <tr><input type="submit" name="submitResort" value="確定"></tr>
             </table>
-            <input type="hidden" name="parentUserId" value="<?php echo $_POST['parentUserId']; ?>">
-            <input type="hidden" name="companyId" value="<?php echo $_POST['companyId']; ?>">
-            <input type="submit" name="playDate" value="<?php echo $_POST['year']."/".$_POST['month']."/".$_POST['day']; ?>">
         </form>
         </center>
     </body>
