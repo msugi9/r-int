@@ -43,7 +43,7 @@ TEL<input type = "text" name ="tel";>
 <select name="ski">
   <?php
   foreach ($ski_resort as $value) {
-    echo '<option value="' . $value['id'] . '">' . $value['name'] . '</option>';
+    echo "<option value='$value['id']'>$value['name']</option>";
   }
  ?>
 </select>
