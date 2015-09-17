@@ -47,7 +47,8 @@ foreach($data as $tmp){
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach ($rdata as $relationData) : ?>
-        <?php var_dump($relationData); ?>
+        
+        <?php echo "<pre>";var_dump($relationData); ?>
         <?php if($relationData['parent_personal_id']==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
         <?php var_dump($personData); ?>
