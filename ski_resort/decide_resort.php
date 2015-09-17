@@ -1,4 +1,3 @@
-
 <?php
 $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
 //Postgresqlの接続に必要なデータの取得
@@ -44,9 +43,7 @@ $pdo = null;
           <td><?php echo $prefecture[$row['pref_code']]; ?></td>
           <td><input type="checkbox" name="ski_resort" value="<?php echo $row['pref_code']; ?>"></td>
         </tr>
-        print($prefecture[$row['pref_code']]);
-        }
-        ?>
+        <?php endforeach; ?>
       </table>
     </form>
   </body>
