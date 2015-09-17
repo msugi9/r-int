@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -68,8 +71,8 @@
 	このサービスを利用するには、以下のリンクから必要な情報を入力して下さい
       </div>
       <div class="list-group">
-	<a class="list-group-item" href="/register/adminp.html">新規登録の方はこちら</a>
-	<a class="list-group-item" href="/register/loginp.html">既に会員の方はログインして下さい</a>
+	<a class="list-group-item" href="/register/adminp.html?parent=<?php echo $_SESSION["personal_id"] ?>">新規登録の方はこちら</a>
+	<a class="list-group-item" href="/register/loginp.html?parent=<?php echo $_SESSION["personal_id"] ?>">既に会員の方はログインして下さい</a>
       </div>
 
       </div>
