@@ -44,7 +44,11 @@ try{
 
   <?php
   $x = $data[0]["play_date"];?>
-  <caption><?php $x ?><caption><?php
+  <caption><?php $x ?><caption>
+    <tr>
+    <th>スキー場</th>
+    <th>名前</th>
+    <?php
 foreach($data as $tmp){
     if($x == $tmp["play_date"]){
       echo $tmp["name"];
