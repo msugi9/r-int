@@ -19,16 +19,18 @@
   </head>
   <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
     <!-- タイトル -->
-    <font color="20b2aa">    
-      <h1 style = "font-size: 25px; font-weight: bold;">楽天レンタル</h1>
-    </font>
+    <div class="page-header">
+      <h1><span class="label label-warning">楽々スノボ</span></h1>
+    </div>
     
     <!-- タイトル -->
-    <FONT color="#4169e1">
-    <h2 >楽天レンタルとは、あらかじめレンタルしたい用具をレンタル店に注文することで</h2>
-    <h2>現地に着いてすぐに用具を借りることのできるサービスです。</h2>
-    </FONT>
-
+    <div class="jumbotoron">
+    <div class="container">
+    <h2>楽天レンタルとは、あらかじめレンタルしたい用具をレンタル店に注文することで<br>
+    現地に着いてすぐに用具を借りることのできるサービスです。</h2>
+    </div>
+    </div>
+    
     <font color="66cdaa">
     <h2 style = "font-size: 19px; font-weight: bold;">こんなことありませんか？</h2>
     </font>
