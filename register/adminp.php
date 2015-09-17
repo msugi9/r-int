@@ -43,6 +43,7 @@ $_SESSION["personal_id"] = $personal_id[0]["id"];
 
 print_r("登録を受け付けました。");
 print_r("２秒後にリダイレクトします。");
+var_dump($_SESSION["personal_id"]);
 
 header( "refresh:2;url=/personalinform/personalinfo.html" );
 ?>
