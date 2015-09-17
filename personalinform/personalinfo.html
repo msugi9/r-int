@@ -1,7 +1,11 @@
+<?php
+session_start();
+?>
+
 <html lang = "ja">
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>個人情報入力ページ</title>
+    <title>個人情報入力ページ<?php$_SESSION["personal_id"]?></title>
   </head>
 
   <body bgcolor="#fffacd  " TEXT="#333333  " LINK="#3333cc  ">
