@@ -52,7 +52,7 @@ try{
   以下の欄に入力することで、お客様それぞれに合わせたサイズの用具を借りることが出来ます。
 
   <!-- HTMLフォーム表示 -->
-  <form action="./personal_form.php" method="post">
+  <form action="./personalinfo.php" method="post">
     <div class="container">
       <table class="table">
 	<tbody>
@@ -128,7 +128,7 @@ try{
 	</tbody>
       </table>
       <p>
-	<button type="submit" class="btn btn-primary">更新</button>
+	<button type="submit" name="submit" value="更新" class="btn btn-primary">更新</button>
 	<button type="button" class="btn btn-default" onclick="location.href='/top/user_top.php'">戻る</button>
       </p>
     </div>
