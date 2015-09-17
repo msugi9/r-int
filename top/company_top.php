@@ -51,19 +51,17 @@ try{
     </div>
 
   
-  <div style="text-align: center">
-    <a href="../company/order.php">注文一覧</a>
-  </div>
-
   <table border="1" align="center">
     <tr>
-      <th><a href="/company/itemregist.php">アイテム登録</a></th>
+      <th class="warning"><a href="/company/itemregist.php">アイテム登録</a></th>
       <!--<th><a href="">企業データ変更</a></th>-->
-      <th><a href="/company/order.php">注文一覧</a></th>
+      <th class="warning"><a href="/company/order.php">注文一覧</a></th>
     </tr>
     <tr>
-      <th>
+      <th class="warning">
         <a href="/company/company_form">企業データ変更</a>
+      </th>
+      <th class="warning">
       </th>
     </tr>
   </table>
