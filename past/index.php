@@ -32,7 +32,7 @@ try{
 </head>
 <body>
   <?php
-  $x = $tmp[0][3];
+  $x = $data[0][3];
   foreach($data as $tmp){if($tmp[3]==$x)
   $childname = $tmp["child_personal_id"];
 $ski = $tmp[9];
