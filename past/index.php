@@ -47,6 +47,7 @@ try{
   echo $x;
 foreach($data as $tmp){
     if($x == $tmp[4]){
+      echo $tmp[9];
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -68,6 +69,7 @@ foreach($data as $tmp){
   }
     $x = $tmp[4];
     if($x == $tmp[4]){
+      echo $tmp[9];
     try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
