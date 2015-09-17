@@ -49,7 +49,7 @@ foreach($data as $tmp){
   <body>
     <center>
     <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-      <tr>あなたの名前は<?php echo $userName; ?>。</tr>
+      <tr><td>あなたの名前は<?php echo $userName; ?>。</td></tr>
     </table>
     参加者を選択してください。<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">

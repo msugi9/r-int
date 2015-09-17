@@ -23,7 +23,10 @@ try{
   //sql文
   $ssql = "select * from ski_resort";
   $sresult = $pdo->query($ssql);
-  $persdata = $sresult->fetchAll();
+  $sdata = $sresult->fetchAll();
+  $psql = "select * from personal";
+  $presult = $pdo->query($psql);
+  $pdata = $presult->fetchAll();
   
   $apsql = "insert into apply (personal_id, company_id, ski_resort_id, play_date) values ('$personalId','$companyId','$skiResortId','$playDate')";
   $apresult = $pdo->exec($apsql);
@@ -37,6 +40,24 @@ try{
   echo "<pre>";
   print_r($apiddata);
   echo "-----</pre>";
+  
+  foreach ($pdata as $personData){
+    $prsnId = "prsn" .$personData['id'];
+    if($_SESSION["$prsnId"]){
+      foreach($itemCode as $item){
+        $itemId = $item['name'].$personData['id'];
+        $whichItem=$item['id'];
+        if($_SESSION["$itemId"]){
+          $apitemsql = "insert into apply_item (apply_id, personal_id, item_code) values ('$apidata','$personalId','$whichItem')";
+          $apitemresult = $pdo->exec($apitemsql);
+          if (!$apitemresult) {
+            print('データを登録できませんでした。');
+          }
+        }
+      }
+    }
+  }
+  
   
   /*
   foreach($data as $tmp)//applu_itemのDBへの入力。無理だすまん。

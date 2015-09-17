@@ -40,7 +40,10 @@ $itemCode = array(
           <td>氏名</td><td>板ブーツ</td><td>ウェア</td><td>小物</td>
         </tr>
         <?php foreach ($data as $personData) : ?>
-        <?php $prsnId = "prsn" .$personData['id'];?>
+        <?php 
+        $prsnId = "prsn" .$personData['id'];
+        $_SESSION["$prsnId"]=1;
+        ?>
         <?php if($_POST["$prsnId"]) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
