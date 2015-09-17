@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
 <head>
   <title>User Top</title>
@@ -17,7 +20,7 @@
     </tr>
   </table>
   <div style="margin-top: 30px;text-align: center">
-   <!-- <a href="">ログアウト</a>-->
+    <button type="button" class="btn btn-primary" onclick="location.href='/top/logoutc.php'">ログアウト</button>
   </div>
 </body>
 </html>
