@@ -53,7 +53,7 @@ try{
 foreach($data as $tmp){
     if($x == $tmp["play_date"]){
       ?> <tr>
-        <td><?php $tmp["name"];?></td>
+        <td><?php $tmp["name"]?></td>
     <?php try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
@@ -77,10 +77,10 @@ foreach($data as $tmp){
 
     if($x != $tmp["play_date"])?></table><?php {
       $x = $tmp["play_date"];?>
-      <table><caption><?php $x ?><tr>
+      <table><caption><?php $x ?></caption><tr>
       <th>名前</th>
       <th>スキー場</th>
-    </tr></caption><?php
+    </tr><?php
       if($x == $tmp["play_date"]){
       ?><td> <?php $tmp["name"] ?></td><?php
     try{
