@@ -6,7 +6,7 @@
     // セッションファイルの削除
     session_destroy();
 
-    header( "refresh:2;url=/top/user_top.php" );
+    header( "refresh:2;url=/register/loginp.php" );
 ?>
 
 <<html>
