@@ -42,7 +42,7 @@ foreach($itemdata as $tmp){
   <body>
     <center>
     これでいい？？？？？？？
-    <form action="./applyDb.php" method="post">
+    <form action="./applyDb_escape.php" method="post">
       <!--for文的な？-->
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
