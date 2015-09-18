@@ -18,7 +18,7 @@ try{
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
   if($accessory=="1"){
-    $accessorySql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessoryPrice', true, 1)";
+    $accessorySql = "insert into item (company_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessoryPrice', true, 1)";
     $sql = $pdo->exec($accessorySql);
     var_dump($accessorySql);
     var_dump($sql);
@@ -26,14 +26,14 @@ try{
   }
 
   if($board=="1"){
-    $boardSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", true, '$board', 2)";
+    $boardSql = "insert into item (company_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$boardPrice', true, 2)";
     $sql = $pdo->exec($boardSql);
     var_dump($boardSql);
     $sql = null;
   }
 
   if($wear=="1"){
-    $wearSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", true, '$wear', 3)";
+    $wearSql = "insert into item (company_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$wearPrice', true, 3)";
     $sql = $pdo->exec($wearSql);
     var_dump($wearSql);
   }
