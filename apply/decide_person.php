@@ -52,10 +52,12 @@ foreach($data as $tmp){
         <?php if($personData["id"]==$relationData["child_personal_id"]){$flg=1;} ?>
         <?php foreach ($idata as $inviteData) : ?>
         <?php if($personData["id"]==$inviteData["child_personal_id"]){$flg=1;} ?>
+        <?php if($flg) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
         </tr>
+        <?php endif; ?>
         <?php $flg =0; ?>
         <?php endforeach; ?>
         <?php endforeach; ?>
