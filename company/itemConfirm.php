@@ -11,31 +11,27 @@ $board = $_REQUEST['board'];
 $boardPrice = $_REQUEST['board_price'];
 $accessory = $_REQUEST['accessory'];
 $accessoryPrice = $_REQUEST['accessory_price'];
-var_dump($wear);
-var_dump($wearPrice);
-
 
 try{
     //データベース接続
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
-  //if($accessory==true){
-    $accessorySql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessory_price', '$accessory', 1)";
-    var_dump($accessorySql);
+  if($accessory==true){
+    $accessorySql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessoryPrice', '$accessory', 1)";
     $sql = $pdo->exec($accessorySql);
     $sql = null;
-  //}
+  }
 
-  //if($board==true){
-    $boardSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$board_price', '$board', 2)";
+  if($board==true){
+    $boardSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$boardPrice', '$board', 2)";
     $sql = $pdo->exec($boardSql);
     $sql = null;
-  //}
+  }
 
-  //if($wear==true){
-    $wearSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$wear_price', '$wear', 3)";
+  if($wear==true){
+    $wearSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$wearPrice', '$wear', 3)";
     $sql = $pdo->exec($wearSql);
-  //}
+  }
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
