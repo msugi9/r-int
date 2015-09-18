@@ -51,6 +51,7 @@ foreach($itemdata as $tmp){
             <tr>
               <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td> <td>小計</td>
             </tr>
+            <?php $_SESSION["priceAll"]=0; ?>
             <?php foreach ($data as $personData) : ?>
             <?php $prsnId = "prsn" .$personData['id'];?>
             <?php if($_POST["$prsnId"]) :?>
@@ -60,7 +61,7 @@ foreach($itemdata as $tmp){
             $wearId = "wear".$personData['id'];
             $acceId = "acce".$personData['id'];
             $priceId = "price" .$personData['id'];//一人分の金額
-            $_SESSION["$priceId"]=$_SESSION["priceAll"]=0;
+            $_SESSION["$priceId"]=0;
             ?>
             <tr style="background-color: #ffffff  ;">
               <td align="left"><?php echo $personData['name']; ?></td>
@@ -74,11 +75,9 @@ foreach($itemdata as $tmp){
             $_SESSION["$boardId"]=$_POST["$boardId"];
             $_SESSION["$wearId"]=$_POST["$wearId"];
             $_SESSION["$acceId"]=$_POST["$acceId"];
-            echo $_SESSION["priceAll"]."a";
             ?>
             <?php 
             $_SESSION["priceAll"] += $_SESSION["$priceId"]; 
-            echo $_SESSION["priceAll"]."b"; 
             ?>
             <?php endif; ?>
             <?php endforeach; ?>
