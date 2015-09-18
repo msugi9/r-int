@@ -38,7 +38,9 @@ try{
 
     以下の欄に受注された注文を表示します。
 
-    <?php echo "$apply_data";?>
+    <?php foreach ($apply_data as $personalData) : ?>
+      <?php echo "$personData['id']";?>
+    <?php endforeach; ?>
     
   </body>
 </html>
