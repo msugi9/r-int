@@ -27,7 +27,7 @@ try{
   $apsql = "insert into apply (personal_id, company_id, ski_resort_id, play_date) values ('$personalId','$companyId','$skiResortId','$playDate')";
   $apresult = $pdo->exec($apsql);
   if (!$apresult) {
-    print('データを登録できませんでした。');
+    var_dump("$apresultのデータを登録できませんでした。<br>");
   }
   //sql文
   $apidsql = "select id from apply where person_id =".$personalId." and play_date = ".$playDate;
@@ -47,7 +47,7 @@ try{
           $apitemsql = "insert into apply_item (apply_id, personal_id, item_code) values ('$apidata','$personalId','$whichItem')";
           $apitemresult = $pdo->exec($apitemsql);
           if (!$apitemresult) {
-            print('データを登録できませんでした。');
+            var_dump($_SESSION["$prsnId"]."の$apitemresultのデータを登録できませんでした。<br>");
           }
         }
       }
