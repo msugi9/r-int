@@ -59,11 +59,11 @@ padding: 0.5em;
     <th>スキー場</th>
   </tr>
     <?php
-foreach($data as $tmp){
+foreach($data as $tmp){?>
+  <tr>
+    <td><?php echo $tmp["name"];?></td><?php
     if($x == $tmp["play_date"]){
-      ?> <tr>
-        <td><?php echo $tmp["name"];?></td>
-    <?php try{
+      try{
       //データベースに接続
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
       //sql文
