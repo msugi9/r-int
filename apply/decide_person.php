@@ -50,14 +50,15 @@ foreach($data as $tmp){
         <?php $flg = 0; ?>
         <?php foreach ($rdata as $relationData) : ?>
         <?php if($personData["id"]==$relationData["child_personal_id"]){$flg=1;} ?>
-        <?php endforeach; ?>
         <?php foreach ($idata as $inviteData) : ?>
         <?php if($personData["id"]==$inviteData["child_personal_id"]){$flg=1;} ?>
-        <?php endforeach; ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
         </tr>
+        <?php $flg =0; ?>
+        <?php endforeach; ?>
+        <?php endforeach; ?>
         <?php endforeach; ?>
       </table>
       <input type="submit" value="メンバー確定">
