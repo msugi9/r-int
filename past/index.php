@@ -81,10 +81,10 @@ foreach($data as $tmp){?>
       print('Error:'.$e->getMessage());
       die();
     }
-  }
+  }?></table><?php
 
 
-    if($x != $tmp["play_date"])?></table><?php {
+    if($x != $tmp["play_date"]) {
       $x = $tmp["play_date"];?>
       <table><caption><?php echo $x ;?></caption><tr>
       <th>名前</th>
