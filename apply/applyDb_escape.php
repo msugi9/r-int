@@ -5,5 +5,5 @@
   </head>
   レンタル品の受付を完了しました。
   <br>
-  <a href="/top/user=top.php">TOPへ戻る</a>
+  <a href="/top/user_top.php">TOPへ戻る</a>
 </html>
