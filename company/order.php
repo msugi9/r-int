@@ -39,7 +39,7 @@ try{
     以下の欄に受注された注文を表示します。
 
     <?php foreach ($apply_data as $personalData) : ?>
-      <?php echo $personData['id']; ?>
+      <?php echo $personData['personal_id']; ?>
     <?php endforeach; ?>
     
   </body>
