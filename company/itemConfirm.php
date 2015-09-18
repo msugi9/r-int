@@ -11,6 +11,8 @@ $board = $_REQUEST['board'];
 $boardPrice = $_REQUEST['board_price'];
 $accessory = $_REQUEST['accessory'];
 $accessoryPrice = $_REQUEST['accessory_price'];
+var_dump($wear);
+var_dump($wearPrice);
 
 
 try{
@@ -19,6 +21,7 @@ try{
 
   //if($accessory==true){
     $accessorySql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessory_price', '$accessory', 1)";
+    var_dump($accessorySql);
     $sql = $pdo->exec($accessorySql);
     $sql = null;
   //}
