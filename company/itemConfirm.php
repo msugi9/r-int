@@ -32,6 +32,7 @@ try{
     $wearSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$wearPrice', '$wear', 3)";
     $sql = $pdo->exec($wearSql);
   }
+  var_dump($sql);
 
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
