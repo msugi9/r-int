@@ -47,46 +47,50 @@ foreach($itemdata as $tmp){
       <center>
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <tr>
-        <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <tr>
-          <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td> <td>小計</td>
-        </tr>
-        <?php foreach ($data as $personData) : ?>
-        <?php $prsnId = "prsn" .$personData['id'];?>
-        <?php if($_POST["$prsnId"]) :?>
-        <?php 
-        $prsnId = "prsn" .$personData['id'];
-        $boardId = "board".$personData['id'];
-        $wearId = "wear".$personData['id'];
-        $acceId = "acce".$personData['id'];
-        $priceId = "price" .$personData['id'];//一人分の金額
-        $_SESSION["$priceId"]=$_SESSION["priceAll"]=0;
-        ?>
-        <tr style="background-color: #ffffff  ;">
-          <td align="left"><?php echo $personData['name']; ?></td>
-          <td align="center"><?php if($_POST["$boardId"]){echo "○";$_SESSION["$priceId"]+=$bPrice;}else{echo "×";}?></td>
-          <td align="center"><?php if($_POST["$wearId"]){echo "○";$_SESSION["$priceId"]+=$wPrice;}else{echo "×";}?></td>
-          <td align="center"><?php if($_POST["$acceId"]){echo "○";$_SESSION["$priceId"]+=$aPrice;}else{echo "×";}?></td>
-          <td align="right">￥<?php echo $_SESSION["$priceId"]; ?></td>
-        </tr>
-        <?php
-        ////sessionに1か0が入るはず///
-        $_SESSION["$boardId"]=$_POST["$boardId"];
-        $_SESSION["$wearId"]=$_POST["$wearId"];
-        $_SESSION["$acceId"]=$_POST["$acceId"];
-        ?>
-        <?php $_SESSION["priceAll"] += $_SESSION["$priceId"]; ?>
-        <?php endif; ?>
-        <?php endforeach; ?>
-      </table></tr>
+          <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
+            <tr>
+              <td>氏名</td> <td>板ブーツ</td> <td>ウェア</td> <td>小物</td> <td>小計</td>
+            </tr>
+            <?php foreach ($data as $personData) : ?>
+            <?php $prsnId = "prsn" .$personData['id'];?>
+            <?php if($_POST["$prsnId"]) :?>
+            <?php 
+            $prsnId = "prsn" .$personData['id'];
+            $boardId = "board".$personData['id'];
+            $wearId = "wear".$personData['id'];
+            $acceId = "acce".$personData['id'];
+            $priceId = "price" .$personData['id'];//一人分の金額
+            $_SESSION["$priceId"]=$_SESSION["priceAll"]=0;
+            ?>
+            <tr style="background-color: #ffffff  ;">
+              <td align="left"><?php echo $personData['name']; ?></td>
+              <td align="center"><?php if($_POST["$boardId"]){echo "○";$_SESSION["$priceId"]+=$bPrice;}else{echo "×";}?></td>
+              <td align="center"><?php if($_POST["$wearId"]){echo "○";$_SESSION["$priceId"]+=$wPrice;}else{echo "×";}?></td>
+              <td align="center"><?php if($_POST["$acceId"]){echo "○";$_SESSION["$priceId"]+=$aPrice;}else{echo "×";}?></td>
+              <td align="right">￥<?php echo $_SESSION["$priceId"]; ?></td>
+            </tr>
+            <?php
+            ////sessionに1か0が入るはず///
+            $_SESSION["$boardId"]=$_POST["$boardId"];
+            $_SESSION["$wearId"]=$_POST["$wearId"];
+            $_SESSION["$acceId"]=$_POST["$acceId"];
+            echo $_SESSION["priceAll"]."a";
+            ?>
+            <?php 
+            $_SESSION["priceAll"] += $_SESSION["$priceId"]; 
+            echo $_SESSION["priceAll"]."b"; 
+            ?>
+            <?php endif; ?>
+            <?php endforeach; ?>
+        </table></tr>
         <tr><td align="right">合計  ￥<?php echo $_SESSION["priceAll"]; ?></tr>
-    </table>
+        </table>
+        </center>
+        <!--for文的な？-->
+        
+        <input type="hidden" name="id" value="1">
+        <input type="submit" value="申し込む">
+      </form>
       </center>
-      <!--for文的な？-->
-      
-      <input type="hidden" name="id" value="1">
-      <input type="submit" value="申し込む">
-    </form>
-    </center>
-  </body>
-</html>
+    </body>
+  </html>
