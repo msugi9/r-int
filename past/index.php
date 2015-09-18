@@ -55,8 +55,8 @@ padding: 0.5em;
   $x = $data[0]["play_date"];?>
   <caption><?php echo $x; ?></caption>
     <tr>
-    <th>名前</th>
-    <th>スキー場</th>
+    <th>スキー場</th>
+    <th>名前</th>
   </tr>
     <?php
 foreach($data as $tmp){?>
@@ -64,11 +64,6 @@ foreach($data as $tmp){?>
     <td><?php echo $tmp["name"];?></td><?php
     if($x == $tmp["play_date"]){
       try{
-      //データベースに接続
-      $pdo = new PDO($dsn, $url['user'], $url['pass']);
-      //sql文
-
-
       $pdo =null;
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
       //sql文
@@ -81,10 +76,10 @@ foreach($data as $tmp){?>
       print('Error:'.$e->getMessage());
       die();
     }
-  }?></table><?php
+  }
 
 
-    if($x != $tmp["play_date"]) {
+    if($x != $tmp["play_date"])?></table><?php {
       $x = $tmp["play_date"];?>
       <table><caption><?php echo $x ;?></caption><tr>
       <th>名前</th>
