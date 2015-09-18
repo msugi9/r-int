@@ -10,17 +10,16 @@ try{
   $sql = "select * from personal";
   $result = $pdo->query($sql);
   $data = $result->fetchAll();
+  /////////////////////////////////
   $rsql = "select * from relation";
   $rresult = $pdo->query($rsql);
-  $rdata = $result->fetchAll();
-  $isql = "select * from item";
+  $rdata = $rresult->fetchAll();
+  /////////////////////////////////
+  $isql = "select * from invite";
   $iresult = $pdo->query($isql);
-  $idata = $result->fetchAll();
-  //  if($data){
-  //    echo "<pre>";
-  //    print_r($data);
-  //    echo "</pre>";
-  //  }
+  $idata = $iresult->fetchAll();
+  /////////////////////////////////
+  
   
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
@@ -28,15 +27,10 @@ try{
 }
 session_start();
 $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる？？
-//$childrenUserId = $_POST["something"]; //子ユーザのidをとってくる？？
 $companyId = $_SESSION["company_id"];//レンタル会社のidもとってくる？？
 foreach($data as $tmp){
   if($tmp['id']==$parentUserId)$userName = $tmp['name'];
 }
-//$relationPsql = "select child_person_id from relation where parent_person_id = '$parentUserId'";
-//$relationPresult = $pdo->query($relationPsql);
-//$relationPdata = $relationPresult->fetchAll();
-
 ?>
 <html lang = "ja">
   <head>
@@ -46,19 +40,28 @@ foreach($data as $tmp){
   <body>
     <center>
     <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-      <tr>あなたの名前は<?php echo $userName; ?>。</tr>
+      <tr><td><?php echo $userName; ?>さんの知り合い</td></tr>
     </table>
-    参加者を選択してください。<TMPL_VAR NAME=HOME>
+    参加者を選択しましょう！<TMPL_VAR NAME=HOME>
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
         <?php foreach ($data as $personData) : ?>
-        <?php if($rdata['parent_personal_id']==$parentUserId) : ?>
+        <?php $flg = 0;$flg2=1; ?>
+        <?php foreach ($rdata as $relationData) : ?>
+        <?php if($personData["id"]==$relationData["child_personal_id"]){$flg=1;} ?>
+        <?php foreach ($idata as $inviteData) : ?>
+        <?php if($personData["id"]==$inviteData["child_personal_id"]){$flg=1;} ?>
+        <?php if($flg&&$flg2) :?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
         </tr>
+        <?php $flg2=0;?>
         <?php endif; ?>
+        <?php $flg =0; ?>
+        <?php endforeach; ?>
+        <?php endforeach; ?>
         <?php endforeach; ?>
       </table>
       <input type="submit" value="メンバー確定">
