@@ -8,7 +8,7 @@ try{
     //データベースに接続
     
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
-    $sql = "select personal_id,item_code from apply_item";
+    $sql = "select * from apply_item";
     $result = $pdo->query($sql);
     
     $apply_data = $result->fetchAll();
@@ -39,7 +39,7 @@ try{
     以下の欄に受注された注文を表示します。
 
     <?php foreach ($apply_data as $personalData) : ?>
-      <?php echo $personData['personal_id']; ?>
+      <?php echo $personData['id']; ?>
     <?php endforeach; ?>
     
   </body>
