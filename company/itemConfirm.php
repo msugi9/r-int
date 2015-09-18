@@ -17,7 +17,7 @@ try{
     //データベース接続
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
-  if($accessory=="1"){
+  if($accessory=="1"){exit;
     $accessorySql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessoryPrice', true, 1)";
     $sql = $pdo->exec($accessorySql);
     $sql = null;
