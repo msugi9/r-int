@@ -27,21 +27,11 @@ $parentUserId = $_SESSION["personal_id"]; //親ユーザのidをとってくる
 $_SESSION["ski_resort_id"]=$_POST['skiResortId'];
 $_SESSION["play_date"]=$_POST['year']."/".$_POST['month']."/".$_POST['day'];
 foreach($comdata as $tmp){
-    if($tmp['ski_resort_id']==$_POST['skiResortId']){$_SESSION["company_id"]=$comdata['id'];}
+    if($tmp['ski_resort_id']==$_POST['skiResortId']){$_SESSION["company_id"]=$tmp['id'];}
 }
 foreach($sdata as $tmp2){
-    if($tmp2['id']==$_POST['skiResortId']){$_SESSION['ski_resort_name']=$sdata['name'];}
+    if($tmp2['id']==$_POST['skiResortId']){$_SESSION['ski_resort_name']=$tmp2['name'];}
 }
-echo $_SESSION["company_id"]."a";
-echo $_POST['skiResortId']."b";
-echo $comdata['id']."c";
-echo $_SESSION['ski_resort_name']."d";
-$_SESSION["company_id"]=$comdata['id'];
-$_SESSION['ski_resort_name']=$sdata['name'];
-echo $_SESSION["company_id"]."a";
-echo $_POST['skiResortId']."b";
-echo $comdata['id']."c";
-echo $_SESSION["ski_resort_name"]."d";
 ?>
 
 <html lang = "ja">
@@ -52,12 +42,11 @@ echo $_SESSION["ski_resort_name"]."d";
     <body>
         <center>
         以下の日程，スキー場のご利用でよろしいですか？<TMPL_VAR NAME=HOME>
-        <form action="./resortDb.php" method  ="post">
+        <form action="/apply/decide_person.php" method  ="post">
             <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
                 <tr><td><?php echo "行き先->" . $_SESSION['ski_resort_name']; ?></td></tr>
-                <tr><td>hokkaido</td></tr>
                 <tr><td><?php echo "日程->" . $_SESSION["play_date"]; ?></td></tr>
-                <tr><input type="submit" name="submitResort" value="確定"></tr>
+                <tr><input type="submit" name="submitResort" value="確定して参加者選択へ"></tr>
             </table>
         </form>
         </center>
