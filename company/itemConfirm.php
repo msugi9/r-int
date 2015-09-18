@@ -17,21 +17,25 @@ try{
     //データベース接続
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
 
-  if($accessory=="1"){exit;
+  if($accessory=="1"){
     $accessorySql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", '$accessoryPrice', true, 1)";
     $sql = $pdo->exec($accessorySql);
+    var_dump($accessorySql);
+    var_dump($sql);
     $sql = null;
   }
 
   if($board=="1"){
     $boardSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", true, '$board', 2)";
     $sql = $pdo->exec($boardSql);
+    var_dump($boardSql);
     $sql = null;
   }
 
   if($wear=="1"){
     $wearSql = "insert into item (conpany_id,item_fee,available_flg,item_code)values(" . $_SESSION["company_id"] . ", true, '$wear', 3)";
     $sql = $pdo->exec($wearSql);
+    var_dump($wearSql);
   }
 
 }catch(PDOException $e){
