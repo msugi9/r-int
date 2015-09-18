@@ -8,7 +8,7 @@ try{
     //データベースに接続
     
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
-    $sql = "select * from apply_item";
+    $sql = "select * from item";
     $result = $pdo->query($sql);
     
     $apply_data = $result->fetchAll();
