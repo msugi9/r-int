@@ -88,10 +88,6 @@ foreach($data as $tmp){?>
       if($x == $tmp["play_date"]){
       ?><td> <?php echo $tmp["name"]; ?></td><?php
     try{
-      //データベースに接続
-      $pdo = new PDO($dsn, $url['user'], $url['pass']);
-      //sql文
-
 
       $pdo =null;
       $pdo = new PDO($dsn, $url['user'], $url['pass']);
