@@ -3,19 +3,25 @@ $database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204
 $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
-session_start();
 try{
     
     //データベースに接続
     
     $pdo = new PDO($dsn, $url['user'], $url['pass']);
-    $sql = "select id,name from ski_resort";
+    $sql = "select personal_id,item_code from apply_item";
     $result = $pdo->query($sql);
-    $ski_resort = $result->fetchAll();
+    
+    $apply_data = $result->fetchAll();
+
+    
 }catch(PDOException $e){
     print('Error:'.$e->getMessage());
     die();
 }
+
+    session_start();
+
+
 //var_dump($_SESSION["personal_id"])
 ?>
 
@@ -31,6 +37,8 @@ try{
     <!-- タイトル -->
 
     以下の欄に受注された注文を表示します。
+
+    <?php echo "$apply_data";?>
     
   </body>
 </html>
