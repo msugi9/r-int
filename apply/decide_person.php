@@ -46,19 +46,18 @@ foreach($data as $tmp){
     <form action="./apply.php" method  ="post">
       <!--for文的な？-->
       <table border="1" width="500" cellspacing="0" cellpadding="5" bordercolor="#333333">
-        <?php foreach ($rdata as $relationData) : ?>
-        <?php if($relationData["parent_personal_id"]==$parentUserId) : ?>
         <?php foreach ($data as $personData) : ?>
+        <?php $flg = 0; ?>
+        <?php foreach ($rdata as $relationData) : ?>
+        <?php if($personData["id"]==$relationData["child_personal_id"]){$flg=1;} ?>
+        <?php endforeach; ?>
         <?php foreach ($idata as $inviteData) : ?>
-        <?php if(($personData["id"]==$relationData["child_personal_id"])||($personData["id"]==$inviteData["child_personal_id"])) :?>
+        <?php if($personData["id"]==$inviteData["child_personal_id"]){$flg=1;} ?>
+        <?php endforeach; ?>
         <tr style="background-color: #ffffff  ;">
           <td align="left"><?php echo $personData['name']; ?></td>
           <td align="left"><input type="checkbox" name="prsn<?php echo $personData['id'];?>" value="1"></td>
         </tr>
-        <?php endif; ?>
-        <?php endforeach; ?>
-        <?php endforeach; ?>
-        <?php endif; ?>
         <?php endforeach; ?>
       </table>
       <input type="submit" value="メンバー確定">

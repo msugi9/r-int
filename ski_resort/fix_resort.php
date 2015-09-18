@@ -32,9 +32,6 @@ foreach($comdata as $tmp){
 foreach($sdata as $tmp2){
     if($tmp2['id']==$_POST['skiResortId']){$_SESSION['ski_resort_name']=$tmp2['name'];}
 }
-echo $_SESSION["company_id"]."a";
-echo $_POST['skiResortId']."b";
-echo $_SESSION['ski_resort_name']."d";
 ?>
 
 <html lang = "ja">
