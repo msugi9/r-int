@@ -12,10 +12,6 @@ $companyId = $_SESSION["company_id"];
 $skiResortId = $_SESSION["ski_resort_id"];
 $playDate = $_SESSION["play_date"];
 
-$userId = ($_POST["address"]);
-$itemId = ($_POST["tel"]);
-$ski = ($_POST["ski"]);
-
 try{
   
   //データベースに接続
@@ -23,12 +19,15 @@ try{
   //sql文
   $ssql = "select * from ski_resort";
   $sresult = $pdo->query($ssql);
-  $persdata = $sresult->fetchAll();
+  $sdata = $sresult->fetchAll();
+  $psql = "select * from personal";
+  $presult = $pdo->query($psql);
+  $pdata = $presult->fetchAll();
   
   $apsql = "insert into apply (personal_id, company_id, ski_resort_id, play_date) values ('$personalId','$companyId','$skiResortId','$playDate')";
   $apresult = $pdo->exec($apsql);
   if (!$apresult) {
-    print('データを登録できませんでした。');
+    var_dump('$apresultのデータを登録できませんでした。<br>');
   }
   //sql文
   $apidsql = "select id from apply where person_id =".$personalId." and play_date = ".$playDate;
@@ -38,13 +37,22 @@ try{
   print_r($apiddata);
   echo "-----</pre>";
   
-  /*
-  foreach($data as $tmp)//applu_itemのDBへの入力。無理だすまん。
-  if(1){
-    $apisql = "insert into apply_item values ( '$_POST[""],'$_POST[""]','$_POST[""]')";
-    $result = $pdo->exec($sql);
+  foreach ($pdata as $personData){
+    $prsnId = "prsn" .$personData['id'];
+    if($_SESSION["$prsnId"]){
+      foreach($itemCode as $item){
+        $itemId = $item['name'].$personData['id'];
+        $whichItem=$item['id'];
+        if($_SESSION["$itemId"]){
+          $apitemsql = "insert into apply_item (apply_id, personal_id, item_code) values ('$apidata','$personalId','$whichItem')";
+          $apitemresult = $pdo->exec($apitemsql);
+          if (!$apitemresult) {
+            var_dump($_SESSION["$prsnId"].'の$apitemresultのデータを登録できませんでした。<br>');
+          }
+        }
+      }
+    }
   }
-  */
 }catch(PDOException $e){
   print('Error:'.$e->getMessage());
   die();
