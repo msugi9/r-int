@@ -1,5 +1,5 @@
 <?php
-$database_url = "postgres://jqczyyfqfondlh:AVywYkXKpxTnzKtlbyr8wxIFQN@ec2-54-204-30-115.compute-1.amazonaws.com:5432/d8seqgbs15lak9";
+$database_url = "postgres://dfsqpthtomggqb:vVnSt-eQ-LsScxxOqFFbvfDu1d@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d7onvm4i8i6ang";
 //Postgresqlの接続に必要なデータの取得
 $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
@@ -19,13 +19,14 @@ try{
   print('Error:'.$e->getMessage());
   die();
 }
+
 session_start();
 $itemCode = array(
-
 'id'=>'1','name'=>'acce',
 'id'=>'2','name'=>'board',
 'id'=>'3','name'=>'wear',
 );
+
 foreach($itemdata as $tmp){
   if($tmp["company_id"]==$_SESSION["company_id"]){
     if($tmp["item_code"]==2)$bPrice=$tmp["item_fee"];
