@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$database_url = "postgres://dfsqpthtomggqb:vVnSt-eQ-LsScxxOqFFbvfDu1d@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d7onvm4i8i6ang";
+$database_url = "postgres://kikflxevlqickd:2k4rCJxU0oMOH6OOWWSEiqH1mY@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d6h4ep9bna3r8i";
 $url = parse_url($database_url);
 $dsn = sprintf('pgsql:host=%s;dbname=%s', $url['host'], substr($url['path'], 1));
 
