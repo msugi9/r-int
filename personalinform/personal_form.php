@@ -1,4 +1,4 @@
-<?php
+<!--?php
 session_start();
 
 $database_url = "postgres://kikflxevlqickd:2k4rCJxU0oMOH6OOWWSEiqH1mY@ec2-54-204-25-54.compute-1.amazonaws.com:5432/d6h4ep9bna3r8i";
@@ -20,17 +20,20 @@ try{
   die();
 }
 ?>
-
+-->
 <html
   <html lang="en">
     <head>
+		<!-->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+		<!-->
+		<title>Bootstrap 101 Template</title>
     
     <!-- Bootstrap -->
+		<!-->
     <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -137,7 +140,6 @@ try{
     </form>
 
   <!-- HTMLフォーム表示 -->
-		<label >abc</label></br>
 </body>
 </html>
 
